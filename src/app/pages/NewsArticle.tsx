@@ -639,7 +639,7 @@ export function NewsArticle() {
                 </div>
               </div>
               <p className="text-xs text-gray-500 leading-relaxed mt-4">
-                Dr. Laura Johnson served as Director of the National Center for Water Quality Research at Heidelberg University, where she led long\‑term water quality monitoring and research on nutrients and harmful algal blooms, expanded the center\’s monitoring network, collaborated widely with stakeholders, and contributed dozens of peer\‑reviewed publications on agricultural watershed impacts and Great Lakes water quality.
+                Dr. Laura Johnson directed the NCWQR, leading research on nutrients, harmful algal blooms, and agricultural watershed impacts while expanding monitoring programs and collaborating on Great Lakes water quality studies.
               </p>
               <Link
                 to="/about"
