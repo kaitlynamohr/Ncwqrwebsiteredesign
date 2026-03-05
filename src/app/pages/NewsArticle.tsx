@@ -23,11 +23,11 @@ const DARK_BLUE = '#0f2942';
 const GREEN = '#2D5016';
 const LIGHT_BG = '#F8FAFC';
 
-/* ─── Mock article data ─────────────────────────────────────── */
+/* ─── 2/1/2020 Article ─────────────────────────────────────── */
 const articles: Record<string, ArticleData> = {
   '1': {
     id: '1',
-    tag: 'Partnership',
+    tag: 'Announcement',
     tagColor: BLUE,
     date: 'February 14, 2025',
     readTime: '8 min read',

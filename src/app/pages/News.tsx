@@ -8,7 +8,7 @@ const GREEN = '#2D5016';
 
 const newsItems = [
   {
-    id: 1,
+    id: 7,
     date: 'February 6, 2025',
     title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
     excerpt:
@@ -18,7 +18,7 @@ const newsItems = [
     tagColor: GREEN,
   },
   {
-    id: 2,
+    id: 6,
     date: 'March 16, 2023',
     title: 'The Annual Report for 2022 is now available!',
     excerpt:
@@ -28,7 +28,7 @@ const newsItems = [
     tagColor: '#B45309',
   },
   {
-    id: 3,
+    id: 5,
     date: 'December 15, 2021',
     title: 'The Annual Report for 2021 is now available!',
     excerpt:
@@ -48,7 +48,7 @@ const newsItems = [
     tagColor: BLUE,
   },
   {
-    id: 5,
+    id: 3,
     date: 'October 1, 2020',
     title: 'Happy New Year from NCWQR! Welcome to our 2020 Student Research Interns',
     excerpt:
@@ -58,7 +58,7 @@ const newsItems = [
     tagColor: BLUE,
   },
   {
-    id: 6,
+    id: 2,
     date: 'March 20, 2020',
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
     excerpt:
@@ -68,7 +68,7 @@ const newsItems = [
     tagColor: BLUE,
   },
   {
-    id: 7,
+    id: 1,
     date: 'February 1, 2020',
     title: 'NCWQR Launches Monthly Updates Highlighting Research, Data, and Outreach Efforts',
     excerpt:
