@@ -65,10 +65,6 @@ const articles: Record<string, ArticleData> = {
       ),
       },
       {
-        type: 'heading',
-        content: 'Why the Great Lakes?',
-      },
-      {
         type: 'paragraph',
         content: (
                 <>
