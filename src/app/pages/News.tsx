@@ -1,6 +1,7 @@
 import { PageHero } from '../components/PageHero';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router';
 
 const BLUE = '#1B4F8A';
 const GREEN = '#2D5016';
@@ -122,13 +123,13 @@ export function News() {
                   {newsItems[0].title}
                 </h2>
                 <p className="text-gray-600 text-sm leading-relaxed mb-6">{newsItems[0].excerpt}</p>
-                <a
-                  href="#"
+                <Link
+                  to={`/news/${newsItems[0].id}`}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold"
                   style={{ color: BLUE }}
                 >
                   Read Full Story <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
             </div>
           </motion.article>
@@ -171,13 +172,13 @@ export function News() {
                   <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-3">
                     {item.excerpt}
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to={`/news/${item.id}`}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold"
                     style={{ color: BLUE }}
                   >
                     Read More <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
+                  </Link>
                 </div>
               </motion.article>
             ))}
