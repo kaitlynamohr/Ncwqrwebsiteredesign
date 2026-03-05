@@ -23,7 +23,7 @@ const DARK_BLUE = '#0f2942';
 const GREEN = '#2D5016';
 const LIGHT_BG = '#F8FAFC';
 
-/* ─── 2/1/2020 Article ─────────────────────────────────────── */
+/* ─── Articles ─────────────────────────────────────── */
 const articles: Record<string, ArticleData> = {
   '1': {
     id: '1',
@@ -49,19 +49,19 @@ const articles: Record<string, ArticleData> = {
           'This is the start of a new series on the going-ons at the NCWQR!  I hope to publish these posts monthly throughout the year to give everyone a view of what we’re up to on the 3rd floor of Gillmor Hall.',
       },
       {
-      type: 'paragraph',
-      content: (
-          <>
-          To start things off, let's discuss last year! In 2019, our chemistry lab analyzed over 11,000 water samples for nutrients and/or sediment most of which were for the Heidelberg Tributary Loading Program {' '}
-          <Link to="/publications" style={{ color: BLUE, textDecoration: 'underline' }}>
-            (HLTP)
-          </Link>
-          {' '} and were collected from 25 different locations throughout Ohio and one in Michigan. Our researchers published 7 peer-reviewed articles{' '}
-          <Link to="/monitoring" style={{ color: BLUE, textDecoration: 'underline' }}>
-            you can find them here
-          </Link>
-          {'; '}managed 8 different grants aside from the HTLP; presented at the International Society for Great Lakes Research, the Society for Freshwater Sciences, the Soil and Water Conservation Society, the Ecological Society of America, and the American Geophysical Union conferences; and gave over 20 presentations to various groups throughout the community. At the same time, we continued to analyze samples for private well owners, assisted in expanding the Sandusky River Watershed Coalition, and mentored students both as interns and in the classroom. To wrap up 2019, we were informed that 4 grant proposals were selected for funding, ranging in topics from antibiotics in rivers to using field-scale models to help develop water quality trading markets.
-          </>
+        type: 'paragraph',
+        content: (
+                <>
+                    To start things off, let's discuss last year! In 2019, our chemistry lab analyzed over 11,000 water samples for nutrients and/or sediment most of which were for the Heidelberg Tributary Loading Program {' '}
+                    <Link to="/publications" style={{ color: BLUE, textDecoration: 'underline' }}>
+                        (HLTP)
+                    </Link>
+                    {' '} and were collected from 25 different locations throughout Ohio and one in Michigan. Our researchers published 7 peer-reviewed articles{' '}
+                    <Link to="/monitoring" style={{ color: BLUE, textDecoration: 'underline' }}>
+                        you can find them here
+                    </Link>
+                    {'; '}managed 8 different grants aside from the HTLP; presented at the International Society for Great Lakes Research, the Society for Freshwater Sciences, the Soil and Water Conservation Society, the Ecological Society of America, and the American Geophysical Union conferences; and gave over 20 presentations to various groups throughout the community. At the same time, we continued to analyze samples for private well owners, assisted in expanding the Sandusky River Watershed Coalition, and mentored students both as interns and in the classroom. To wrap up 2019, we were informed that 4 grant proposals were selected for funding, ranging in topics from antibiotics in rivers to using field-scale models to help develop water quality trading markets.
+                </>
       ),
       },
       {
@@ -69,14 +69,14 @@ const articles: Record<string, ArticleData> = {
         content: 'Why the Great Lakes?',
       },
       {
-      type: 'paragraph',
-      content: (
-          <>
-          One of the biggest events in 2019 was the celebration of our 50th Anniversary in October.  We had a 2-day workshop which culminated in an anniversary dinner.  Most exciting, the history of the NCWQR, which was written by Dr. Ken Baker, is now available online {' '}
-          <Link to="https://ncwqr.org/wp-content/uploads/2020/02/ncwqr-history-by-ken-baker-2019-updated.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
-            here!
-          </Link>
-          </>
+        type: 'paragraph',
+        content: (
+                <>
+                    One of the biggest events in 2019 was the celebration of our 50th Anniversary in October.  We had a 2-day workshop which culminated in an anniversary dinner.  Most exciting, the history of the NCWQR, which was written by Dr. Ken Baker, is now available online {' '}
+                    <Link to="https://ncwqr.org/wp-content/uploads/2020/02/ncwqr-history-by-ken-baker-2019-updated.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                        here!
+                    </Link>
+                </>
       ),
       },
       {
@@ -90,19 +90,99 @@ const articles: Record<string, ArticleData> = {
           'On top of all that, January has been rather warm and rainy with 4 different high flow events about perfectly timed by each week leading to high samples loads for the lab with especially muddy samples (which take longer to filter).',
       },
       {
-      type: 'paragraph',
-      content: (
-          <>
-          Moving forward, we\’ll be completing our spring and annual loading calculations, finishing up a number of different papers and reports that are in progress, giving a few presentations, and are looking forward to the {' '}
-          <Link to="https://www.facebook.com/SanduskyRiverWatershedCoalition/photos/a.402820289765903/2696379333743309/?type=3&theater" style={{ color: BLUE, textDecoration: 'underline' }}>
-           February SRWC Brews and News featuring Ray Grob who will review the history of the Sandusky River!
-          </Link>
-          </>
+        type: 'paragraph',
+        content: (
+                <>
+                    Moving forward, we\’ll be completing our spring and annual loading calculations, finishing up a number of different papers and reports that are in progress, giving a few presentations, and are looking forward to the {' '}
+                    <Link to="https://www.facebook.com/SanduskyRiverWatershedCoalition/photos/a.402820289765903/2696379333743309/?type=3&theater" style={{ color: BLUE, textDecoration: 'underline' }}>
+                    February SRWC Brews and News featuring Ray Grob who will review the history of the Sandusky River!
+                    </Link>
+                </>
       ),
       },
     ],
     relatedIds: ['4', '3', '2'],
   },
+    '2': {
+    id: '2',
+    tag: 'Annual Report',
+    tagColor: '#B45309',
+    date: 'March 20, 2020',
+    readTime: '5 min read',
+    author: {
+        name: 'Dr. Laura Johnson',
+        title: 'Director, NCWQR',
+        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+    },
+    title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
+    subtitle: 'Weather, research, and resilience in unprecedented times—keeping the NCWQR running through storms, blooms, and a rapidly changing world.',
+    heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
+    heroCaption: '',
+    body: [
+        {
+            type: 'paragraph',
+            content:
+            'What weird times we’re living in right now! I can say, up until this week, 2020 has been an especially busy year.  We’ve had at least 6 storm events in the past 6 weeks, which has kept the lab very busy with lots of muddy samples.  As of March 1st we officially entered the spring loading season for the Lake Erie bloom forecast, so it can stop raining any day now!',
+        },
+        {
+            type: 'image',
+            url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85',
+            caption:
+            'Before and during a storm event from a station last week',
+        },
+        {
+            type: 'paragraph',
+            content: (
+                    <>
+                        Since the last update, I\’ve been to the University of Nebraska in Lincoln to give a seminar and meet with our collaborators at the Water Science Laboratory {' '}
+                        <Link to="https://youtu.be/drJB0klhMEQ" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            (watch here)
+                        </Link>
+                        {' '} Nate gave a talk at the Great Lakes Symposium at the Toledo Zoo for an audience of a couple hundred middle and high school students from multiple Toledo-area schools. We also went to the {' '}
+                        <Link to="https://fabe.osu.edu/CTCon" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            (watch here)
+                        </Link>
+                        {' '} in Ada in early March for a talk on the 2019 results and heard lots of updates from the edge-of-field research and other agroecosystem research. I\’m also happy to report that the 2019 loads are complete for each of our stations.  It took a bit longer this year, in part because of the record-high number of stations we are running!  Monitoring 23 stations is a big task and we\’ve been doing a great job of providing high-quality data for each of these.
+                    </>
+        ),
+        },
+        {
+            type: 'image',
+            url: 'Screenshot of the autoBeale program for loads',
+            caption:
+            'Before and during a storm event from a station last week',
+        },
+        {
+            type: 'paragraph',
+            content: 'The Sandusky River Watershed Coalition had a great News and Brews event in February featuring Ray Grob to chat about his experiences on the Sandusky River.  In addition, supplies to start stenciling storm drains have been acquired and are available for people who need volunteer activities.  These were tested a couple weekends ago around Tiffin.',
+        },
+        {
+            type: 'imagegrid',
+            images: [
+                { url: 'https://yourimage1.jpg', caption: 'optional caption' },
+                { url: 'https://yourimage2.jpg', caption: 'optional caption' },
+                { url: 'https://yourimage3.jpg', caption: 'optional caption' },
+            ],
+        },
+        {
+            type: 'paragraph',
+            content: 'A big congratulations to our post-doc, Tian Guo, for starting a new position with the National Soil Erosion Research Laboratory and Department of Agricultural & Biological Engineering at Purdue University last week.  She will be missed, but luckily in our line of work, we can continue to collaborate!'
+        },
+        {
+            type: 'paragraph',
+            content: (
+                    <>
+                        And now for the updates regarding COVID-19 and the Ohio Stay-at-Home order… You may have heard the news that the {' '}
+                        <Link to="https://inside.heidelberg.edu/departments-offices/health-center/covid-19-novel-coronavirus" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            Heidelberg campus will be closed after Sunday for the rest of the semester and that all classes have moved online.
+                        </Link>
+                        {' '} Aaron and Rem will have their hands full transitioning existing content into this new platform!  For the lab, we are suspending sampling at stations where the samples have to be shipped (Raisin, Cuyahoga, Great Miami, Scioto, and Muskingum) and reducing sampling frequency at the remaining stations to once per day starting on Monday, March 23.  This should get us ~2-3 weeks of sampling before we\’d need new bottles. We are in the Maumee loading season for predicting bloom severity, and thus will prioritize Maumee sampling as we are able.   Though the order only lasts for two weeks, who knows what will happen as we move forward.  We will be making decisions that prioritize the health of everyone at the NCWQR first, and then we\’ll be sampling as much as we can second!
+                    </>
+        ),
+        },
+    ],
+    relatedIds: ['4', '3', '1'],
+    },
 };
 
 /* Related article stubs */
@@ -173,13 +253,14 @@ interface AuthorData {
 }
 
 interface BodyBlock {
-  type: 'paragraph' | 'heading' | 'pullquote' | 'image' | 'databox';
+  type: 'paragraph' | 'heading' | 'pullquote' | 'image' | 'databox' | 'imagegrid';
   content?: string | React.ReactNode;
   attribution?: string;
   url?: string;
   caption?: string;
   label?: string;
   stats?: { value: string; description: string }[];
+  images?: { url: string; caption?: string }[];
 }
 
 interface ArticleData {
@@ -298,6 +379,25 @@ function BodyBlock({ block }: { block: BodyBlock }) {
           </div>
         </div>
       );
+      case 'imagegrid':
+        return (
+            <div className="grid grid-cols-3 gap-4 my-8">
+            {block.images?.map((img: { url: string; caption?: string }, i: number) => (
+                <figure key={i}>
+                    <img
+                    src={img.url}
+                    alt={img.caption || ''}
+                    className="w-full h-48 object-cover rounded-xl shadow-sm"
+                    />
+                    {img.caption && (
+                    <figcaption className="mt-2 text-xs text-gray-400 text-center italic">
+                        {img.caption}
+                    </figcaption>
+                    )}
+                </figure>
+                ))}
+            </div>
+        );
 
     default:
       return null;
