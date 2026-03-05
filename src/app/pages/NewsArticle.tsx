@@ -52,13 +52,13 @@ const articles: Record<string, ArticleData> = {
       type: 'paragraph',
       content: (
           <>
-          To start things off, let's discuss last year! In 2019, our chemistry lab analyzed over 11,000 water samples for nutrients and/or sediment most of which were for the Heidelberg Tributary Loading Program
+          To start things off, let's discuss last year! In 2019, our chemistry lab analyzed over 11,000 water samples for nutrients and/or sediment most of which were for the Heidelberg Tributary Loading Program {' '}
           <Link to="/publications" style={{ color: BLUE, textDecoration: 'underline' }}>
-            {' '} (HLTP)
+            (HLTP)
           </Link>
           and were collected from 25 different locations throughout Ohio and one in Michigan. Our researchers published 7 peer-reviewed articles{' '}
           <Link to="/monitoring" style={{ color: BLUE, textDecoration: 'underline' }}>
-            {' '} you can find them here
+            you can find them here
           </Link>
           {'; '}managed 8 different grants aside from the HTLP; presented at the International Society for Great Lakes Research, the Society for Freshwater Sciences, the Soil and Water Conservation Society, the Ecological Society of America, and the American Geophysical Union conferences; and gave over 20 presentations to various groups throughout the community. At the same time, we continued to analyze samples for private well owners, assisted in expanding the Sandusky River Watershed Coalition, and mentored students both as interns and in the classroom. To wrap up 2019, we were informed that 4 grant proposals were selected for funding, ranging in topics from antibiotics in rivers to using field-scale models to help develop water quality trading markets.
           </>
@@ -72,9 +72,9 @@ const articles: Record<string, ArticleData> = {
       type: 'paragraph',
       content: (
           <>
-          One of the biggest events in 2019 was the celebration of our 50th Anniversary in October.  We had a 2-day workshop which culminated in an anniversary dinner.  Most exciting, the history of the NCWQR, which was written by Dr. Ken Baker, is now available online
+          One of the biggest events in 2019 was the celebration of our 50th Anniversary in October.  We had a 2-day workshop which culminated in an anniversary dinner.  Most exciting, the history of the NCWQR, which was written by Dr. Ken Baker, is now available online {' '}
           <Link to="https://ncwqr.org/wp-content/uploads/2020/02/ncwqr-history-by-ken-baker-2019-updated.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
-            {' '} here!
+            here!
           </Link>
           </>
       ),
@@ -93,9 +93,9 @@ const articles: Record<string, ArticleData> = {
       type: 'paragraph',
       content: (
           <>
-          Moving forward, we\’ll be completing our spring and annual loading calculations, finishing up a number of different papers and reports that are in progress, giving a few presentations, and are looking forward to the
+          Moving forward, we\’ll be completing our spring and annual loading calculations, finishing up a number of different papers and reports that are in progress, giving a few presentations, and are looking forward to the {' '}
           <Link to="https://www.facebook.com/SanduskyRiverWatershedCoalition/photos/a.402820289765903/2696379333743309/?type=3&theater" style={{ color: BLUE, textDecoration: 'underline' }}>
-            {' '} February SRWC Brews and News featuring Ray Grob who will review the history of the Sandusky River!
+           February SRWC Brews and News featuring Ray Grob who will review the history of the Sandusky River!
           </Link>
           </>
       ),
