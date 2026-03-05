@@ -10,6 +10,7 @@ import { GetInvolved } from './pages/GetInvolved';
 import { News } from './pages/News';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
+import { NewsArticle } from './pages/NewsArticle';
 
 export const router = createBrowserRouter([
   {
