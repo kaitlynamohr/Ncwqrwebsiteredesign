@@ -113,7 +113,7 @@ const articles: Record<string, ArticleData> = {
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
     subtitle: 'Weather, research, and resilience in unprecedented times—keeping the NCWQR running through storms, blooms, and a rapidly changing world.',
     heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
-    heroCaption: '',
+    heroCaption: 'image caption',
     body: [
         {
             type: 'paragraph',
@@ -144,9 +144,9 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'Screenshot of the autoBeale program for loads',
+            url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85',
             caption:
-            'Before and during a storm event from a station last week',
+            'Screenshot of the autoBeale program for loads',
         },
         {
             type: 'paragraph',
@@ -155,9 +155,9 @@ const articles: Record<string, ArticleData> = {
         {
             type: 'imagegrid',
             images: [
-                { url: 'https://yourimage1.jpg', caption: 'optional caption' },
-                { url: 'https://yourimage2.jpg', caption: 'optional caption' },
-                { url: 'https://yourimage3.jpg', caption: 'optional caption' },
+                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'optional caption' },
+                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'optional caption' },
+                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'optional caption' },
             ],
         },
         {
