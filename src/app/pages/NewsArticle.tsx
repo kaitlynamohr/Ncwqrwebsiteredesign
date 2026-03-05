@@ -56,7 +56,7 @@ const articles: Record<string, ArticleData> = {
           <Link to="/publications" style={{ color: BLUE, textDecoration: 'underline' }}>
             (HLTP)
           </Link>
-          and were collected from 25 different locations throughout Ohio and one in Michigan. Our researchers published 7 peer-reviewed articles{' '}
+          {' '} and were collected from 25 different locations throughout Ohio and one in Michigan. Our researchers published 7 peer-reviewed articles{' '}
           <Link to="/monitoring" style={{ color: BLUE, textDecoration: 'underline' }}>
             you can find them here
           </Link>
