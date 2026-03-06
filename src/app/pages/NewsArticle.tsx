@@ -261,7 +261,7 @@ const articles: Record<string, ArticleData> = {
     tag: 'Announcement',
     tagColor: BLUE,
     date: 'April 26, 2021',
-    readTime: '5 min read',
+    readTime: '10 min read',
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
@@ -329,7 +329,45 @@ const articles: Record<string, ArticleData> = {
         },
     ],
     relatedIds: ['3', '2', '1'],
-  }, 
+  },
+    '5': {
+    id: '5',
+    tag: 'Annual Report',
+    tagColor: '#B45309',
+    date: 'December 15, 2021',
+    readTime: '2 min read',
+    author: {
+        name: 'Dr. Laura Johnson',
+        title: 'Director, NCWQR',
+        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+    },
+    title: 'The Annual Report for 2021 is now avaliable!',
+    subtitle: 'Closing out 2021 with a look back at a productive year and a preview of the projects ahead for the NCWQR.',
+    heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
+    heroCaption: 'image caption',
+    body: [
+        {
+            type: 'paragraph',
+            content: 'As we end 2021 and enter 2022, I’d like to share some lab updates… this time in the form of a short annual report!  As you’ll see in the report, we’ve had a productive year and are looking forward to some new projects picking up steam over the next year.  Our team has changed some over the past 2 years but we’re now a well-oiled machine and I’m thankful every day to have such great folks at the NCWQR.'
+        },
+        {
+            type: 'paragraph',
+            content: (
+                    <>
+                        Because of Dave and Pete’s tireless work promoting the lab and communicating our results, there is a high appreciation for our work in the region. Our data are being used to {' '}
+                        <Link to="https://ncwqr.org/wp-content/uploads/2021/12/ncwqr-annual-report-2021_final.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            NCWQR Annual Report 2021
+                        </Link>
+                      
+                    </>
+        ),
+        },
+        {
+            type: 'paragraph',
+            content: 'And now with 2022 on the horizon, let\'s sample on!'        },
+    ],
+    relatedIds: ['6', '4', '3'],
+  },  
 };
 
 /* Related article stubs */
