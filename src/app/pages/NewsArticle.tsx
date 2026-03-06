@@ -255,6 +255,80 @@ const articles: Record<string, ArticleData> = {
         },
     ],
     relatedIds: ['4', '2', '1'],
+  },
+    '4': {
+    id: '4',
+    tag: 'Announcement',
+    tagColor: BLUE,
+    date: 'April 26, 2021',
+    readTime: '5 min read',
+    author: {
+        name: 'Dr. Laura Johnson',
+        title: 'Director, NCWQR',
+        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+    },
+    title: 'A Farewell to our Founder, Dr. David Baker',
+    subtitle: 'Remembering the legacy of NCWQR founder Dr. David Baker—whose vision, curiosity, and commitment to data continue to guide the lab’s work today.',
+    heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
+    heroCaption: 'image caption',
+    body: [
+        {
+            type: 'paragraph',
+            content: (
+                    <>
+                        The NCWQR had to say goodbye to our founder, Dr. David Baker, on Saturday.  His accomplishments have been well summarized already {' '}
+                        <Link to="https://www.hgmackfuneralhome.com/obituaries/david-baker" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            here
+                        </Link>
+                        {' '}, and {' '}
+                        <Link to="https://inside.heidelberg.edu/news/041921/campus-mourns-passing-dr-david-baker" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            here
+                        </Link>
+                        {' '}, and {' '}
+                        <Link to="https://www.toledoblade.com/local/environment/2021/04/20/toledo-obituaries-david-bruce-baker-heidelberg-university-renowned-water-quality-expert/stories/20210419122" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            here
+                        </Link>
+                        {' '}, and {' '}
+                        <Link to="https://www.toledoblade.com/opinion/columnists/2021/04/25/commentary-heidelberg-university-david-baker-will-have-lasting-impact-lake-erie/stories/20210424002" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            here
+                        </Link>
+                        {' '}. Furthermore, {' '}
+                        <Link to="https://ncwqr.org/wp-content/uploads/2020/02/ncwqr-history-by-ken-baker-2019-updated.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            a 255 page history of the lab was graciously written by Dr. Ken Baker in 2019
+                        </Link>
+                        {' '} to help celebrate the lab’s 50th anniversary.  As written to his family on Saturday, {' '}
+                        <strong>
+                            Dave Baker will forever be missed, but is also our constant inspiration to do more and always ask “I wonder if…” As long as the NCWQR continues to exist, so does the spirit of Dave Baker.
+                        </strong>
+                    </>
+        ),
+        },
+        {
+            type: 'paragraph',
+            content: 'In this post, I would like to expand on this sentiment and reflect on how Dave has affected my life and will continue to do so. I joined the NCWQR 8 years ago as a research scientist to help Dave complete a few on-going projects that he started in the mid 2000s to better understand why dissolved phosphorus increased in the western Lake Erie tributaries and how to reduce those levels.  It should be noted that these projects were started after Dave\’s first retirement, and overlapped with his term as an interim director. Compared to most people in the lab, I\’ve known Dave for a fairly short amount of time, however, I was able to interact with him closely on these projects and was lucky to see his thinking towards science and data.  '
+        },
+        {
+            type: 'paragraph',
+            content: 'Dave toed the line between being remarkably humble (he would be the first to say he didn\’t have a degree in a field of water science and he didn\’t have a strong statistical background) with being stalwart about the findings in the data and brave to show those data in sticky situations.  He was able to analyze vast quantities of data in ways that were equally simple and yet ingenious.  He was so familiar with these datasets that if other people analyzed lab data in a paper or presentation, he could tell immediately if they did something wrong without even having to look anything up.  In fact, we are all a little worse off than we were before without having Dave around to apply his creative thinking to the world of water.  I, for one, will miss having the opportunity to hear his thoughts on new papers or proposals, reports and guidelines to improve water quality, and his brainstorming on the next thing we should be studying.'
+        },
+        {
+            type: 'paragraph',
+            content: 'It\’s a unique type of grief I think, being in the position I\’m in. I\’ve essentially inherited Dave\’s Water Quality Lab and while the team we have working in the lab currently along with our past director, Ken Krieger, are a wonderful support system, it somehow feels a bit more lonely without Dave. Furthermore, I am no Dave Baker.  I share his enthusiasm for our work, but I don\’t have his way of thinking, I have my own.  The NCWQR these days is a little bit different than in past years.  Much of the team that had been around for many years have retired since I joined the lab in 2013- Pete, Ken, Jack, Dave, Ellen, and Barb, and most recently, Rem started a new position with NIBIO in Norway. But when you think about the fundamentals of what we are doing to this day- how we collect samples, what we measure, and at what frequency- these are the same projects that Dave envisioned and Jack actualized in the early 1970s.'
+        },
+        {
+            type: 'paragraph',
+            content: (
+                    <>
+                        Because of Dave and Pete’s tireless work promoting the lab and communicating our results, there is a high appreciation for our work in the region. Our data are being used to {' '}
+                        <Link to="https://inside.heidelberg.edu/departments-offices/health-center/covid-19-novel-coronavirus" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            assess progress towards reducing phosphorus entering Lake Erie, forecast bloom severity in the western Lake Erie basin, examine the effectiveness of the H2Ohio agricultural and wetland practices being implemented under Governor DeWine, model the needed practices and coverage to improve water quality in the region, determine how much nitrogen and phosphorus comes from different sources in each of the major watersheds in Ohio
+                        </Link>
+                        {' '}, and to develop tools that best estimate loadings when data aren’t as plentiful as they are from the NCWQR.  And I’m certainly missing something in this list.  Because of these activities and our broad network of colleagues, our funding has been ample since I’ve been director and we are currently at the cusp of 2 new, potentially decade-long projects.  I’m pleased to say that it doesn’t appear that activities at the NCWQR will be slowing anytime soon.  Hence, the spirit of Dave Baker, his original ideas on how to monitor watersheds and communicate those results, lives on through each of us at the NCWQR and we intend to sample on!  
+                    </>
+        ),
+        },
+    ],
+    relatedIds: ['3', '2', '1'],
   }, 
 };
 
