@@ -324,6 +324,72 @@ interface AuthorData {
   title: string;
   avatar: string;
 }
+/* Image scroller settings and cycle through arrows + dots */
+function ImageScroller({ images }: { images: { url: string; caption?: string }[] }) {
+  const [current, setCurrent] = useState(0);
+
+  const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+  const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
+
+  return (
+    <div className="relative my-8 rounded-2xl overflow-hidden shadow-md">
+      {/* Image */}
+      <img
+        src={images[current].url}
+        alt={images[current].caption || ''}
+        className="w-full object-cover"
+        style={{ height: '480px' }}
+      />
+
+      {/* Caption */}
+      {images[current].caption && (
+        <div
+          className="absolute bottom-12 left-0 right-0 text-center text-sm text-white px-4"
+          style={{ textShadow: '0 1px 4px rgba(0,0,0,0.7)' }}
+        >
+          {images[current].caption}
+        </div>
+      )}
+
+      {/* Left arrow */}
+      <button
+        onClick={prev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all"
+        style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: '#fff' }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.7)')}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.45)')}
+      >
+        ‹
+      </button>
+
+      {/* Right arrow */}
+      <button
+        onClick={next}
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full flex items-center justify-center transition-all"
+        style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: '#fff' }}
+        onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.7)')}
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'rgba(0,0,0,0.45)')}
+      >
+        ›
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className="w-2.5 h-2.5 rounded-full transition-all"
+            style={{
+              backgroundColor: i === current ? '#fff' : 'rgba(255,255,255,0.4)',
+              transform: i === current ? 'scale(1.2)' : 'scale(1)',
+            }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 interface BodyBlock {
   type: 'paragraph' | 'heading' | 'pullquote' | 'image' | 'databox' | 'imagegrid' | 'subheading' | 'imagescroller';
@@ -484,29 +550,10 @@ function BodyBlock({ block }: { block: BodyBlock }) {
           </h3>
       );
       case 'imagescroller':
-        return (
-          <div className="my-8 overflow-x-auto">
-            <div className="flex gap-4" style={{ minWidth: 'max-content' }}>
-              {block.images?.map((img: { url: string; caption?: string }, i: number) => (
-                <figure key={i} style={{ width: '280px', flexShrink: 0 }}>
-                  <img
-                    src={img.url}
-                    alt={img.caption || ''}
-                    className="w-full h-52 object-cover rounded-xl shadow-sm"
-                  />
-                  {img.caption && (
-                    <figcaption className="mt-2 text-xs text-gray-400 text-center italic">
-                      {img.caption}
-                    </figcaption>
-                  )}
-                </figure>
-              ))}
-            </div>
-          </div>
-      );
-    default:
-      return null;
-  }
+        return <ImageScroller images={block.images || []} />;
+          default:
+            return null;
+        }
 }
 
 function ShareButton({
