@@ -126,7 +126,7 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85',
+            url: 'https://ncwqr.org/wp-content/uploads/2020/03/img_20200317_092823.jpg?w=450',
             caption:
             'Before and during a storm event from a station last week',
         },
@@ -148,7 +148,7 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85',
+            url: 'https://ncwqr.org/wp-content/uploads/2020/03/img_20200303_124841.jpg?w=600',
             caption:
             'Screenshot of the autoBeale program for loads',
         },
@@ -159,9 +159,9 @@ const articles: Record<string, ArticleData> = {
         {
             type: 'imagegrid',
             images: [
-                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'optional caption' },
-                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'optional caption' },
-                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'optional caption' },
+                { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3420.jpg?w=492&h=659&ssl=1'},
+                { url: 'https://ncwqr.org/2020/03/20/from-the-director-2/img_3419/'},
+                { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3408.jpg?w=490&h=657&ssl=1'},
             ],
         },
         {
@@ -215,10 +215,10 @@ const articles: Record<string, ArticleData> = {
         {
           type: 'imagescroller',
           images: [
-            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
-            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
-            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
-            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
+            { url: 'view-source:https://ncwqr.org/wp-content/uploads/2020/10/5-scan0001.jpg?w=1024'},
+            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/ellen-immunoassay-2013-1.jpg'},
+            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/7-scan0003-1.jpg'},
+            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/barb-filtering-samples-2013-1.jpg'},
           ],
           caption: 'Slideshow of Ellen and Barm from then to now'
         },
@@ -245,8 +245,8 @@ const articles: Record<string, ArticleData> = {
         {
             type: 'imagegrid',
             images: [
-                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'Taylor and Emily weighing filters (L to R)' },
-                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'Kevin on the ion chromatograph' },
+                { url: 'https://ncwqr.org/wp-content/uploads/2020/10/2020-10-01-taylor-emily.jpg', caption: 'Taylor and Emily weighing filters (L to R)' },
+                { url: 'https://ncwqr.org/wp-content/uploads/2020/10/2020-10-01-kevin.jpg', caption: 'Kevin on the ion chromatograph' },
             ],
         },
         {
@@ -428,7 +428,7 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85',
+            url: 'https://ncwqr.org/wp-content/uploads/2025/02/summer-camps-poster25_page_3.jpg?w=1440',
         },
     ],
     relatedIds: ['6', '5', '4'],
