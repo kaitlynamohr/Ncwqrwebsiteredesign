@@ -514,7 +514,7 @@ function ImageScroller({ images }: { images: { url: string; caption?: string }[]
       <img
         src={images[current].url}
         alt={images[current].caption || ''}
-        className="w-full object-cover"
+        className="w-full h-auto rounded-xl shadow-sm"
         style={{ height: '480px' }}
       />
 
@@ -654,7 +654,7 @@ function BodyBlock({ block }: { block: BodyBlock }) {
           <img
             src={block.url}
             alt={block.caption || ''}
-            className="w-full rounded-2xl object-cover shadow-md"
+            className="w-full h-auto rounded-2xl shadow-md"
             style={{ maxHeight: '480px' }}
           />
           {block.caption && (
