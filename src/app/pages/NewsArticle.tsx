@@ -105,8 +105,8 @@ const articles: Record<string, ArticleData> = {
   },
     '2': {
     id: '2',
-    tag: 'Annual Report',
-    tagColor: '#B45309',
+    tag: 'Announcement',
+    tagColor: BLUE,
     date: 'March 20, 2020',
     readTime: '5 min read',
     author: {
@@ -186,7 +186,76 @@ const articles: Record<string, ArticleData> = {
         },
     ],
     relatedIds: ['4', '3', '1'],
+  },
+    '3': {
+    id: '3',
+    tag: 'Announcement',
+    tagColor: BLUE,
+    date: 'October 1, 2020',
+    readTime: '4 min read',
+    author: {
+        name: 'Dr. Laura Johnson',
+        title: 'Director, NCWQR',
+        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
     },
+    title: 'Happy New Year from NCWQR! Welcome to our 2020 Student Research Interns',
+    subtitle: 'A changing of the guard at NCWQR—honoring longtime staff while welcoming a new generation of field and lab scientists.',
+    heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
+    heroCaption: 'image caption',
+    body: [
+        {
+          type: 'subheading',
+          content: 'Happy New Year!'
+        },
+        {
+            type: 'paragraph',
+            content:
+            'This year brings a lot of changes for the NCWQR.  Ellen and Barb, our two longest term employees retired at the end of August.  Their talent and dedication to the NCWQR is what made us one of the best water quality labs around!  We already miss them both greatly but know that they are enjoying not having to panic during every storm.',
+        },
+        {
+          type: 'imagescroller',
+          images: [
+            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
+            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
+            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
+            { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85'},
+          ],
+          caption: 'Slideshow of Ellen and Barm from then to now'
+        },
+        {
+            type: 'paragraph',
+            content: 'With that, I\’d like to introduce our three new field & lab technicians!  Taylor Fulton joined us in mid-August, Emily Clark at the beginning of September, and Kevin Jones in mid-September. ',
+        },
+        {
+          type: 'paragraph',
+          content: 'Taylor recently graduated from Kent State University with a BS in Environmental Conservation Biology and worked as an undergraduate researcher in a soil ecology lab and an ecotoxicology & biogeochemistry lab.  '
+        },
+        {
+          type: 'paragraph',
+          content: 'Emily is also a recent graduate, but from Bowling Green State University with a B.S. in Environmental Science.  As an undergraduate she worked in a water chemistry lab and did an REU at U of Toledo on respiration rates of artic soils.  '
+        },
+        {
+          type: 'paragraph',
+          content: 'Kevin returned to Ohio to join the lab after a couple years of water monitoring in Florida at Sanibel-Captiva Conservation Foundation.  Prior to that he worked for a couple of summers in the water chemistry lab at OSU Stone Lab and was a fish observer in Alaska. He graduated from the University of Alabama with a B.S. in Chemistry and Marine Science.'
+        },
+        {
+          type: 'paragraph',
+          content: 'All three have experiences that are a great fit for the NCWQR and we\’re so happy they all decided to join our team! '
+        },
+        {
+            type: 'imagegrid',
+            images: [
+                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'Taylor and Emily weighing filters (L to R)' },
+                { url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85', caption: 'Kevin on the ion chromatograph' },
+            ],
+        },
+        {
+            type: 'paragraph',
+            content: 'And so, our new year\'s resolution will be the same as every year...sample on!'
+        },
+    ],
+    relatedIds: ['4', '2', '1'],
+  }, 
 };
 
 /* Related article stubs */
@@ -257,7 +326,7 @@ interface AuthorData {
 }
 
 interface BodyBlock {
-  type: 'paragraph' | 'heading' | 'pullquote' | 'image' | 'databox' | 'imagegrid';
+  type: 'paragraph' | 'heading' | 'pullquote' | 'image' | 'databox' | 'imagegrid' | 'subheading' | 'imagescroller';
   content?: string | React.ReactNode;
   attribution?: string;
   url?: string;
@@ -402,7 +471,36 @@ function BodyBlock({ block }: { block: BodyBlock }) {
                 ))}
             </div>
         );
-
+      case 'subheading':
+        return (
+          <h3
+            className="mt-8 mb-4 text-center"
+            style={{ fontSize: '1.2rem', fontWeight: 700, color: BLUE, lineHeight: 1.3 }}
+          >
+            {block.content}
+          </h3>
+      );
+      case 'imagescroller':
+        return (
+          <div className="my-8 overflow-x-auto">
+            <div className="flex gap-4" style={{ minWidth: 'max-content' }}>
+              {block.images?.map((img: { url: string; caption?: string }, i: number) => (
+                <figure key={i} style={{ width: '280px', flexShrink: 0 }}>
+                  <img
+                    src={img.url}
+                    alt={img.caption || ''}
+                    className="w-full h-52 object-cover rounded-xl shadow-sm"
+                  />
+                  {img.caption && (
+                    <figcaption className="mt-2 text-xs text-gray-400 text-center italic">
+                      {img.caption}
+                    </figcaption>
+                  )}
+                </figure>
+              ))}
+            </div>
+          </div>
+      );
     default:
       return null;
   }
