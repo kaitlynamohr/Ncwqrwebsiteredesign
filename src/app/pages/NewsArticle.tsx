@@ -655,17 +655,31 @@ function BodyBlock({ block }: { block: BodyBlock }) {
     case 'image':
       const heightMap = {
         small: '250px',
-        medium: '480px',
-        large: '900px',
+        medium: 'auto',
+        large: 'auto',
       };
+
+      const maxHeightMap = {
+        small: '250px',
+        medium: '500px',
+        large: 'none',
+      };
+
       const imageSize = block.size ?? 'medium';
       return (
         <figure className="my-10">
           <img
             src={block.url}
             alt={block.caption || ''}
-            className="w-full rounded-2xl object-contain shadow-md"
-            style={{ height: heightMap[imageSize] }}
+            className="rounded-2xl shadow-md"
+            style={{
+              height: heightMap[imageSize],
+              maxHeight: maxHeightMap[imageSize],
+              width: 'auto',
+              maxWidth: '100%',
+              display: 'block',
+              margin: '0 auto',
+            }}
           />
           {block.caption && (
             <figcaption className="mt-3 text-sm text-gray-500 text-center italic">
@@ -673,8 +687,7 @@ function BodyBlock({ block }: { block: BodyBlock }) {
             </figcaption>
           )}
         </figure>
-    );
-
+      );
     case 'databox':
       return (
         <div
