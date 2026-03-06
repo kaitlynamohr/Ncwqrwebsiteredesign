@@ -656,7 +656,7 @@ function BodyBlock({ block }: { block: BodyBlock }) {
       const heightMap = {
         small: '250px',
         medium: '480px',
-        large: '700px',
+        large: '900px',
       };
       const imageSize = block.size ?? 'medium';
       return (
@@ -664,7 +664,7 @@ function BodyBlock({ block }: { block: BodyBlock }) {
           <img
             src={block.url}
             alt={block.caption || ''}
-            className="w-full rounded-2xl object-cover shadow-md"
+            className="w-full rounded-2xl object-contain shadow-md"
             style={{ height: heightMap[imageSize] }}
           />
           {block.caption && (
