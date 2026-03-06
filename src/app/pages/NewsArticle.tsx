@@ -354,7 +354,6 @@ const articles: Record<string, ArticleData> = {
             type: 'paragraph',
             content: (
                     <>
-                        Because of Dave and Pete’s tireless work promoting the lab and communicating our results, there is a high appreciation for our work in the region. Our data are being used to {' '}
                         <Link to="https://ncwqr.org/wp-content/uploads/2021/12/ncwqr-annual-report-2021_final.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
                             NCWQR Annual Report 2021
                         </Link>
