@@ -34,7 +34,7 @@ const articles: Record<string, ArticleData> = {
     author: {
       name: 'Dr. Laura Johnson',
       title: 'Director, NCWQR',
-      avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+      avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'NCWQR Launches Monthly Updates Highlighting Research, Data, and Outreach Efforts',
     subtitle:
@@ -112,7 +112,7 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+        avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
     subtitle: 'Weather, research, and resilience in unprecedented times—keeping the NCWQR running through storms, blooms, and a rapidly changing world.',
@@ -198,7 +198,7 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+        avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'Happy New Year from NCWQR! Welcome to our 2020 Student Research Interns',
     subtitle: 'A changing of the guard at NCWQR—honoring longtime staff while welcoming a new generation of field and lab scientists.',
@@ -267,7 +267,7 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+        avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'A Farewell to our Founder, Dr. David Baker',
     subtitle: 'Remembering the legacy of NCWQR founder Dr. David Baker—whose vision, curiosity, and commitment to data continue to guide the lab’s work today.',
@@ -341,7 +341,7 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+        avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'The Annual Report for 2021 is now avaliable!',
     subtitle: 'Closing out 2021 with a look back at a productive year and a preview of the projects ahead for the NCWQR.',
@@ -379,7 +379,7 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+        avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'The Annual Report for 2022 is now avaliable!',
     subtitle: 'Highlights from the NCWQR’s 2022 annual report, including new team members, ongoing monitoring programs, and preparations for the upcoming Lake Erie bloom forecast season.',
@@ -413,7 +413,7 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+        avatar: 'https://www.heidelberg.edu/sites/default/files/images/staff-images/LauraJohnson_0.jpg',
     },
     title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
     subtitle: 'A hands-on workshop where participants investigate stream and wetland health using real water quality monitoring tools and data analysis.',
