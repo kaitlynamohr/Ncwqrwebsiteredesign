@@ -129,6 +129,7 @@ const articles: Record<string, ArticleData> = {
             url: 'https://ncwqr.org/wp-content/uploads/2020/03/img_20200317_092823.jpg?w=450',
             caption:
             'Before and during a storm event from a station last week',
+            size: 'medium'
         },
         {
             type: 'paragraph',
@@ -151,6 +152,7 @@ const articles: Record<string, ArticleData> = {
             url: 'https://ncwqr.org/wp-content/uploads/2020/03/img_20200303_124841.jpg?w=600',
             caption:
             'Screenshot of the autoBeale program for loads',
+            size: 'medium'
         },
         {
             type: 'paragraph',
@@ -429,6 +431,7 @@ const articles: Record<string, ArticleData> = {
         {
             type: 'image',
             url: 'https://ncwqr.org/wp-content/uploads/2025/02/summer-camps-poster25_page_3.jpg?w=1440',
+            size: 'large'
         },
     ],
     relatedIds: ['6', '5', '4'],
@@ -577,6 +580,7 @@ interface BodyBlock {
   label?: string;
   stats?: { value: string; description: string }[];
   images?: { url: string; caption?: string }[];
+  size?: 'small' | 'medium' | 'large';
 }
 
 interface ArticleData {
@@ -649,13 +653,19 @@ function BodyBlock({ block }: { block: BodyBlock }) {
       );
 
     case 'image':
+      const heightMap = {
+        small: '250px',
+        medium: '480px',
+        large: '700px',
+      };
+      const imageSize = block.size ?? 'medium';
       return (
         <figure className="my-10">
           <img
             src={block.url}
             alt={block.caption || ''}
-            className="w-full h-auto rounded-2xl shadow-md"
-            style={{ maxHeight: '480px' }}
+            className="w-full rounded-2xl object-cover shadow-md"
+            style={{ height: heightMap[imageSize] }}
           />
           {block.caption && (
             <figcaption className="mt-3 text-sm text-gray-500 text-center italic">
@@ -663,7 +673,7 @@ function BodyBlock({ block }: { block: BodyBlock }) {
             </figcaption>
           )}
         </figure>
-      );
+    );
 
     case 'databox':
       return (
