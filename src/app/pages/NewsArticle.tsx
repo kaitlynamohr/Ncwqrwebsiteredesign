@@ -363,7 +363,42 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'paragraph',
-            content: 'And now with 2022 on the horizon, let\'s sample on!'        },
+            content: 'And now with 2022 on the horizon, let\'s sample on!'
+        },
+    ],
+    relatedIds: ['6', '4', '3'],
+  },
+    '6': {
+    id: '6',
+    tag: 'Annual Report',
+    tagColor: '#B45309',
+    date: 'March 16, 2023',
+    readTime: '3 min read',
+    author: {
+        name: 'Dr. Laura Johnson',
+        title: 'Director, NCWQR',
+        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+    },
+    title: 'The Annual Report for 2022 is now avaliable!',
+    subtitle: 'Highlights from the NCWQR’s 2022 annual report, including new team members, ongoing monitoring programs, and preparations for the upcoming Lake Erie bloom forecast season.',
+    heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
+    heroCaption: 'image caption',
+    body: [
+        {
+            type: 'paragraph',
+            content: 'The 2022 annual report is now available! We’ve had another productive year that ended with a number of publications coming online around the same time. We added a new team member, James, who is sampling our wetlands as part of the H2Ohio Wetlands Monitoring Program. In the coming year, we continue to grow and anticipate adding a postdoctoral research associate and a new research technician to our team. At this time, we’re in the middle of finishing up quality control and assessment on the 2022 HTLP data and calculating nutrient loads. That being said, the 2023 loading season for HABs in the western Lake Erie basin has also officially started (early season projections will start in May and the seasonal forecast is planned for June 29). Our plan for the remainder of 2023 is the same as every year, and that’s to sample on! '
+        },
+        {
+            type: 'paragraph',
+            content: (
+                    <>
+                        <Link to="https://ncwqr.org/wp-content/uploads/2023/03/ncwqr-annual-report-2022_6jan23.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                            NCWQR Annual Report 2022
+                        </Link>
+                      
+                    </>
+        ),
+        },
     ],
     relatedIds: ['6', '4', '3'],
   },  
