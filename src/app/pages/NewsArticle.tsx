@@ -400,7 +400,38 @@ const articles: Record<string, ArticleData> = {
         ),
         },
     ],
-    relatedIds: ['6', '4', '3'],
+    relatedIds: ['5', '4', '3'],
+  },
+    '7': {
+    id: '7',
+    tag: 'Event',
+    tagColor: GREEN,
+    date: 'February 6, 2025',
+    readTime: '5 min read',
+    author: {
+        name: 'Dr. Laura Johnson',
+        title: 'Director, NCWQR',
+        avatar: 'https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=120&q=80',
+    },
+    title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
+    subtitle: 'A hands-on workshop where participants investigate stream and wetland health using real water quality monitoring tools and data analysis.',
+    heroImage: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85',
+    heroCaption: 'image caption',
+    body: [
+        {
+          type: 'subheading',
+          content: '2025 Summer Camp: Water Detectives - Rivers and Wetlands'
+        },
+        {
+            type: 'paragraph',
+            content: 'Led by researchers from the National Center for Water Quality Research, attendees will become water detectives to determine the health of local streams and wetlands. In the field, hands-on training with specialized water quality equipment will help attendees learn how to assess the physical, chemical, and biological components of streams and wetlands. After collecting their own data, attendees will learn how to analyze the data they collected to determine the health of the water. Lastly, they will learn how their findings can be used to guide decision making and policy decisions on real-life water quality issues threatening our freshwater systems.'
+        },
+        {
+            type: 'image',
+            url: 'https://images.unsplash.com/photo-1676694571291-f58eb75c268f?w=1200&q=85',
+        },
+    ],
+    relatedIds: ['6', '5', '4'],
   },  
 };
 
