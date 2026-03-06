@@ -89,12 +89,16 @@ const articles: Record<string, ArticleData> = {
         type: 'paragraph',
         content: (
                 <>
-                    Moving forward, we\’ll be completing our spring and annual loading calculations, finishing up a number of different papers and reports that are in progress, giving a few presentations, and are looking forward to the {' '}
+                    Moving forward, we’ll be completing our spring and annual loading calculations, finishing up a number of different papers and reports that are in progress, giving a few presentations, and are looking forward to the {' '}
                     <Link to="https://www.facebook.com/SanduskyRiverWatershedCoalition/photos/a.402820289765903/2696379333743309/?type=3&theater" style={{ color: BLUE, textDecoration: 'underline' }}>
                     February SRWC Brews and News featuring Ray Grob who will review the history of the Sandusky River!
                     </Link>
                 </>
       ),
+      },
+      {
+        type: 'paragraph',
+        content: '…and as always, sample on!'
       },
     ],
     relatedIds: ['4', '3', '2'],
@@ -172,9 +176,13 @@ const articles: Record<string, ArticleData> = {
                         <Link to="https://inside.heidelberg.edu/departments-offices/health-center/covid-19-novel-coronavirus" style={{ color: BLUE, textDecoration: 'underline' }}>
                             Heidelberg campus will be closed after Sunday for the rest of the semester and that all classes have moved online.
                         </Link>
-                        {' '} Aaron and Rem will have their hands full transitioning existing content into this new platform!  For the lab, we are suspending sampling at stations where the samples have to be shipped (Raisin, Cuyahoga, Great Miami, Scioto, and Muskingum) and reducing sampling frequency at the remaining stations to once per day starting on Monday, March 23.  This should get us ~2-3 weeks of sampling before we\’d need new bottles. We are in the Maumee loading season for predicting bloom severity, and thus will prioritize Maumee sampling as we are able.   Though the order only lasts for two weeks, who knows what will happen as we move forward.  We will be making decisions that prioritize the health of everyone at the NCWQR first, and then we\’ll be sampling as much as we can second!
+                        {' '} Aaron and Rem will have their hands full transitioning existing content into this new platform!  For the lab, we are suspending sampling at stations where the samples have to be shipped (Raisin, Cuyahoga, Great Miami, Scioto, and Muskingum) and reducing sampling frequency at the remaining stations to once per day starting on Monday, March 23.  This should get us ~2-3 weeks of sampling before we’d need new bottles. We are in the Maumee loading season for predicting bloom severity, and thus will prioritize Maumee sampling as we are able.   Though the order only lasts for two weeks, who knows what will happen as we move forward.  We will be making decisions that prioritize the health of everyone at the NCWQR first, and then we’ll be sampling as much as we can second!
                     </>
         ),
+        },
+        {
+            type: 'paragraph',
+            content: 'Until then, sample on!'
         },
     ],
     relatedIds: ['4', '3', '1'],
