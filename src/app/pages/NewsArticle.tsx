@@ -453,22 +453,25 @@ function BodyBlock({ block }: { block: BodyBlock }) {
         </div>
       );
       case 'imagegrid':
-        return (
-            <div className="grid grid-cols-3 gap-4 my-8">
-            {block.images?.map((img: { url: string; caption?: string }, i: number) => (
+          return (
+            <div 
+              className="grid gap-4 my-8"
+              style={{ gridTemplateColumns: `repeat(${block.images?.length || 1}, 1fr)` }}
+            >
+              {block.images?.map((img: { url: string; caption?: string }, i: number) => (
                 <figure key={i}>
-                    <img
+                  <img
                     src={img.url}
                     alt={img.caption || ''}
                     className="w-full h-48 object-cover rounded-xl shadow-sm"
-                    />
-                    {img.caption && (
+                  />
+                  {img.caption && (
                     <figcaption className="mt-2 text-xs text-gray-400 text-center italic">
-                        {img.caption}
+                      {img.caption}
                     </figcaption>
-                    )}
+                  )}
                 </figure>
-                ))}
+              ))}
             </div>
         );
       case 'subheading':
