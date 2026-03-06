@@ -160,7 +160,7 @@ const articles: Record<string, ArticleData> = {
             type: 'imagegrid',
             images: [
                 { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3420.jpg?w=492&h=659&ssl=1'},
-                { url: 'https://ncwqr.org/2020/03/20/from-the-director-2/img_3419/'},
+                { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3419.jpg?w=490&h=657&ssl=1'},
                 { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3408.jpg?w=490&h=657&ssl=1'},
             ],
         },
@@ -215,7 +215,7 @@ const articles: Record<string, ArticleData> = {
         {
           type: 'imagescroller',
           images: [
-            { url: 'view-source:https://ncwqr.org/wp-content/uploads/2020/10/5-scan0001.jpg?w=1024'},
+            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/5-scan0001.jpg?w=1024'},
             { url: 'https://ncwqr.org/wp-content/uploads/2020/10/ellen-immunoassay-2013-1.jpg'},
             { url: 'https://ncwqr.org/wp-content/uploads/2020/10/7-scan0003-1.jpg'},
             { url: 'https://ncwqr.org/wp-content/uploads/2020/10/barb-filtering-samples-2013-1.jpg'},
