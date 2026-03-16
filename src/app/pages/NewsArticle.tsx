@@ -34,13 +34,11 @@ const articles: Record<string, ArticleData> = {
     author: {
       name: 'Dr. Laura Johnson',
       title: 'Director, NCWQR',
-      avatar: '/public/images/people/dr-laura-joghnson.jpg',
+      avatar: '/images/people/dr-laura-joghnson.jpg',
     },
     title: 'NCWQR Launches Monthly Updates Highlighting Research, Data, and Outreach Efforts',
-    subtitle:
-      'Tracking water, research, and community impact from the 3rd floor of Gillmor Hall—celebrating a year of discoveries, collaborations, and milestones at the NCWQR.',
-    heroImage:
-      '/public/images/2014-trees.jpg',
+    subtitle: 'Tracking water, research, and community impact from the 3rd floor of Gillmor Hall—celebrating a year of discoveries, collaborations, and milestones at the NCWQR.',
+    heroImage: '/images/2014-trees.jpg',
     heroCaption: 'image caption',
     body: [
       {
@@ -112,11 +110,11 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: '/public/images/people/dr-laura-johnson.jpg',
+        avatar: '/images/people/dr-laura-johnson.jpg',
     },
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
     subtitle: 'Weather, research, and resilience in unprecedented times—keeping the NCWQR running through storms, blooms, and a rapidly changing world.',
-    heroImage: '/public/images/nature/bush-RC.jpg',
+    heroImage: '/images/nature/bush-RC.jpg',
     heroCaption: 'image caption',
     body: [
         {
@@ -198,11 +196,11 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: '/public/images/people/dr-laura-johnson.jpg',
+        avatar: '/images/people/dr-laura-johnson.jpg',
     },
     title: 'Happy New Year from NCWQR! Welcome to our 2020 Student Research Interns',
     subtitle: 'A changing of the guard at NCWQR—honoring longtime staff while welcoming a new generation of field and lab scientists.',
-    heroImage: '/public/images/nature/RC-muddy-low.jpg',
+    heroImage: '/images/nature/RC-muddy-low.jpg',
     heroCaption: 'image caption',
     body: [
         {
@@ -267,11 +265,11 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: '/public/images/people/dr-laura-johnson.jpg',
+        avatar: '/images/people/dr-laura-johnson.jpg',
     },
     title: 'A Farewell to our Founder, Dr. David Baker',
     subtitle: 'Remembering the legacy of NCWQR founder Dr. David Baker—whose vision, curiosity, and commitment to data continue to guide the lab’s work today.',
-    heroImage: '/public/images/people/baker-respirometer.jpg',
+    heroImage: '/images/people/baker-respirometer.jpg',
     heroCaption: 'image caption',
     body: [
         {
@@ -341,11 +339,11 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: '/public/images/people/dr-laura-johnson.jpg',
+        avatar: '/images/people/dr-laura-johnson.jpg',
     },
     title: 'The Annual Report for 2021 is now avaliable!',
     subtitle: 'Closing out 2021 with a look back at a productive year and a preview of the projects ahead for the NCWQR.',
-    heroImage: '/public/images/nature/winter-water.jpg',
+    heroImage: '/images/nature/winter-water.jpg',
     heroCaption: 'image caption',
     body: [
         {
@@ -379,11 +377,11 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: '/public/images/people/dr-laura-johnson.jpg',
+        avatar: '/images/people/dr-laura-johnson.jpg',
     },
     title: 'The Annual Report for 2022 is now avaliable!',
     subtitle: 'Highlights from the NCWQR’s 2022 annual report, including new team members, ongoing monitoring programs, and preparations for the upcoming Lake Erie bloom forecast season.',
-    heroImage: '/public/images/nature/rock-creek-low.jpg',
+    heroImage: '/images/nature/rock-creek-low.jpg',
     heroCaption: 'image caption',
     body: [
         {
@@ -413,11 +411,11 @@ const articles: Record<string, ArticleData> = {
     author: {
         name: 'Dr. Laura Johnson',
         title: 'Director, NCWQR',
-        avatar: '/public/images/people/dr-laura/johnson.jpg',
+        avatar: '/images/people/dr-laura/johnson.jpg',
     },
     title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
     subtitle: 'A hands-on workshop where participants investigate stream and wetland health using real water quality monitoring tools and data analysis.',
-    heroImage: '/public/images/Gillmore-2014.jpg',
+    heroImage: '/images/Gillmore-2014.jpg',
     heroCaption: 'image caption',
     body: [
         {
@@ -444,7 +442,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '7',
     date: 'February 6, 2025',
     title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
-    image: '/public/images/Gillmore-2014.jpg',
+    image: '/images/Gillmore-2014.jpg',
     tag: 'Event',
     tagColor: GREEN,
   },
@@ -452,7 +450,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '6',
     date: 'March 16, 2023',
     title: 'The Annual Report for 2022 is now available!',
-    image: '/public/images/nature/rock-creek-low.jpg',
+    image: '/images/nature/rock-creek-low.jpg',
     tag: 'Annual Report',
     tagColor: '#B45309',
   },
@@ -460,7 +458,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '5',
     date: 'December 15, 2021',
     title: 'The Annual Report for 2021 is now available!',
-    image: '/public/images/winter-water.jpg',
+    image: '/images/winter-water.jpg',
     tag: 'Annual Report',
     tagColor: '#B45309',
   },
@@ -468,7 +466,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '4',
     date: 'April 26, 2021',
     title: 'Farewell to our Founder, Dr. David Baker',
-    image: '/public/images/people/baker-respirometer.jpg',
+    image: '/images/people/baker-respirometer.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -476,7 +474,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '3',
     date: 'October 1, 2020',
     title: 'Happy New Year from NCWQR! Welcome to our 2020 Student Research Interns',
-    image: '/public/images/nature/RC-muddy-low',
+    image: '/images/nature/RC-muddy-low',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -484,7 +482,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '2',
     date: 'March 20, 2020',
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
-    image: '/public/images/nature/bush-RC.jpg',
+    image: '/images/nature/bush-RC.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -492,7 +490,7 @@ const relatedArticles: Record<string, RelatedArticle> = {
     id: '1',
     date: 'February 1, 2020',
     title: 'NCWQR Launches Monthly Updates Highlighting Research, Data, and Outreach Efforts',
-    image: '/public/images/nature/2014-trees.jpg',
+    image: '/images/nature/2014-trees.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
