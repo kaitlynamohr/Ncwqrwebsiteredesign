@@ -13,7 +13,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                  src="/images/ncwqr-logo-large.jpg"
+                  src="/images/ncwqr-logo-2026-large.jpg"
                   alt="NCWQR Logo"
                   className="h-10 w-auto"
                 />
