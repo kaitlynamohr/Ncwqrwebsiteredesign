@@ -63,7 +63,7 @@ const newsItems = [
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
     excerpt:
       'The NCWQR team has had a busy spring sampling season and recent outreach activities, but we are adjusting to the new realities of COVID-19. We have implemented safety protocols for our field teams, including social distancing and enhanced sanitation measures, to ensure the safety of our staff while continuing our critical water quality monitoring work. We remain committed to providing high-quality data and research to support informed decision-making for Lake Erie\'s health.',
-    image: 'images/nautre/bush-RC.jpg',
+    image: 'images/nature/bush-RC.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
