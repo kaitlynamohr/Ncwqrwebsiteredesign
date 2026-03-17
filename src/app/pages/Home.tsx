@@ -39,31 +39,34 @@ const services = [
 
 const news = [
   {
-    id: 1,
-    date: 'February 14, 2025',
-    title: 'NCWQR Joins COMPASS Great Lakes Coastal Observations Network',
+    id: 7,
+    date: 'February 6, 2025',
+    title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
     excerpt:
-      'NCWQR has partnered with Pacific Northwest National Laboratory and the broader COMPASS network to expand coastal ecosystem monitoring across the Great Lakes.',
-    image: 'https://images.unsplash.com/photo-1752424751303-33bde8f3c487?w=600&q=80',
-    tag: 'Partnership',
+      'NCWQR is excited to announce a new summer camp opportunity for local middle school students: "Water Detectives - Rivers and Wetlands." This week-long camp will provide hands-on learning experiences focused on water quality monitoring, aquatic ecology, and conservation in Lake Erie\'s tributaries and wetlands. Campers will engage in field sampling, lab activities, and interactive lessons led by NCWQR scientists.',
+    image: 'images/lab/gillmore-2014.jpg',
+    tag: 'Event',
+    tagColor: GREEN,
   },
   {
-    id: 2,
-    date: 'November 8, 2024',
-    title: '2024 Tributary Loading Report Now Available for Download',
+    id: 6,
+    date: 'March 16, 2023',
+    title: 'The Annual Report for 2022 is now available!',
     excerpt:
-      'Annual data summary for all 18 HTLP monitoring stations is now published, showing continued nutrient load patterns across the Western Lake Erie Basin.',
-    image: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=600&q=80',
-    tag: 'Data Release',
+      'NCWQR\'s 2022 Annual Report is now available for download. The report highlights key findings from the year\'s monitoring efforts, including trends in nutrient loading, emerging contaminants, and ecological health indicators across the HTLP network. It also features updates on research projects, partnerships, and community engagement initiatives.',
+    image: 'images/nature/rock-creek-low.JPG',
+    tag: 'Annual Report',
+    tagColor: '#B45309',
   },
   {
-    id: 3,
-    date: 'August 29, 2024',
-    title: 'HAB Season Outlook: NOAA Forecast Informed by NCWQR Data',
+    id: 5,
+    date: 'December 15, 2021',
+    title: 'The Annual Report for 2021 is now available!',
     excerpt:
-      'NOAA\'s 2024 harmful algal bloom forecast for Lake Erie\'s Western Basin drew heavily on tributary phosphorus loading data collected by NCWQR throughout the spring season.',
-    image: 'https://images.unsplash.com/photo-1595114828630-4c3d46d92a1b?w=600&q=80',
-    tag: 'HAB Forecast',
+      'NCWQR\'s 2021 Annual Report is now available for download. The report highlights key findings from the year\'s monitoring efforts, including long-term moniroting and modeling of rivers feeding Lake Erie. It also features updates on new projects, technology, and partnerships to support sustainable water management.',
+    image: 'images/nature/winter-water.jpg',
+    tag: 'Annual Report',
+    tagColor: '#B45309',
   },
 ];
 
@@ -75,7 +78,7 @@ export function Home() {
         className="relative flex items-center justify-start overflow-hidden"
         style={{
           minHeight: '92vh',
-          backgroundImage: `url(https://images.unsplash.com/photo-1748892030128-341ea9ea13f8?w=1600&q=90)`,
+          backgroundImage: 'images/nature/rock-splash-action.JPG',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -414,7 +417,7 @@ export function Home() {
           <div
             className="relative min-h-80 lg:min-h-[500px]"
             style={{
-              backgroundImage: `url(https://images.unsplash.com/photo-1748261347768-a32434751a9a?w=900&q=85)`,
+              backgroundImage: 'images/lab/test-circle.jpg',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}

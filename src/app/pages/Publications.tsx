@@ -118,7 +118,7 @@ export function Publications() {
       <PageHero
         title="Publications"
         subtitle="Peer-reviewed research, technical reports, and conference contributions from NCWQR scientists."
-        imageUrl="https://images.unsplash.com/photo-1570615541379-e6b7ab6d4eb9?w=1600&q=85"
+        imageUrl="images/nature/2014-bridge.jpg"
       />
 
       <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F8FAFC' }}>

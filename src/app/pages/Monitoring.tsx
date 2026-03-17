@@ -57,7 +57,7 @@ export function Monitoring() {
       <PageHero
         title="Monitoring Program"
         subtitle="The Heidelberg Tributary Loading Program — the world's most comprehensive water quality record for Lake Erie's tributaries."
-        imageUrl="https://images.unsplash.com/photo-1763658997578-90f853cff359?w=1600&q=85"
+        imageUrl="images/nature/RC-leaves-water.jpg"
       />
 
       {/* ── HTLP FEATURED ── */}
@@ -127,7 +127,7 @@ export function Monitoring() {
               className="rounded-2xl overflow-hidden shadow-xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1595114828630-4c3d46d92a1b?w=800&q=85"
+                src="images/nature/wetlands.JPG"
                 alt="HTLP Monitoring Network Map"
                 className="w-full h-80 lg:h-96 object-cover"
               />

@@ -72,7 +72,7 @@ export function WaterTesting() {
       <PageHero
         title="Water Testing Services"
         subtitle="State-of-the-art analytical laboratory services since 1969 — nearly 200,000 samples processed with rigor and precision."
-        imageUrl="https://images.unsplash.com/photo-1570615541379-e6b7ab6d4eb9?w=1600&q=85"
+        imageUrl="images/lab/sample-stations.jpg"
       />
 
       {/* ── INTRO ── */}

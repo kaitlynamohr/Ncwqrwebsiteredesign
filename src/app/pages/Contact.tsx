@@ -41,7 +41,7 @@ export function Contact() {
       <PageHero
         title="Contact Us"
         subtitle="Reach out to the NCWQR team for research inquiries, water testing requests, collaboration opportunities, and more."
-        imageUrl="https://images.unsplash.com/photo-1762075314727-bfa5da3c235e?w=1600&q=85"
+        imageUrl="images/lab/Gillmore.JPG"
       />
 
       <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F8FAFC' }}>
@@ -313,7 +313,7 @@ export function Contact() {
               style={{ backgroundColor: '#dde4ec' }}
             >
               <img
-                src="https://images.unsplash.com/photo-1762075314727-bfa5da3c235e?w=1400&q=70"
+                src="images/lab/Gillmore-2015.JPG"
                 alt="Heidelberg University Campus"
                 className="absolute inset-0 w-full h-full object-cover opacity-50"
               />

@@ -234,7 +234,7 @@ export function Research() {
       <PageHero
         title="Research"
         subtitle="Active partnerships with USDA, NOAA, USGS, and leading universities — tackling the most pressing water quality challenges of our time."
-        imageUrl="https://images.unsplash.com/photo-1752424751303-33bde8f3c487?w=1600&q=85"
+        imageUrl="images/lab/1980-pesticides.jpg"
       />
 
       {/* ── ONGOING ── */}

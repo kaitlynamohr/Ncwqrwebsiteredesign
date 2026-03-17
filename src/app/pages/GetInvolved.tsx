@@ -64,7 +64,7 @@ export function GetInvolved() {
       <PageHero
         title="Do Real Science. Make a Real Impact."
         subtitle="Student internships at NCWQR put you on the front lines of nationally significant water quality research — before you graduate."
-        imageUrl="https://images.unsplash.com/photo-1748261347768-a32434751a9a?w=1600&q=85"
+        imageUrl="images/people/candice-suzie.jpg"
       />
 
       {/* ── HERO STATEMENT ── */}
@@ -135,7 +135,7 @@ export function GetInvolved() {
           <div
             className="relative min-h-72 lg:min-h-[500px]"
             style={{
-              backgroundImage: `url(https://images.unsplash.com/photo-1762075314727-bfa5da3c235e?w=900&q=85)`,
+              backgroundImage: 'images/lab/classroom-gm.JPG',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
