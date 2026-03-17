@@ -44,7 +44,7 @@ const news = [
     title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
     excerpt:
       'NCWQR is excited to announce a new summer camp opportunity for local middle school students: "Water Detectives - Rivers and Wetlands." This week-long camp will provide hands-on learning experiences focused on water quality monitoring, aquatic ecology, and conservation in Lake Erie\'s tributaries and wetlands. Campers will engage in field sampling, lab activities, and interactive lessons led by NCWQR scientists.',
-    image: 'images/lab/gillmore-2014.jpg',
+    image: '/images/lab/gillmore-2014.jpg',
     tag: 'Event',
     tagColor: GREEN,
   },
@@ -54,7 +54,7 @@ const news = [
     title: 'The Annual Report for 2022 is now available!',
     excerpt:
       'NCWQR\'s 2022 Annual Report is now available for download. The report highlights key findings from the year\'s monitoring efforts, including trends in nutrient loading, emerging contaminants, and ecological health indicators across the HTLP network. It also features updates on research projects, partnerships, and community engagement initiatives.',
-    image: 'images/nature/rock-creek-low.JPG',
+    image: '/images/nature/rock-creek-low.JPG',
     tag: 'Annual Report',
     tagColor: '#B45309',
   },
@@ -64,7 +64,7 @@ const news = [
     title: 'The Annual Report for 2021 is now available!',
     excerpt:
       'NCWQR\'s 2021 Annual Report is now available for download. The report highlights key findings from the year\'s monitoring efforts, including long-term moniroting and modeling of rivers feeding Lake Erie. It also features updates on new projects, technology, and partnerships to support sustainable water management.',
-    image: 'images/nature/winter-water.jpg',
+    image: '/images/nature/winter-water.jpg',
     tag: 'Annual Report',
     tagColor: '#B45309',
   },
@@ -78,7 +78,7 @@ export function Home() {
         className="relative flex items-center justify-start overflow-hidden"
         style={{
           minHeight: '92vh',
-          backgroundImage: 'images/nature/rock-splash-action.JPG',
+          backgroundImage: 'url(/images/nature/rock-splash-action.JPG)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -417,7 +417,7 @@ export function Home() {
           <div
             className="relative min-h-80 lg:min-h-[500px]"
             style={{
-              backgroundImage: 'images/lab/test-circle.jpg',
+              backgroundImage: '/images/lab/test-circle.jpg',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
