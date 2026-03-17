@@ -12,9 +12,11 @@ export function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: BLUE }}>
-                <Droplets className="w-6 h-6 text-white" />
-              </div>
+              <img
+                  src="/images/ncwqr-logo-large.jpg"
+                  alt="NCWQR Logo"
+                  className="h-10 w-auto"
+                />
               <div>
                 <div className="font-bold text-sm text-white">NCWQR</div>
                 <div className="text-xs text-blue-200">National Center for Water Quality Research</div>

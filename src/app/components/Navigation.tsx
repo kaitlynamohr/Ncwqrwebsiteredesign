@@ -62,12 +62,11 @@ export function Navigation() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-              style={{ backgroundColor: BLUE }}
-            >
-              <Droplets className="w-6 h-6 text-white" />
-            </div>
+            <img
+                src="/images/ncwqr-logo-2026-large.jpg"
+                alt="NCWQR Logo"
+                className="h-10 w-auto"
+              />
             <div className="leading-tight">
               <div
                 className="text-sm font-bold tracking-tight"
