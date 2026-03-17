@@ -13,7 +13,7 @@ const newsItems = [
     title: 'Summer Camp Opportunity: Water Detectives - Rivers and Wetlands',
     excerpt:
       'NCWQR is excited to announce a new summer camp opportunity for local middle school students: "Water Detectives - Rivers and Wetlands." This week-long camp will provide hands-on learning experiences focused on water quality monitoring, aquatic ecology, and conservation in Lake Erie\'s tributaries and wetlands. Campers will engage in field sampling, lab activities, and interactive lessons led by NCWQR scientists.',
-    image: 'https://images.unsplash.com/photo-1752424751303-33bde8f3c487?w=800&q=80',
+    image: 'images/lab/gillmore-2014.jpg',
     tag: 'Event',
     tagColor: GREEN,
   },
@@ -23,7 +23,7 @@ const newsItems = [
     title: 'The Annual Report for 2022 is now available!',
     excerpt:
       'NCWQR\'s 2022 Annual Report is now available for download. The report highlights key findings from the year\'s monitoring efforts, including trends in nutrient loading, emerging contaminants, and ecological health indicators across the HTLP network. It also features updates on research projects, partnerships, and community engagement initiatives.',
-    image: 'https://images.unsplash.com/photo-1763658997578-90f853cff359?w=800&q=80',
+    image: 'images/nature/rock-creek-low.JPG',
     tag: 'Annual Report',
     tagColor: '#B45309',
   },
@@ -33,7 +33,7 @@ const newsItems = [
     title: 'The Annual Report for 2021 is now available!',
     excerpt:
       'NCWQR\'s 2021 Annual Report is now available for download. The report highlights key findings from the year\'s monitoring efforts, including long-term moniroting and modeling of rivers feeding Lake Erie. It also features updates on new projects, technology, and partnerships to support sustainable water management.',
-    image: 'https://images.unsplash.com/photo-1595114828630-4c3d46d92a1b?w=800&q=80',
+    image: 'images/nature/winter-water.jpg',
     tag: 'Annual Report',
     tagColor: '#B45309',
   },
@@ -43,7 +43,7 @@ const newsItems = [
     title: 'Farewell to our Founder, Dr. David Baker',
     excerpt:
       'The passing of Dr. David Baker deeply impacted the NCWQR community, whose ongoing innovative thinking and dedication to water quality research continue to inspre students and scientists alike. Dr. David Baker will continue to guide the NCWQR\'s ongoing efforts to sutdy and improve watershed health in the Lake Erie region and beyond.',
-    image: 'https://images.unsplash.com/photo-1570615541379-e6b7ab6d4eb9?w=800&q=80',
+    image: 'images/people/baker-respirometer.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -53,7 +53,7 @@ const newsItems = [
     title: 'Happy New Year from NCWQR! Welcome to our 2020 Student Research Interns',
     excerpt:
       'NCWQR is excited to welcome our 2020 Student Research Interns! This year, we have a talented group of undergraduate and graduate students joining us for the summer to assist with field sampling, data analysis, and research projects focused on water quality in Lake Erie\'s tributaries. We look forward to their contributions and learning from their fresh perspectives.',
-    image: 'https://images.unsplash.com/photo-1748261347768-a32434751a9a?w=800&q=80',
+    image: 'images/nature/RC-muddy-low.JPG',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -63,7 +63,7 @@ const newsItems = [
     title: 'Adjusting to COVID-19: NCWQR\'s Response and Continued Commitment to Research',
     excerpt:
       'The NCWQR team has had a busy spring sampling season and recent outreach activities, but we are adjusting to the new realities of COVID-19. We have implemented safety protocols for our field teams, including social distancing and enhanced sanitation measures, to ensure the safety of our staff while continuing our critical water quality monitoring work. We remain committed to providing high-quality data and research to support informed decision-making for Lake Erie\'s health.',
-    image: 'https://images.unsplash.com/photo-1752424751303-33bde8f3c487?w=800&q=80',
+    image: 'images/nautre/bush-RC.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -73,7 +73,7 @@ const newsItems = [
     title: 'NCWQR Launches Monthly Updates Highlighting Research, Data, and Outreach Efforts',
     excerpt:
       'NCWQR is excited to launch our monthly updates, designed to keep our community informed about the latest research findings, data releases, partnerships, and outreach efforts. Each month, we will share highlights from our monitoring activities, upcoming events, and opportunities for engagement. We look forward to connecting with our community and sharing the important work we are doing to protect and improve water quality in the Lake Erie region.',
-    image: 'https://images.unsplash.com/photo-1752424751303-33bde8f3c487?w=800&q=80',
+    image: 'images/nature/2014-trees.jpg',
     tag: 'Announcement',
     tagColor: BLUE,
   },
@@ -85,7 +85,7 @@ export function News() {
       <PageHero
         title="News & Updates"
         subtitle="The latest research findings, data releases, partnerships, and announcements from NCWQR."
-        imageUrl="https://images.unsplash.com/photo-1748892030128-341ea9ea13f8?w=1600&q=85"
+        imageUrl="images/nature/RC-clean.jpg"
       />
 
       <section className="py-20 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: '#F8FAFC' }}>
