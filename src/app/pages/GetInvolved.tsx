@@ -135,7 +135,7 @@ export function GetInvolved() {
           <div
             className="relative min-h-72 lg:min-h-[500px]"
             style={{
-              backgroundImage: 'images/lab/classroom-gm.JPG',
+              backgroundImage: `url('/images/lab/classroom-gm.JPG')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
