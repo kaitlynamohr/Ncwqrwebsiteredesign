@@ -38,7 +38,7 @@ const articles: Record<string, ArticleData> = {
     },
     title: 'NCWQR Launches Monthly Updates Highlighting Research, Data, and Outreach Efforts',
     subtitle: 'Tracking water, research, and community impact from the 3rd floor of Gillmor Hall—celebrating a year of discoveries, collaborations, and milestones at the NCWQR.',
-    heroImage: '/images/2014-trees.jpg',
+    heroImage: '/images/nature/2014-trees.jpg',
     heroCaption: 'image caption',
     body: [
       {
