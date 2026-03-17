@@ -417,7 +417,7 @@ export function Home() {
           <div
             className="relative min-h-80 lg:min-h-[500px]"
             style={{
-              backgroundImage: '/images/lab/test-circle.jpg',
+              backgroundImage: `url('/images/lab/test-circle.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
