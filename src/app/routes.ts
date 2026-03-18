@@ -26,6 +26,8 @@ export const router = createBrowserRouter([
       { path: 'publications', Component: Publications },
       { path: 'water-testing', Component: WaterTesting },
       { path: 'get-involved', Component: GetInvolved },
+      { path: 'staff-directory', Component: StaffDirectory },
+      { path: 'staff-directory/:id', Component: StaffProfile },
       { path: 'news', Component: News },
       { path: 'news/:id', Component: NewsArticle },
       { path: 'contact', Component: Contact },
