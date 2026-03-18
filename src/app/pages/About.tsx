@@ -40,13 +40,13 @@ const milestones = [
 ];
 
 const team = [
-  { role: 'Director / Principal Investigator', name: 'Senior Research Scientist', dept: 'Research & Administration' },
-  { role: 'Research Scientist', name: 'Water Chemistry Lead', dept: 'Analytical Laboratory' },
-  { role: 'Research Scientist', name: 'Watershed Hydrology', dept: 'Field Operations' },
-  { role: 'Laboratory Technician', name: 'Sample Analysis & QA', dept: 'Analytical Laboratory' },
-  { role: 'Field Technician', name: 'Station Maintenance', dept: 'Field Operations' },
-  { role: 'Data Manager', name: 'GIS & Database Systems', dept: 'Data & Technology' },
-  { role: 'Laboratory Technician', name: 'Biological Studies', dept: 'Analytical Laboratory' },
+  { role: 'Director / Principal Investigator', name: 'Remegio Confessor', dept: 'Research & Administration' },
+  { role: 'Coordinator and Field Investigator', name: 'Jakob Boehler', dept: 'Research & Administration' },
+  { role: 'Research Scientist', name: 'Nate Manning', dept: 'Research & Administration' },
+  { role: 'Field and Laboratory Technician', name: 'Emily Clark', dept: 'Field Operations' },
+  { role: 'Postdoctoral Research Associate', name: 'Colleen Cosgrove', dept: 'Field Operations' },
+  { role: 'Laboratory Technician', name: 'Madison Rice', dept: 'Field Operations' },
+  { role: 'Business Manager & Private Well Testing Coordinator', name: 'Nancy Miller', dept: 'Data & Technology' },
 ];
 
 const funders = [
