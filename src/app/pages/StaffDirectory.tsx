@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, Mail, Phone, Users, X, ChevronDown } from 'lucide-react';
 import { PageHero } from '../components/PageHero';
-import { staffMembers, DEPARTMENTS, TYPES } from '../data/staffData';
-import type { StaffMember } from '../data/staffData';
+import { staffMembers, DEPARTMENTS, TYPES } from '../data/StaffData';
+import type { StaffMember } from '../data/StaffData';
 
 const BLUE = '#1B4F8A';
 const DARK_BLUE = '#0f2942';

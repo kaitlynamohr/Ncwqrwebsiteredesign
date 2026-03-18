@@ -16,7 +16,7 @@ import {
   Calendar,
   Award,
 } from 'lucide-react';
-import { staffMembers } from '../data/staffData';
+import { staffMembers } from '../data/StaffData';
 
 const BLUE = '#1B4F8A';
 const DARK_BLUE = '#0f2942';
