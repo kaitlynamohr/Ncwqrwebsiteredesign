@@ -34,236 +34,261 @@ export interface StaffMember {
 export const staffMembers: StaffMember[] = [
   {
     id: '1',
-    name: 'David R. Baker',
-    credentials: 'Ph.D.',
+    name: 'Remegio Confessor',
+    credentials: 'Ph.D. in Agricultural and Biological Engineering',
     title: 'Director & Principal Investigator',
     department: 'Research & Administration',
     type: 'Leadership',
-    email: 'dbaker@heidelberg.edu',
-    phone: '(419) 448-3828',
-    photo: 'https://images.unsplash.com/photo-1750853754432-475026390c49?w=400&q=80',
-    officeLocation: 'Gillmor Science Hall, Room 201',
-    bio: 'Dr. David Baker has led the National Center for Water Quality Research since 2005, continuing a legacy that dates to his early career work establishing the original River Laboratory monitoring network in the late 1970s. His research focuses on nutrient dynamics in agricultural watersheds, phosphorus cycling in the Lake Erie basin, and the relationships between land use, hydrology, and water quality. Dr. Baker\'s data and analyses have directly informed federal and state nutrient management policy across the Great Lakes region, and his monitoring network is widely recognized as the most comprehensive long-term tributary water quality dataset in North America.',
+    email: 'rconfeso@heidelberg.edu',
+    phone: '(419) 448-2056',
+    photo: 'images/people/remegio-confessor-2026.jpg',
+    officeLocation: 'Gillmor Science Hall, Room 301',
+    bio: 'Dr. Remegio B. Confesor is a researcher specializing in hydrologic and watershed modeling, with a focus on nutrient transport, sediment dynamics, and agricultural water quality systems. His work centers on applying and advancing models such as SWAT and APEX to evaluate the impacts of land use, agricultural practices, and climate change on watershed processes. Dr. Confesor has contributed extensively to research addressing phosphorus loading and harmful algal blooms in the Lake Erie Basin, producing modeling frameworks used to inform nutrient management strategies and policy decisions. Prior to joining the Norwegian Institute of Bioeconomy Research in 2021, he spent over a decade at the National Center for Water Quality Research at Heidelberg University, where he worked on long-term monitoring and modeling of tributary nutrient loading. His research integrates field data, computational modeling, and environmental systems analysis to support large-scale watershed management and climate adaptation efforts.',
     expertise: [
-      'Nutrient Dynamics',
-      'Agricultural Watersheds',
-      'Phosphorus Cycling',
-      'Lake Erie Water Quality',
-      'Long-term Monitoring',
-      'Environmental Policy',
-      'Tributary Loading',
+        'Hydrologic Modeling (SWAT, APEX)',
+        'Water Quality',
+        'Nutrient Transport (Phosphorus, Nitrogen)',
+        'Sediment Transport',
+        'Runoff Processes',
+        'Soil Science',
+        'Subsurface Drainage',
+        'Climate Change Impacts',
+        'Agricultural Watersheds'
     ],
     education: [
-      { degree: 'Ph.D. in Limnology', institution: 'Michigan State University', year: 1977 },
-      { degree: 'M.S. in Environmental Science', institution: 'Ohio State University', year: 1973 },
-      { degree: 'B.S. in Biology', institution: 'Heidelberg College', year: 1971 },
+        {
+        degree: 'Ph.D. in Agricultural and Biological Engineering',
+        institution: 'Pennsylvania State University',
+        year: 2004
+        }
     ],
     projects: [
-      {
-        title: 'COMPASS Great Lakes Coastal Observations Network',
-        funder: 'U.S. Department of Energy',
-        years: '2022–2028',
-        description: 'Expanding coastal ecosystem monitoring across the Great Lakes to quantify carbon, nutrient, and water cycling responses to climate change.',
-      },
-      {
-        title: 'Heidelberg Tributary Loading Program (HTLP)',
-        funder: 'USDA / NOAA / ODNR',
-        years: '1975–present',
-        description: 'Continuous monitoring of nutrient, sediment, and discharge at 18 Lake Erie tributary stations. The foundational dataset for Great Lakes water quality management.',
-      },
-      {
-        title: 'Lake Erie Phosphorus Reduction Initiative',
-        funder: 'Ohio EPA',
-        years: '2019–2024',
-        description: 'Quantifying tributary phosphorus loads relative to the binational Great Lakes Water Quality Agreement targets and informing H2Ohio wetland siting priorities.',
-      },
+        {
+        title: 'SWAT-Based Watershed Modeling for Nutrient Management',
+        funder: 'Multiple (Academic & Government Collaborations)',
+        years: '2010–Present',
+        description: 'Development and application of SWAT models to evaluate nutrient runoff, fertilizer timing, and conservation practices in agricultural watersheds, particularly in the Western Lake Erie Basin.'
+        },
+        {
+        title: 'Climate Change Impacts on Agricultural Water Quality',
+        funder: 'Research Collaborations (US & EU)',
+        years: '2015–Present',
+        description: 'Assessment of climate-driven changes in hydrology, nutrient loading, and watershed response using multi-model ensemble approaches.'
+        },
+        {
+        title: 'Lake Erie Nutrient Loading and Harmful Algal Bloom Modeling',
+        funder: 'NOAA / USDA / EPA Collaborations',
+        years: '2008–2021',
+        description: 'Modeling phosphorus transport and evaluating best management practices to reduce harmful algal blooms in the Western Lake Erie Basin.'
+        }
     ],
     publications: [
-      {
+        {
+        year: 2025,
+        title: 'Advancing SWAT modeling with rainfall risk-based fertilizer timing to improve nutrient management and crop yields',
+        journal: 'Agricultural Systems / Modeling Research',
+        doi: '10.1016/j.agwat.2025.109555'
+        },
+        {
         year: 2023,
-        title: 'Four decades of tributary nutrient loading to Lake Erie: Trends, drivers, and management implications',
-        journal: 'Journal of Great Lakes Research',
-        doi: '10.1016/j.jglr.2023.04.011',
-      },
-      {
+        title: 'Analysis of spatiotemporal variation in dissolved organic carbon concentrations for streams with cropland-dominated watersheds',
+        journal: 'Science of The Total Environment',
+        doi: '10.1016/j.scitotenv.2022.160744'
+        },
+        {
+        year: 2022,
+        title: 'Using a Multi-Institutional Ensemble of Watershed Models to Assess Agricultural Conservation Effectiveness in a Future Climate',
+        journal: 'Journal of the American Water Resources Association',
+        doi: '10.1111/1752-1688.13023'
+        },
+        {
         year: 2021,
-        title: 'Spring phosphorus loading from the Maumee River: A 45-year context for harmful algal bloom forecasting',
-        journal: 'Environmental Science & Technology',
-        doi: '10.1021/acs.est.1c02174',
-      },
-      {
-        year: 2019,
-        title: 'Legacy phosphorus and the challenge of Lake Erie eutrophication',
-        journal: 'Science of the Total Environment',
-        doi: '10.1016/j.scitotenv.2019.135178',
-      },
-      {
-        year: 2017,
-        title: 'Dissolved reactive phosphorus export from agricultural watersheds: Evidence for preferential flow pathways',
-        journal: 'Water Resources Research',
-        doi: '10.1002/2016WR020156',
-      },
+        title: 'Impact of Agricultural Practices on Water Quality of Old Woman Creek Watershed, Ohio',
+        journal: 'Agriculture',
+        doi: '10.3390/agriculture11050426'
+        }
     ],
-    joinedYear: 1975,
-  },
-  {
+    joinedYear: 2008
+    },
+    {
     id: '2',
-    name: 'Laura T. Winslow',
-    credentials: 'Ph.D.',
-    title: 'Senior Research Scientist — Water Chemistry',
-    department: 'Analytical Laboratory',
+    name: 'Jakob Boehler',
+    credentials: 'M.S. Education, B.S. Environmental Science',
+    title: 'Coordinator, Sandusky River Watershed Coalition & Field Manager, NCWQR',
+    department: 'Field Operations & Watershed Coordination',
     type: 'Research Scientist',
-    email: 'lwinslow@heidelberg.edu',
-    phone: '(419) 448-3831',
-    photo: 'https://images.unsplash.com/photo-1618053448748-b7251851d014?w=400&q=80',
-    officeLocation: 'Gillmor Science Hall, Room 115',
-    bio: 'Dr. Laura Winslow joined NCWQR in 2011 after completing her doctoral work on dissolved organic matter dynamics in Midwestern agricultural streams. At NCWQR, she oversees all analytical laboratory operations and leads research on emerging contaminants, microplastics, and the chemical fingerprinting of nutrient sources across the Lake Erie watershed. She has developed several novel passive sampling methods now adopted by partner labs across the Great Lakes network and has served as co-investigator on five federally funded research projects.',
+    email: 'jboehler@heidelberg.edu',
+    phone: '(419) 448-2054)',
+    photo: 'images/people/jakob-boehler-2026.jpg',
+    bio: 'Jakob Boehler is an environmental science professional specializing in watershed management and water quality monitoring. He serves as Coordinator for the Sandusky River Watershed Coalition and Field Manager for the National Center for Water Quality Research (NCWQR) at Heidelberg University. Since joining NCWQR in 2011, he has led field operations including sample collection, data management, and quality assurance for long-term tributary monitoring programs. His work focuses on maintaining high data integrity standards and supporting watershed-scale research efforts across the Lake Erie Basin. In his watershed coordination role, he works with regional stakeholders to implement conservation practices and improve water quality outcomes.',
     expertise: [
-      'Water Chemistry',
-      'Dissolved Organic Matter',
-      'Emerging Contaminants',
-      'Microplastics',
-      'Passive Sampling Methods',
-      'Source Attribution',
-      'Analytical Methods Development',
+        'Water Quality Monitoring',
+        'Watershed Management',
+        'Field Data Collection',
+        'Quality Assurance / Quality Control (QA/QC)',
+        'Macroinvertebrate Analysis',
+        'Environmental Sampling Protocols'
     ],
     education: [
-      { degree: 'Ph.D. in Environmental Chemistry', institution: 'University of Michigan', year: 2010 },
-      { degree: 'B.S. in Chemistry', institution: 'Denison University', year: 2005 },
+        {
+        degree: 'M.S. Education',
+        institution: 'Heidelberg University',
+        year: 2015
+        },
+        {
+        degree: 'B.S. in Environmental Science',
+        institution: 'Heidelberg University',
+        year: 2011
+        }
     ],
     projects: [
-      {
-        title: 'Veterinary Pharmaceuticals in Lake Erie Tributaries',
-        funder: 'National Science Foundation',
-        years: '2022–2025',
-        description: 'Deploying passive samplers across 12 tributary stations to detect and quantify veterinary antibiotics, hormones, and antiparasitic compounds in agricultural watersheds.',
-      },
-      {
-        title: 'Microplastic Flux in Great Lakes Tributaries',
-        funder: 'NOAA Great Lakes Program',
-        years: '2021–2024',
-        description: 'Characterizing microplastic particle types, concentrations, and seasonal flux at selected HTLP monitoring stations.',
-      },
+        {
+        title: 'Heidelberg Tributary Loading Program (Field Operations)',
+        funder: 'Multiple (USDA / NOAA / ODNR)',
+        years: '2011–Present',
+        description: 'Field management of long-term monitoring stations measuring nutrient, sediment, and discharge across Lake Erie tributaries.'
+        },
+        {
+        title: 'Sandusky River Watershed Coordination',
+        funder: 'Regional / State Partnerships',
+        years: '2017–Present',
+        description: 'Coordination of watershed initiatives, stakeholder engagement, and implementation of conservation practices to improve regional water quality.'
+        }
     ],
-    publications: [
-      {
-        year: 2024,
-        title: 'Veterinary pharmaceuticals detected in Lake Erie tributaries using passive sampling: Occurrence, seasonality, and source attribution',
-        journal: 'Environmental Science & Technology',
-        doi: '10.1021/acs.est.4c01023',
-      },
-      {
-        year: 2022,
-        title: 'Dissolved organic matter character along a land-use gradient in Lake Erie agricultural tributaries',
-        journal: 'Biogeochemistry',
-        doi: '10.1007/s10533-022-00941-2',
-      },
-      {
-        year: 2020,
-        title: 'Passive sampler performance in high-turbidity agricultural streams: Comparison with active monitoring',
-        journal: 'Chemosphere',
-        doi: '10.1016/j.chemosphere.2020.126918',
-      },
-    ],
-    joinedYear: 2011,
-  },
-  {
+    publications: [],
+    joinedYear: 2011
+    },
+    {
     id: '3',
-    name: 'Marcus J. Ostrowski',
-    credentials: 'M.S.',
-    title: 'Research Scientist — Watershed Hydrology',
+    name: 'Nancy Miller',
+    credentials: 'B.S.',
+    title: 'Business Manager & Private Well Testing Coordinator',
     department: 'Field Operations',
-    type: 'Research Scientist',
-    email: 'mostrowski@heidelberg.edu',
-    photo: 'https://images.unsplash.com/photo-1758685734503-58a8accc24e8?w=400&q=80',
+    type: 'Leadership',
+    email: 'nmillar@heidelberg.edu',
+    photo: 'images/people/nancy-miller-2026.jpg',
     officeLocation: 'Gillmor Science Hall, Room 118',
-    bio: 'Marcus Ostrowski leads NCWQR\'s field operations program, overseeing the deployment and maintenance of continuous monitoring stations across the HTLP network. With over 15 years of experience in hydrological monitoring, he specializes in streamflow measurement, rating curve development, and sensor calibration. Marcus also leads NCWQR\'s storm event sampling campaigns, which capture the episodic nutrient pulses responsible for the majority of annual tributary loading to Lake Erie.',
+    bio: 'Nancy Miller is the Business Manager and Private Well Testing Coordinator at NCWQR. She oversees the business operations and manages the private well testing program, ensuring compliance with regulatory standards and providing technical support to stakeholders.',
     expertise: [
-      'Streamflow Measurement',
-      'Hydrological Monitoring',
-      'Rating Curve Development',
-      'Storm Event Sampling',
-      'Sensor Calibration',
-      'GIS & Spatial Analysis',
+      'Business Management',
+      'Private Well Testing',
+      'Regulatory Compliance',
+      'Stakeholder Engagement',
       'Continuous Water Quality Monitoring',
     ],
     education: [
-      { degree: 'M.S. in Hydrology', institution: 'Ohio State University', year: 2008 },
-      { degree: 'B.S. in Environmental Science', institution: 'Bowling Green State University', year: 2006 },
+      {
+        degree: '',
+        institution: '',
+        year: 0,
+      },
     ],
     projects: [
       {
-        title: 'Heidelberg Tributary Loading Program — Field Operations',
-        funder: 'USDA / NOAA',
-        years: '2009–present',
-        description: 'Directing all field monitoring operations for the 18-station HTLP network, including instrument maintenance, QA/QC, and storm response sampling.',
+        title: '',
+        funder: '',
+        years: '',
+        description: '',
       },
     ],
-    publications: [
-      {
-        year: 2023,
-        title: 'High-frequency turbidity as a proxy for suspended sediment in agricultural streams: Calibration uncertainty and transferability',
-        journal: 'Hydrological Processes',
-        doi: '10.1002/hyp.14832',
-      },
-    ],
-    joinedYear: 2009,
+    publications: [],
+    joinedYear: 0,
   },
   {
     id: '4',
-    name: 'Priya Nandakumar',
-    credentials: 'Ph.D.',
-    title: 'Research Scientist — Biogeochemistry',
-    department: 'Analytical Laboratory',
+    name: 'Nate Manning',
+    credentials: 'Ph.D. in Environmental Science',
+    title: 'Research Scientist',
+    department: 'Water Quality Research',
     type: 'Research Scientist',
-    email: 'pnandakumar@heidelberg.edu',
-    photo: 'https://images.unsplash.com/photo-1602610187228-ff21f0316be0?w=400&q=80',
-    officeLocation: 'Gillmor Science Hall, Room 116',
-    bio: 'Dr. Priya Nandakumar is a biogeochemist whose work focuses on the cycling of carbon and nitrogen in agricultural and coastal freshwater systems. She joined NCWQR in 2018 following postdoctoral research at the Great Lakes Environmental Research Laboratory (GLERL). Her current projects include quantifying greenhouse gas emissions from Lake Erie tributaries and studying the role of riparian buffers and constructed wetlands in nutrient and carbon retention.',
+    email: 'nmanning@heidelberg.edu',
+    phone: '(419) 448-2443)',
+    photo: 'images/people/nate-manning-2026.jpg',
+    officeLocation: 'Heidelberg University, Tiffin, Ohio',
+    bio: 'Dr. Nate Manning is a Research Scientist at the National Center for Water Quality Research (NCWQR) at Heidelberg University. His research focuses on water quality, watershed hydrology, and aquatic ecosystem dynamics, with an emphasis on nutrient transport and harmful algal blooms in the Lake Erie Basin. He works extensively with long-term monitoring datasets to analyze sediment, phosphorus, nitrogen, and chloride dynamics across tributaries and wetlands. His work contributes to understanding drivers of eutrophication, freshwater salinization, and watershed-scale environmental change. He is affiliated with Donald Scavia’s lab and has contributed to forecasting models for harmful algal blooms in Western Lake Erie.',
     expertise: [
-      'Biogeochemistry',
-      'Carbon Cycling',
-      'Nitrogen Dynamics',
-      'Greenhouse Gas Fluxes',
-      'Wetland Science',
-      'Riparian Buffers',
-      'Stable Isotopes',
+        'Water Quality',
+        'Watershed Hydrology',
+        'Hydrological Modeling',
+        'Aquatic Ecosystems',
+        'Environmental Science',
+        'Climate Change',
+        'Freshwater Ecology',
+        'Ecology',
+        'Nutrient Transport',
+        'Harmful Algal Blooms (HABs)'
     ],
     education: [
-      { degree: 'Ph.D. in Biogeochemistry', institution: 'University of Notre Dame', year: 2015 },
-      { degree: 'M.S. in Environmental Science', institution: 'Indiana University', year: 2011 },
-      { degree: 'B.S. in Chemistry', institution: 'University of Mumbai', year: 2009 },
+        {
+        degree: 'Ph.D. in Environmental Science',
+        institution: 'University of Toledo',
+        year: 2013
+        },
+        {
+        degree: 'M.S. in Biology',
+        institution: 'University of Akron',
+        year: 2005
+        },
+        {
+        degree: 'B.S. in Biology',
+        institution: 'Wittenberg University',
+        year: 2001
+        }
     ],
     projects: [
-      {
-        title: 'H2Ohio Wetland Monitoring — LEARN Network',
-        funder: 'Ohio Department of Natural Resources',
-        years: '2020–present',
-        description: 'Monitoring constructed wetland performance for phosphorus, nitrate, and dissolved carbon retention as part of Ohio\'s H2Ohio water quality initiative.',
-      },
-      {
-        title: 'COMPASS Great Lakes — Carbon Flux Component',
-        funder: 'U.S. Department of Energy',
-        years: '2022–2028',
-        description: 'Measuring greenhouse gas fluxes and dissolved inorganic carbon dynamics at Lake Erie coastal focal sites.',
-      },
+        {
+        title: 'H2Ohio Wetland Monitoring Program',
+        funder: 'Ohio EPA / Heidelberg University NCWQR',
+        years: '2021–Present',
+        description: 'Monitoring surface water and soil nutrient concentrations from wetlands across Ohio to quantify nutrient cycling and evaluate restoration impacts.'
+        },
+        {
+        title: 'Grand Lake St. Marys Chloride Source Delineation',
+        funder: 'Heidelberg University NCWQR',
+        years: '2024–Present',
+        description: 'Identifying and quantifying sources of chloride pollution contributing to freshwater salinization in the Grand Lake St. Marys watershed.'
+        },
+        {
+        title: 'Lake Erie Tributary Sediment and Nutrient Yields',
+        funder: 'Heidelberg University NCWQR',
+        years: '2024–Present',
+        description: 'Analyzing annual sediment and nutrient loads in tributaries to Lake Erie to assess drivers of harmful algal blooms and inform nutrient management strategies.'
+        },
+        {
+        title: 'Western Lake Erie Nitrogen Loss Study',
+        funder: 'Heidelberg University NCWQR',
+        years: '2024–Present',
+        description: 'Investigating controls on in-stream nitrogen loss in Western Lake Erie tributaries to support nutrient load reduction and water quality improvement efforts.'
+        },
     ],
     publications: [
-      {
+        {
         year: 2024,
-        title: 'H2Ohio wetland pilot results: First-year phosphorus and carbon retention at four agricultural drainage treatment sites',
-        journal: 'Ecological Engineering',
-        doi: '10.1016/j.ecoleng.2024.107188',
-      },
-      {
-        year: 2022,
-        title: 'N2O and CO2 emissions from agricultural drainage ditches in the Maumee watershed',
-        journal: 'Global Biogeochemical Cycles',
-        doi: '10.1029/2022GB007341',
-      },
+        title: 'A Tale of Two Tributaries: Source Delineation of Chloride in a Distressed Watershed (Grand Lake St. Marys, Ohio)',
+        journal: 'Water Air and Soil Pollution',
+        doi: '10.1007/s11270-024-07455-0'
+        },
+        {
+        year: 2024,
+        title: 'Drivers of annual suspended sediment and nutrient yields in tributaries to Lake Erie',
+        journal: 'Aquatic Ecosystem Health and Management',
+        doi: '10.14321/aehm.026.04.05'
+        },
+        {
+        year: 2024,
+        title: 'Controls on in-stream nitrogen loss in western Lake Erie tributaries',
+        journal: 'Journal of Great Lakes Research',
+        doi: '10.1016/j.jglr.2024.102284'
+        },
+        {
+        year: 2024,
+        title: 'Ecology of Lake Erie - Nutrients, microbes, algae and dreissenid mussels: A Synthesis',
+        journal: 'Aquatic Ecosystem Health and Management',
+        doi: '10.14321/aehm.026.04.131'
+        },
     ],
-    joinedYear: 2018,
-  },
+    joinedYear: 2018
+    },
   {
     id: '5',
     name: 'Jesse T. Caldwell',
@@ -297,115 +322,150 @@ export const staffMembers: StaffMember[] = [
     joinedYear: 2014,
   },
   {
-    id: '6',
-    name: 'Megan Ortiz',
-    credentials: '',
-    title: 'Laboratory Technician — Sample Analysis',
-    department: 'Analytical Laboratory',
-    type: 'Lab Technician',
-    email: 'mortiz@heidelberg.edu',
-    photo: 'https://images.unsplash.com/photo-1618053448748-b7251851d014?w=400&q=80',
-    bio: 'Megan Ortiz manages sample intake, preparation, and analysis in the NCWQR analytical laboratory. She is responsible for total phosphorus, dissolved reactive phosphorus, nitrate, and suspended sediment analyses across thousands of water samples processed annually. Megan also oversees laboratory QA/QC documentation and participates in the interlaboratory proficiency testing program coordinated through the Great Lakes Water Quality monitoring network.',
+    id: '5',
+    name: 'Emily Clark',
+    credentials: 'B.S. in Environmental Science - Restoration',
+    title: 'Field and Laboratory Technician',
+    department: 'Water Quality Research',
+    type: 'Field Technician',
+    email: 'eclack4@heidelbnerg.edu',
+    phone: '(419) 448-2198)',
+    photo: 'images/people/emily-clark-2026.jpg',
+    officeLocation: 'Heidelberg University, Tiffin, Ohio',
+    bio: 'Emily Clark is a Field and Laboratory Technician at the National Center for Water Quality Research (NCWQR) at Heidelberg University. She specializes in the collection and processing of water quality samples for long-term monitoring programs, including the H2Ohio Wetland Monitoring Program. Emily operates analytical instruments such as colorimetric auto-analyzers and ion chromatographs, prepares standards and reagents, and ensures strict adherence to QA/QC protocols. Her work supports research on nutrient dynamics, watershed health, and water quality management across Ohio.',
     expertise: [
-      'Nutrient Analysis',
-      'Suspended Sediment',
-      'Laboratory QA/QC',
-      'Sample Preparation',
-      'Automated Colorimetry',
-      'ICP-MS',
+        'Water Quality Monitoring',
+        'Laboratory Analysis',
+        'Field Sampling',
+        'Nutrient Analysis',
+        'Environmental Data QA/QC',
+        'Aquatic Ecosystems'
     ],
     education: [
-      { degree: 'B.S. in Chemistry', institution: 'Heidelberg University', year: 2019 },
-    ],
-    projects: [],
-    publications: [],
-    joinedYear: 2019,
-  },
-  {
-    id: '7',
-    name: 'Tobias Reinhardt',
-    credentials: 'M.S.',
-    title: 'Data Manager & GIS Analyst',
-    department: 'Data & Technology',
-    type: 'Data & Technology',
-    email: 'treinhardt@heidelberg.edu',
-    photo: 'https://images.unsplash.com/photo-1770219733996-85ce5b943a18?w=400&q=80',
-    officeLocation: 'Gillmor Science Hall, Room 205',
-    bio: 'Tobias Reinhardt manages NCWQR\'s data infrastructure, including the HTLP Data Portal (ncwqr-data.org), the internal LIMS (Laboratory Information Management System), and all GIS and spatial analysis operations. He joined NCWQR in 2016 and has since led the migration of 50 years of historical monitoring data to a modern cloud-hosted database, developed the public API for the HTLP Data Portal, and built interactive dashboards for real-time tributary loading visualization.',
-    expertise: [
-      'Database Management',
-      'GIS & Spatial Analysis',
-      'Web Data Portals',
-      'Python & R Programming',
-      'Data Visualization',
-      'LIMS Administration',
-      'REST APIs',
-    ],
-    education: [
-      { degree: 'M.S. in Geographic Information Science', institution: 'Kent State University', year: 2015 },
-      { degree: 'B.S. in Computer Science', institution: 'Bowling Green State University', year: 2013 },
+        { degree: 'B.S. in Environmental Science - Restoration', institution: 'Bowling Green State University', year: 2020 }
     ],
     projects: [
-      {
-        title: 'HTLP Data Portal Modernization',
-        funder: 'Internal / USDA',
-        years: '2016–present',
-        description: 'Redesigning and maintaining the public-facing NCWQR data portal, including 50-year historical data migration, public API development, and interactive visualization tools.',
-      },
+        {
+        title: 'Long-term Tributary Water Quality Monitoring',
+        funder: 'Heidelberg University NCWQR',
+        years: '2020–Present',
+        description: 'Collection and analysis of river water samples for long-term monitoring programs to track nutrient, sediment, and water quality trends in Ohio tributaries.'
+        },
+        {
+        title: 'H2Ohio Wetland Monitoring Program',
+        funder: 'Ohio EPA / Heidelberg University NCWQR',
+        years: '2021–Present',
+        description: 'Field and laboratory processing of wetland surface water and soil samples to quantify nutrient concentrations and evaluate restoration and management outcomes.'
+        },
+        {
+        title: 'Nutrient Reduction in Manure Runoff Studies',
+        funder: 'Bowling Green State University',
+        years: '2018–2020',
+        description: 'Laboratory analysis of manure treatment methods, including total nitrogen and phosphorus measurement, to assess effectiveness of nutrient reduction strategies.'
+        },
+        {
+        title: 'REU Arctic Soil Respiration Study',
+        funder: 'University of Toledo',
+        years: '2019',
+        description: 'Conducted laboratory experiments measuring soil respiration under sub-zero temperatures and varying carbon levels, and presented findings at the REU Poster Gala.'
+        }
     ],
     publications: [],
-    joinedYear: 2016,
+    joinedYear: 2020
+    },
+{
+    id: '7',
+    name: 'Colleen Cosgrove',
+    credentials: 'Ph.D. in Ecology, B.S. in Zoology',
+    title: 'Postdoctoral Research Associate',
+    department: 'Water Quality Research',
+    type: 'Field Technician',
+    email: 'Not publicly listed',
+    phone: 'Not publicly listed',
+    photo: 'images/people/colleen-cosgrove-2026.jpg',
+    officeLocation: 'Heidelberg University, Tiffin, Ohio',
+    bio: 'Colleen Cosgrove is a Postdoctoral Research Associate at the National Center for Water Quality Research at Heidelberg University. Her current work focuses on developing a cross-organization water quality dashboard to improve accessibility and integration of monitoring data. Previously, she evaluated nutrient and contaminant load estimation methods to improve consistency across freshwater monitoring programs. She earned her Ph.D. in Ecology from Kent State University in 2022, focusing on terrestrial ecosystem and community ecology.',
+    expertise: [
+        'Water Quality Analysis',
+        'Load Estimation Methods',
+        'Data Integration & Dashboard Development',
+        'Statistical Analysis',
+        'Ecology',
+        'Community & Ecosystem Ecology',
+        'Spatial Statistics',
+        'Terrestrial Invertebrates'
+    ],
+    education: [
+        { degree: 'Ph.D. in Ecology', institution: 'Kent State University', year: 2022 },
+        { degree: 'B.S. in Zoology', institution: 'Kent State University', year: 2015 }
+    ],
+    projects: [
+        {
+        title: 'Cross-Organization Water Quality Dashboard',
+        funder: 'Heidelberg University NCWQR',
+        years: '2023–Present',
+        description: 'Developing a dashboard to integrate and visualize water quality datasets from multiple organizations for improved stakeholder communication.'
+        },
+        {
+        title: 'Load Estimator Model Evaluation',
+        funder: 'Heidelberg University NCWQR',
+        years: '2023–Present',
+        description: 'Statistically comparing nutrient and contaminant load estimation methods across monitoring programs to ensure data consistency and reliability.'
+        },
+        {
+        title: 'Long-Term Freshwater Monitoring Analysis',
+        funder: 'Heidelberg University NCWQR',
+        years: '2023–Present',
+        description: 'Analyzing historical water quality data to evaluate trends in nutrient loads and environmental drivers of water quality changes.'
+        },
+        {
+        title: 'Lake Erie Harmful Algal Bloom Research',
+        funder: 'Heidelberg University NCWQR',
+        years: '2023–Present',
+        description: 'Integrating land-use and water quality data to assess influences on harmful algal bloom formation and persistence in Lake Erie tributaries.'
+        }
+    ],
+    publications: [
+        {
+        year: 2020,
+        title: 'Dominant community mycorrhizal types influence local spatial structure between adult and juvenile temperate forest tree communities',
+        journal: 'Functional Ecology',
+        doi: '10.1111/1365-2435.13674'
+        },
+        {
+        year: 2018,
+        title: 'Gut bacterial assemblages of freshwater macroinvertebrate functional feeding groups',
+        journal: 'Hydrobiologia',
+        doi: '10.1007/s10750-018-3671-3'
+        },
+    ],
+    joinedYear: 2023
   },
   {
     id: '8',
-    name: 'Sofia Brennan',
-    credentials: 'M.S.',
-    title: 'Research Associate',
-    department: 'Research & Administration',
-    type: 'Research Associate',
-    email: 'sbrennan@heidelberg.edu',
-    photo: 'https://images.unsplash.com/photo-1602610187228-ff21f0316be0?w=400&q=80',
-    bio: 'Sofia Brennan is a Research Associate whose work bridges data analysis and science communication. She supports grant reporting, manuscript preparation, and stakeholder communication across NCWQR\'s federal and state-funded projects. Sofia also coordinates the student internship program and serves as the primary liaison for public inquiry and media outreach. She holds a master\'s degree in Environmental Communication and Policy from Ohio State University.',
-    expertise: [
-      'Science Communication',
-      'Grant Reporting',
-      'Environmental Policy',
-      'Stakeholder Engagement',
-      'Student Mentorship',
-      'Media Relations',
-    ],
-    education: [
-      { degree: 'M.S. in Environmental Communication & Policy', institution: 'Ohio State University', year: 2020 },
-      { degree: 'B.A. in Environmental Studies', institution: 'Kenyon College', year: 2018 },
-    ],
-    projects: [],
-    publications: [],
-    joinedYear: 2020,
-  },
-  {
-    id: '9',
-    name: 'Connor Walsh',
+    name: 'Madison Rice',
     credentials: '',
-    title: 'Field Technician',
-    department: 'Field Operations',
+    title: '',
+    department: '',
     type: 'Field Technician',
-    email: 'cwalsh@heidelberg.edu',
-    photo: 'https://images.unsplash.com/photo-1653070200909-2703da0421c1?w=400&q=80',
-    bio: 'Connor Walsh is a Field Technician supporting monitoring operations on the Cuyahoga, Grand, and Ashtabula River corridors — the eastern Lake Erie tributary stations. He joined NCWQR in 2022 as part of a NOAA-funded network expansion and is responsible for weekly sample collection, instrument checks, and storm-response sampling on the eastern station cluster.',
-    expertise: [
-      'Water Sample Collection',
-      'Instrument Maintenance',
-      'Storm Response Sampling',
-      'Field Safety',
-      'Data Entry & QA',
+    email: '',
+    phone: '',
+    photo: '',
+    officeLocation: '',
+    bio: '',
+    expertise: [],
+    education: [],
+    projects: [
+        {
+        title: '',
+        funder: '',
+        years: '',
+        description: ''
+        }
     ],
-    education: [
-      { degree: 'B.S. in Environmental Science', institution: 'Heidelberg University', year: 2022 },
-    ],
-    projects: [],
     publications: [],
-    joinedYear: 2022,
-  },
+    joinedYear: 0
+    },
 ];
 
 export const DEPARTMENTS = ['All Departments', 'Research & Administration', 'Analytical Laboratory', 'Field Operations', 'Data & Technology'];
