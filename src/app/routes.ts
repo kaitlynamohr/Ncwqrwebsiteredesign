@@ -7,6 +7,8 @@ import { Research } from './pages/Research';
 import { Publications } from './pages/Publications';
 import { WaterTesting } from './pages/WaterTesting';
 import { GetInvolved } from './pages/GetInvolved';
+import { StaffDirectory } from './pages/StaffDirectory';
+import { StaffProfile } from './pages/StaffProfile';
 import { News } from './pages/News';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
