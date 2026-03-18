@@ -7,9 +7,9 @@ const GREEN = '#2D5016';
 const LIGHT_BLUE_BG = '#EBF3FB';
 
 const stats = [
-  { value: '50+', label: 'Years of Continuous Data', sub: 'Since 1969 — the world\'s longest-running record' },
-  { value: '150K+', label: 'Water Samples Analyzed', sub: 'From tributaries across the Great Lakes region' },
-  { value: '18', label: 'Tributary Monitoring Stations', sub: 'Covering the Maumee, Sandusky & more' },
+  { value: '55+', label: 'Years of Continuous Data', sub: 'Since 1969 — the world\'s longest-running record' },
+  { value: '200K+', label: 'Water Samples Analyzed', sub: 'From tributaries across the Great Lakes region' },
+  { value: '28', label: 'Tributary Monitoring Stations', sub: 'Covering the Maumee, Sandusky & more' },
   { value: 'NOAA', label: 'HAB Forecast Partner', sub: 'Our data drives Lake Erie algal bloom predictions' },
 ];
 
@@ -174,9 +174,9 @@ export function Home() {
             className="mt-14 flex flex-wrap gap-4"
           >
             {[
-              { icon: <BarChart3 className="w-4 h-4" />, text: '50+ years of continuous data' },
+              { icon: <BarChart3 className="w-4 h-4" />, text: '55+ years of continuous data' },
               { icon: <Fish className="w-4 h-4" />, text: 'Powering NOAA HAB forecasts' },
-              { icon: <Leaf className="w-4 h-4" />, text: '18 active monitoring stations' },
+              { icon: <Leaf className="w-4 h-4" />, text: '28 active monitoring stations' },
             ].map((badge) => (
               <div
                 key={badge.text}
