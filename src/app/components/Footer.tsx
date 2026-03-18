@@ -118,13 +118,14 @@ export function Footer() {
                 <span className="text-sm text-blue-200">
                   Gillmor Science Hall<br />
                   Heidelberg University<br />
+                  310 East Market Street<br />
                   Tiffin, OH 44883
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-blue-300 flex-shrink-0" />
-                <a href="tel:+14194483828" className="text-sm text-blue-200 hover:text-white transition-colors">
-                  (419) 448-3828
+                <a href="tel:+14194482198" className="text-sm text-blue-200 hover:text-white transition-colors">
+                  (419) 448-2198
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
