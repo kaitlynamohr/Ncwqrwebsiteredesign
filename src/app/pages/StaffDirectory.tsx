@@ -29,7 +29,7 @@ function StaffCard({ member, index }: { member: StaffMember; index: number }) {
       transition={{ duration: 0.25, delay: index * 0.03 }}
     >
       <Link
-        to={`/staff/${member.id}`}
+        to={`/staff-profile/${member.id}`}
         className="flex items-center gap-4 bg-white border border-gray-200 rounded-lg p-4 hover:border-blue-300 hover:shadow-md transition-all group"
       >
         {/* Small square photo */}

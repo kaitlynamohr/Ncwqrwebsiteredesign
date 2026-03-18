@@ -175,11 +175,11 @@ export function StaffProfile() {
                     With NCWQR since {member.joinedYear} ({yearsAtNCWQR} years)
                   </span>
                 )}
-                {member.publications.length > 0 && (
-                  <span className="flex items-center gap-1.5">
+                {(member.publicationCount ?? member.publications.length) > 0 && (
+                <span className="flex items-center gap-1.5">
                     <BookOpen className="w-4 h-4" />
-                    {member.publications.length} publications
-                  </span>
+                    {member.publicationCount ?? member.publications.length} publications
+                </span>
                 )}
                 {member.projects.length > 0 && (
                   <span className="flex items-center gap-1.5">
