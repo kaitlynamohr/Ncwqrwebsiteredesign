@@ -29,6 +29,7 @@ export interface StaffMember {
   projects: Project[];
   publications: Publication[];
   joinedYear: number;
+  publicationCount?: number;
 }
 
 export const staffMembers: StaffMember[] = [
@@ -108,7 +109,8 @@ export const staffMembers: StaffMember[] = [
         doi: '10.3390/agriculture11050426'
         }
     ],
-    joinedYear: 2008
+    joinedYear: 2008,
+    publicationCount: 52,
     },
     {
     id: '2',
@@ -287,7 +289,8 @@ export const staffMembers: StaffMember[] = [
         doi: '10.14321/aehm.026.04.131'
         },
     ],
-    joinedYear: 2018
+    joinedYear: 2018,
+    publicationCount: 21,
     },
   {
     id: '5',
@@ -407,7 +410,8 @@ export const staffMembers: StaffMember[] = [
         doi: '10.1007/s10750-018-3671-3'
         },
     ],
-    joinedYear: 2023
+    joinedYear: 2023,
+    publicationCount: 3,
   },
   {
     id: '7',
