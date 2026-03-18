@@ -416,7 +416,7 @@ export function StaffProfile() {
                   { label: 'Role Type', value: member.type, color: typeColor },
                   { label: 'Joined NCWQR', value: String(member.joinedYear) },
                   { label: 'Years of Service', value: String(yearsAtNCWQR) },
-                  ...(member.publications.length > 0 ? [{ label: 'Publications', value: String(member.publications.length) }] : []),
+                  ...((member.publicationCount ?? member.publications.length) > 0 ? [{ label: 'Publications', value: String(member.publicationCount ?? member.publications.length) }] : []),
                   ...(member.projects.length > 0 ? [{ label: 'Projects', value: String(member.projects.length) }] : []),
                 ].map((row) => (
                   <div key={row.label} className="flex items-center justify-between py-1 border-b border-gray-50 last:border-0">
