@@ -203,7 +203,7 @@ export const staffMembers: StaffMember[] = [
     type: 'Research Scientist',
     email: 'nmanning@heidelberg.edu',
     phone: '(419) 448-2443)',
-    photo: '/images/people/nate-manning-2026.jpg',
+    photo: '/images/people/nathan-manning-2026.jpg',
     officeLocation: 'Heidelberg University, Tiffin, Ohio',
     bio: 'Dr. Nate Manning is a Research Scientist at the National Center for Water Quality Research (NCWQR) at Heidelberg University. His research focuses on water quality, watershed hydrology, and aquatic ecosystem dynamics, with an emphasis on nutrient transport and harmful algal blooms in the Lake Erie Basin. He works extensively with long-term monitoring datasets to analyze sediment, phosphorus, nitrogen, and chloride dynamics across tributaries and wetlands. His work contributes to understanding drivers of eutrophication, freshwater salinization, and watershed-scale environmental change. He is affiliated with Donald Scavia’s lab and has contributed to forecasting models for harmful algal blooms in Western Lake Erie.',
     expertise: [
