@@ -217,7 +217,7 @@ export function About() {
 
           <div className="text-center">
             <a
-              href="https://www.heidelberg.edu/academics/science-technology-engineering-and-mathematics/natural-environment/ncwqr"
+              href="/staff-directory"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-white transition-all"
