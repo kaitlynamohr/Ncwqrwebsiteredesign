@@ -88,8 +88,7 @@ export function About() {
                 <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#0f2942' }}>Our Mission</h3>
               </div>
               <p className="text-gray-700 leading-relaxed" style={{ fontSize: '1.05rem' }}>
-                "Generate knowledge about the dynamics of water and soil resources in order to improve
-                water quality and availability."
+                "Generate knowledge about the dynamics of water and soil resources in order to improve water quality and availability."
               </p>
             </motion.div>
 
@@ -108,8 +107,7 @@ export function About() {
                 <h3 style={{ fontSize: '1.2rem', fontWeight: 700, color: '#0f2942' }}>Our Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed" style={{ fontSize: '1.05rem' }}>
-                "A world where scientific research informs the sustainable use of water and soils,
-                thereby preserving these resources for future generations."
+                "A world where scientific research informs the sustainable use of water and soils thereby preserving these resources for future generations."
               </p>
             </motion.div>
           </div>
