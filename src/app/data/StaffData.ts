@@ -116,7 +116,7 @@ export const staffMembers: StaffMember[] = [
     id: '2',
     name: 'Jakob Boehler',
     credentials: 'M.S. Education, B.S. Environmental Science',
-    title: 'Coordinator &Field Manager',
+    title: 'Coordinator & Field Manager',
     department: 'Research & Administration',
     type: 'Research Scientist',
     email: 'jboehler@heidelberg.edu',
