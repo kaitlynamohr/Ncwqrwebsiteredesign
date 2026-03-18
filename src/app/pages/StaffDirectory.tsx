@@ -139,7 +139,7 @@ export function StaffDirectory() {
       <PageHero
         title="Staff Directory"
         subtitle="Meet the scientists, technicians, and professionals behind NCWQR's 50-year mission to protect and understand our water resources."
-        imageUrl="https://images.unsplash.com/photo-1592925037394-b362acf14512?w=1600&q=85"
+        imageUrl="/images/lab/gm-winter.JPG"
       />
 
       {/* ── Search & Filter bar ───────────────────────────── */}

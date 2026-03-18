@@ -66,7 +66,7 @@ export function About() {
       <PageHero
         title="About NCWQR"
         subtitle="From a university river lab to a nationally designated research center — 55 years of advancing water science."
-        imageUrl="images/lab/gm-winter.JPG"
+        imageUrl="images/lab/gillmore-cherry-flower.jpg"
       />
 
       {/* ── MISSION & VISION ── */}
