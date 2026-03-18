@@ -322,7 +322,7 @@ export const staffMembers: StaffMember[] = [
     joinedYear: 2014,
   },
   {
-    id: '5',
+    id: '6',
     name: 'Emily Clark',
     credentials: 'B.S. in Environmental Science - Restoration',
     title: 'Field and Laboratory Technician',

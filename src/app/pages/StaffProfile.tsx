@@ -99,7 +99,7 @@ export function StaffProfile() {
             className="flex items-center gap-2 mb-8"
           >
             <Link
-              to="/staff"
+              to="/staff-directory"
               className="flex items-center gap-1.5 text-sm text-blue-200 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -465,7 +465,7 @@ export function StaffProfile() {
 
             {/* Back to directory */}
             <Link
-              to="/staff"
+              to="/staff-directory"
               className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border text-sm font-semibold transition-all"
               style={{ borderColor: BLUE + '40', color: BLUE, backgroundColor: '#EEF4FB' }}
               onMouseEnter={(e) => {
@@ -496,7 +496,7 @@ export function StaffProfile() {
                 Others in {member.department}
               </h2>
               <Link
-                to="/staff"
+                to="/staff-directory"
                 className="flex items-center gap-1.5 text-sm font-semibold transition-colors"
                 style={{ color: BLUE }}
               >
