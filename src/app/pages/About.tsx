@@ -8,34 +8,69 @@ const GREEN = '#2D5016';
 
 const milestones = [
   {
+    year: '1967',
+    title: 'River Labs Concept Launched',
+    desc: 'The original "River Labs" component is implemented within Heidelberg\'s Introductory Biology courses, funded by a $2,500 grant from the Esso Foundation.',
+  },
+  {
     year: '1969',
-    title: 'River Laboratory Founded',
-    desc: 'Dr. David B. Baker establishes the River Laboratory at Heidelberg College, beginning what would become the world\'s longest-running continuous water quality monitoring program.',
+    title: 'Sandusky River Project Established',
+    desc: 'The lab is formally established as an independently funded research facility. Jack Kramer is hired as the first full-time employee. Early findings reveal that storm events, not municipal sewage, drive the majority of phosphorus export in agricultural watersheds.',
   },
   {
     year: '1974',
+    title: 'HTLP Initiated',
+    desc: 'The Heidelberg Tributary Loading Program (HTLP) is officially initiated to provide long-term, daily nutrient export data for major Lake Erie tributaries.',
+  },
+  {
+    year: '1977',
     title: 'Renamed Water Quality Laboratory',
-    desc: 'The program grows significantly in scope and is renamed the Water Quality Laboratory, expanding its analytical capabilities and tributary monitoring network.',
+    desc: 'The facility is renamed the Water Quality Laboratory, reflecting its growing scope and analytical capabilities.',
   },
   {
-    year: '1990s',
-    title: 'Lake Erie Data Leadership',
-    desc: 'NCWQR data becomes instrumental in understanding Lake Erie\'s recovery from eutrophication and informing nutrient management strategies across the basin.',
+    year: '1980',
+    title: 'Pesticide Monitoring Added',
+    desc: 'Pesticide monitoring is added to tributary studies in response to environmental concerns regarding no-till agriculture and herbicide use.',
   },
   {
-    year: '2004',
-    title: 'Designated National Center',
-    desc: 'The U.S. House of Representatives designates the lab as the National Center for Water Quality Research — a recognition of the program\'s national significance.',
+    year: '1986',
+    title: 'Private Well Testing Program Launched',
+    desc: 'The Cooperative Private Well Testing Program is launched, eventually analyzing nitrate and herbicide concentrations in over 70,000 wells across multiple states.',
   },
   {
-    year: '2010s',
-    title: 'NOAA Partnership',
-    desc: 'NCWQR data becomes a primary input for NOAA\'s annual harmful algal bloom outlook for Lake Erie, linking tributary phosphorus loads to bloom severity forecasts.',
+    year: '1997',
+    title: 'Sandusky River Watershed Coalition Founded',
+    desc: 'The lab founds the Sandusky River Watershed Coalition to support sustainable development and resource protection in the watershed.',
   },
   {
-    year: '2020s',
-    title: 'Expanding National Partnerships',
-    desc: 'NCWQR joins LTAR, COMPASS, and H2Ohio networks — broadening its footprint from regional water quality monitoring to national agro-ecosystem and coastal research.',
+    year: '2002',
+    title: 'Designated National Center by Act of Congress',
+    desc: 'By an act of Congress, the lab is officially renamed the National Center for Water Quality Research (NCWQR), recognizing its national significance.',
+  },
+  {
+    year: '2005',
+    title: 'Moves to Gillmor Science Hall',
+    desc: 'The NCWQR moves to its current home on the top floor of the newly constructed Gillmor Science Hall. The Tributary Loading Website is launched, making decades of water quality data freely available to the public.',
+  },
+  {
+    year: '2010',
+    title: 'NOAA HAB Forecast Partnership Begins',
+    desc: 'The lab begins collaborating with NOAA to develop annual Harmful Algal Bloom forecasts for Lake Erie based on Maumee River phosphorus loading data.',
+  },
+  {
+    year: '2014',
+    title: 'Toledo Water Crisis',
+    desc: 'The Toledo drinking water crisis focuses international attention on NCWQR\'s long-term research regarding dissolved reactive phosphorus and its role in Lake Erie\'s re-eutrophication.',
+  },
+  {
+    year: '2016',
+    title: '40% Phosphorus Reduction Targets Adopted',
+    desc: 'The U.S. and Canada formally adopt 40% phosphorus reduction targets for Lake Erie, utilizing NCWQR data as the baseline for measuring progress.',
+  },
+  {
+    year: '2019',
+    title: '50th Anniversary',
+    desc: 'The NCWQR celebrates 50 years of monitoring, analyzing, and educating to protect freshwater resources across the Great Lakes region and beyond.',
   },
 ];
 
@@ -65,7 +100,7 @@ export function About() {
     <div>
       <PageHero
         title="About NCWQR"
-        subtitle="From a university river lab to a nationally designated research center — 55 years of advancing water science."
+        subtitle="From a university river lab to a nationally designated research center — 56 years of advancing water science."
         imageUrl="images/lab/gillmore-cherry-flower.jpg"
       />
 
