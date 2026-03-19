@@ -157,7 +157,7 @@ export function About() {
               Our History
             </p>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#0f2942' }}>
-              55 Years of Water Science
+              56 Years of Water Science
             </h2>
           </div>
 
@@ -217,7 +217,7 @@ export function About() {
               </p>
             </div>
             <h2 style={{ fontSize: '2rem', fontWeight: 700, color: '#0f2942' }}>
-              7 Scientists & Technicians + Student Interns
+              7 Scientists, Technicians, and Analysts
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
               A multidisciplinary team of researchers, lab technicians, and field scientists — backed by
