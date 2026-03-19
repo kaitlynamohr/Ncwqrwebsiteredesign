@@ -7,134 +7,171 @@ import { motion } from 'motion/react';
 const BLUE = '#1B4F8A';
 const GREEN = '#2D5016';
 
+interface Project {
+  id: number;
+  title: string;
+  summary: string;
+  partners: string[];
+  tags: string[];
+  status?: string;
+  featured?: boolean;
+  yearEnd?: string;
+  href?: string;
+}
+
 const ongoingProjects = [
   {
     id: 1,
-    title: 'Conservation Management Practices & Watershed Scale Effects',
-    summary:
-      'A paired watershed study evaluating how different agricultural conservation practices (cover crops, reduced tillage, wetland buffers) affect nutrient loading at the watershed scale in the Maumee River Basin.',
-    partners: ['USDA-NRCS', 'Ohio State University Extension'],
+    title: 'Assessing the Watershed Scale Effects of Conservation Management Practices',
+    summary: 'A paired watershed study in the Maumee River headwaters testing whether implementing conservation practices on over 70% of a small watershed can achieve the 40% phosphorus reduction target set in 2015. Funded through USDA-NRCS RCPP AFA and CEAP Watershed Assessment programs.',
+    partners: ['USDA-NRCS', 'Ohio State University', 'EQIP'],
     tags: ['Watershed', 'Agriculture', 'Phosphorus'],
     status: 'Ongoing',
+    href: 'https://www.arcgis.com/home/item.html?id=9381879cefa2475a98f932c61e98aa74',
   },
   {
     id: 2,
     title: 'H2Ohio ODNR Wetland Monitoring Program',
-    summary:
-      'As part of the LEARN (Lake Erie Agronomic Research Network) monitoring network led by Kent State University, NCWQR provides tributary water quality data to evaluate wetland nutrient reduction effectiveness under Ohio\'s H2Ohio program.',
-    partners: ['Ohio DNR', 'Kent State University', 'LEARN Network'],
+    summary: 'Part of the LEARN monitoring team led by Kent State University, assessing nutrient removal effectiveness of wetland restoration projects implemented by ODNR under Governor DeWine\'s H2Ohio Initiative. Partners include Bowling Green State, University of Toledo, Ohio State, and Wright State.',
+    partners: ['Ohio DNR', 'Kent State University', 'BGSU', 'University of Toledo', 'OSU', 'Wright State'],
     tags: ['Wetlands', 'H2Ohio', 'Nutrients'],
     status: 'Ongoing',
+    href: 'https://lakeerieandaquaticresearch.org/research/learn-initiatives/h2ohio-wmp/',
   },
   {
     id: 3,
-    title: 'Colloidal-Phosphorus Research',
-    summary:
-      'Investigating the role of colloidal phosphorus — a size fraction between dissolved and particulate — in lake eutrophication, in collaboration with Ohio State University. This work could redefine how we understand phosphorus bioavailability.',
-    partners: ['Ohio State University'],
+    title: 'Evaluating Colloidal-Phosphorus Exports and Bioavailability',
+    summary: 'Investigating spatiotemporal dynamics of colloidal-phosphorus in streams, wetlands, and western Lake Erie to determine how it challenges existing assumptions about dissolved reactive phosphorus bioavailability and management targets.',
+    partners: ['Ohio State University', 'University of Montana'],
     tags: ['Phosphorus', 'Chemistry', 'Lake Erie'],
     status: 'Ongoing',
   },
   {
     id: 4,
     title: 'Tracking Nutrient Load Reductions in Lake Erie Tributaries',
-    summary:
-      'Using long-term HTLP data in collaboration with the U.S. Geological Survey to detect and attribute changes in nutrient loading over time — essential for evaluating progress toward Great Lakes Water Quality Agreement goals.',
+    summary: 'Using long-term HTLP data in collaboration with USGS to assess trends in nutrient loads from tributaries to Lake Erie in a cohesive manner, providing up-to-date status on progress toward Great Lakes Water Quality Agreement goals.',
     partners: ['USGS'],
     tags: ['Nutrients', 'Trend Analysis', 'Policy'],
     status: 'Ongoing',
   },
   {
     id: 5,
-    title: 'Veterinary Pharmaceuticals in Lake Erie Tributaries',
-    summary:
-      'Employing passive water sampling technology in partnership with the University of Nebraska to detect and quantify veterinary pharmaceuticals (antibiotics, hormones) in tributary streams — a largely unstudied but potentially significant environmental concern.',
-    partners: ['University of Nebraska'],
+    title: 'Occurrence and Sources of Veterinary Pharmaceuticals in Lake Erie Tributaries',
+    summary: 'Using in-situ passive sampling (POCIS) with liquid chromatography tandem mass spectrometry to detect veterinary and mixed-use pharmaceuticals in the Sandusky River watershed — addressing antibiotic resistance risks and potential nutrient source tracing.',
+    partners: ['University of Nebraska — Water Science Laboratory'],
     tags: ['Emerging Contaminants', 'Passive Sampling', 'Pharmaceuticals'],
     status: 'Ongoing',
   },
   {
     id: 6,
-    title: 'COMPASS – Great Lakes Coastal Observations',
-    summary:
-      'Contributing to the Coastal Observations, Mechanisms, and Predictions Across Systems and Scales (COMPASS) project led by Pacific Northwest National Laboratory — a DOE-funded initiative studying how climate change affects coastal freshwater ecosystems.',
-    partners: ['PNNL (Lead)', 'DOE', 'Multiple University Partners'],
+    title: 'COMPASS – Great Lakes Coastal Observations & Modeling',
+    summary: 'Contributing to the DOE-funded Coastal Observations, Mechanisms, and Predictions Across Systems and Scales (COMPASS) project led by Pacific Northwest National Laboratory — developing new coastal observations in Lake Erie and supporting multi-scale Great Lakes modeling.',
+    partners: ['Pacific Northwest National Lab', 'DOE'],
     tags: ['Coastal', 'Climate', 'Great Lakes'],
     status: 'Ongoing',
+    href: 'https://compass.pnnl.gov/',
   },
   {
     id: 7,
-    title: 'Long-Term Agro-Ecosystem Research (LTAR)',
-    summary:
-      'NCWQR serves as the Eastern Corn Belt node of USDA\'s national LTAR network, providing long-term water quality data to compare across agricultural landscapes and assess sustainability of corn-soybean production systems.',
-    partners: ['USDA-ARS', 'National LTAR Network'],
+    title: 'Long-Term Agro-Ecosystem Research Program (LTAR)',
+    summary: 'Since 2014, NCWQR has served as the Eastern Corn Belt node of USDA\'s national LTAR network alongside OSU\'s Soil Drainage Research Unit and Purdue\'s National Soil Erosion Research Laboratory — forecasting effects of environmental trends and policies on agro-ecosystems.',
+    partners: ['USDA-ARS', 'Ohio State University', 'Purdue University'],
     tags: ['Agroecosystems', 'USDA', 'Long-term'],
     status: 'Ongoing',
+    href: 'https://www.ars.usda.gov/natural-resources-and-sustainable-agricultural-systems/water-availability-and-watershed-management/docs/long-term-agroecosystem-research-ltar-network/',
   },
   {
     id: 8,
     title: 'Forecasting Harmful Algal Blooms in Lake Erie\'s Western Basin',
-    summary:
-      'Providing spring tributary phosphorus loading data that serves as the primary input for NOAA\'s annual harmful algal bloom (HAB) severity forecast for Lake Erie\'s Western Basin — directly protecting drinking water for millions in the region.',
-    partners: ['NOAA GLERL', 'Great Lakes HAB Collaborative'],
+    summary: 'NCWQR\'s Maumee River phosphorus loading data is the primary input for NOAA\'s annual HAB severity forecast for Lake Erie\'s Western Basin. The data also feeds Dr. Daniel Obenour\'s Bayesian model at NC State and LimnoTech\'s Western Lake Erie Ecosystem Model (WLEEM).',
+    partners: ['NOAA GLERL', 'NC State University', 'LimnoTech', 'University of Toledo'],
     tags: ['HAB', 'NOAA', 'Drinking Water'],
     status: 'Ongoing',
     featured: true,
+    href: 'https://best.luxuryhotelshub.com/lakeerie/',
   },
 ];
 
 const pastProjects = [
   {
     id: 101,
-    title: 'Lake Erie Phosphorus Task Force',
-    summary: 'Multi-agency evaluation of phosphorus sources and reduction targets to guide Great Lakes Water Quality Agreement targets.',
-    partners: ['EPA', 'Environment Canada', 'Multiple State Agencies'],
-    tags: ['Policy', 'Phosphorus', 'Lake Erie'],
-    yearEnd: '2015',
-  },
-  {
-    id: 102,
-    title: 'Great Lakes Restoration Initiative — Maumee Watershed',
-    summary: 'Baseline and trend monitoring of nutrient and sediment loading from the Maumee River watershed under GLRI funding.',
-    partners: ['EPA', 'Ohio EPA'],
-    tags: ['Maumee', 'Sediment', 'GLRI'],
+    title: 'Evaluating the Impact of Rivers on Phosphorus Delivery to Western Lake Erie',
+    summary: 'Determined when and where rivers act as phosphorus sources or sinks, and how instream processing affects policy recommendations for agricultural conservation targets. Led by Dr. Jim Hood at OSU.',
+    partners: ['Ohio State University', 'USGS'],
+    tags: ['Phosphorus', 'Rivers', 'Lake Erie'],
     yearEnd: '2018',
   },
   {
-    id: 103,
-    title: 'Microcystin Distribution in Lake Erie Tributaries',
-    summary: 'Tracking cyanotoxin (microcystin) concentrations in tributary waters to understand HAB precursor conditions.',
-    partners: ['Ohio EPA', 'Bowling Green State University'],
-    tags: ['HAB', 'Toxins', 'Public Health'],
+    id: 102,
+    title: 'Enhancing HTLP Through Real-Time Data and GLOS Integration',
+    summary: 'Connected water quality sensors to a telecommunication network at HTLP stations and integrated data into the Great Lakes Observing System (GLOS) Seagull platform for real-time public access.',
+    partners: ['GLOS', 'LimnoTech'],
+    tags: ['Data', 'Real-time', 'Technology'],
     yearEnd: '2019',
   },
   {
+    id: 103,
+    title: 'Glyphosate Runoff Dynamics in Lake Erie Tributaries',
+    summary: 'Used novel IC-ICP-MS methods to measure glyphosate and AMPA at environmental concentrations in Rock Creek, Honey Creek, and Wolf Creek watersheds from 2018–2020.',
+    partners: ['University of Nebraska — Water Science Laboratory'],
+    tags: ['Pesticides', 'Glyphosate', 'Agriculture'],
+    yearEnd: '2020',
+  },
+  {
     id: 104,
-    title: 'Atrazine and Herbicide Loading Study',
-    summary: 'Multi-year study of herbicide loading from corn-soybean watersheds and seasonal patterns in tributary concentrations.',
-    partners: ['USDA'],
-    tags: ['Pesticides', 'Agriculture', 'Chemistry'],
-    yearEnd: '2012',
+    title: 'Identifying the Best Strategy to Reduce Phosphorus Loads from Agricultural Watersheds',
+    summary: 'Evaluated basin-wide vs. hotspot targeting strategies for dissolved phosphorus reduction in the Western Lake Erie Basin to improve watershed model predictions.',
+    partners: ['Ohio Sea Grant', 'OSU'],
+    tags: ['Phosphorus', 'Strategy', 'Policy'],
+    yearEnd: '2018',
+    href: 'https://ohioseagrant.osu.edu/research/collaborations/habs/track',
   },
   {
     id: 105,
-    title: 'Biological Assessment of Lake Erie Tributaries',
-    summary: 'Macroinvertebrate and fish community surveys to develop biological indices for assessing stream health.',
-    partners: ['Ohio EPA', 'Heidelberg University Biology Dept.'],
-    tags: ['Biology', 'Stream Health', 'Macroinvertebrates'],
-    yearEnd: '2016',
+    title: 'Verification and Enhancement of NRCS-USDA Nutrient Tracking Tool',
+    summary: 'Three-year USDA-NRCS funded project calibrating the Nutrient Tracking Tool (NTT) and APEX/SWAT models for the Great Lakes basin, with edge-of-field studies and farmer outreach across the Sandusky River watershed.',
+    partners: ['USDA-NRCS', 'Tarleton State University', 'IPM Institute', 'Sandusky River Watershed Coalition'],
+    tags: ['Modeling', 'BMPs', 'Outreach'],
+    yearEnd: '2017',
+    href: '/research/ntt',
   },
   {
     id: 106,
-    title: 'Phosphorus Fractionation in Agricultural Runoff',
-    summary: 'Characterizing dissolved, colloidal, and particulate phosphorus fractions in runoff events from agricultural fields.',
-    partners: ['USDA-ARS'],
-    tags: ['Phosphorus', 'Runoff', 'Field Research'],
-    yearEnd: '2020',
+    title: 'Evaluating the 4R Nutrient Stewardship Certification Program',
+    summary: 'Multi-scale evaluation of how the 4R certification program for nutrient service providers affected crop productivity, water quality, and farmer perceptions in the Western Lake Erie Basin.',
+    partners: ['The Fertilizer Institute', 'USDA-ARS', 'The Nature Conservancy', 'OSU'],
+    tags: ['4R', 'Nutrients', 'Stewardship'],
+    yearEnd: '2018',
+    href: 'https://4rcertified.org/research/',
+  },
+  {
+    id: 107,
+    title: 'Online Tributary Loading Tool for HAB Forecasting',
+    summary: 'Partnered with GLOS and LimnoTech to provide HTLP tributary data online with weekly Maumee River updates from March–August to support real-time HAB forecast tracking.',
+    partners: ['GLOS', 'LimnoTech'],
+    tags: ['HAB', 'Data', 'Tools'],
+    yearEnd: '2018',
+    href: 'http://data.glos.us/maumee/',
+  },
+  {
+    id: 108,
+    title: 'Oligochaete Worm Distributions in the Great Lakes',
+    summary: 'Identified and counted thousands of oligochaetes from Great Lakes sediment samples under a subcontract to Buffalo State College, funded by USEPA Great Lakes National Program Office.',
+    partners: ['Buffalo State College (SUNY)', 'USEPA'],
+    tags: ['Biology', 'Benthos', 'Great Lakes'],
+    yearEnd: '2016',
+  },
+  {
+    id: 109,
+    title: 'Aquatic Communities and Ditch Maintenance in Agricultural Landscapes',
+    summary: 'Surveyed fish and macroinvertebrates in 20 maintained agricultural ditch segments from 2008–2011 to understand how BMPs affect aquatic habitat complexity and community recovery.',
+    partners: ['University of Toledo'],
+    tags: ['Biology', 'Agriculture', 'BMPs'],
+    yearEnd: '2014',
   },
 ];
 
-function ProjectCard({ project, muted = false }: { project: any; muted?: boolean }) {
+function ProjectCard({ project, muted = false }: { project: Project; muted?: boolean }) {
   const [expanded, setExpanded] = useState(false);
 
   return (
@@ -207,20 +244,17 @@ function ProjectCard({ project, muted = false }: { project: any; muted?: boolean
           ))}
         </div>
 
-        {expanded && project.partners && (
-          <div className="mt-4 pt-4 border-t border-gray-100">
-            <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Partners</p>
-            <div className="flex flex-wrap gap-2">
-              {project.partners.map((p: string) => (
-                <span
-                  key={p}
-                  className="text-xs px-2.5 py-1 rounded-md font-medium"
-                  style={{ backgroundColor: muted ? '#F3F4F6' : '#F0F9FF', color: '#374151' }}
-                >
-                  {p}
-                </span>
-              ))}
-            </div>
+        {expanded && project.href && (
+          <div className="mt-3">
+            <a
+              href={project.href}
+              target={project.href.startsWith('http') ? '_blank' : undefined}
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold"
+              style={{ color: BLUE }}
+              >
+              Learn More <ExternalLink className="w-3 h-3" />
+            </a>
           </div>
         )}
       </div>
