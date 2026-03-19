@@ -100,7 +100,7 @@ export function Contact() {
                     <div>
                       <p className="font-semibold text-gray-800 text-sm mb-0.5">Phone</p>
                       <a href="tel:+14194483828" className="text-sm text-gray-600 hover:text-blue-700 transition-colors">
-                        (419) 448-3828
+                        (419) 448-2198
                       </a>
                     </div>
                   </div>
