@@ -21,24 +21,40 @@ const resources = [
 
 const faqs = [
   {
-    q: 'How is water quality data screened for quality?',
-    a: 'All data passes through a multi-step QA/QC process that includes automated range checks, duplicate sample comparisons, and manual review by experienced scientists. Samples that fail any criterion are flagged and either corrected or removed from the dataset.',
+    q: 'Where are the monitoring stations located?',
+    a: 'Station names, coordinates, land use data, and corresponding USGS gage numbers are available in the Station Metadata Spreadsheet and Study Plan linked in the Downloads section above. Each station is co-located at a USGS gaging station.',
   },
   {
-    q: 'What are "detection limits" and why do they matter?',
-    a: 'A detection limit is the lowest concentration our instruments can reliably measure. Values below the detection limit are reported as "<MDL" (less than the method detection limit) rather than zero — this matters because treating non-detects as zero can distort trend analyses.',
+    q: 'How do I cite this data?',
+    a: 'NCWQR. 2022. Heidelberg Tributary Loading Program (HTLP) Dataset. Zenodo. https://doi.org/10.5281/zenodo.6606949',
   },
   {
-    q: 'How often is data collected?',
-    a: 'Monitoring frequency depends on the station and parameter. Most stations use automated samplers that collect water multiple times per week, with increased sampling during high-flow (storm) events when nutrient loading is highest.',
+    q: 'How is stream flow calculated?',
+    a: 'Each station is co-located at a USGS gaging station and flow is determined by USGS. Flow in the data portal is provisional data acquired at the time of sampling. For official loading estimations, USGS data should be downloaded directly.',
   },
   {
-    q: 'Can I download raw data for my own analysis?',
-    a: 'Yes — all historical data is publicly available through the HTLP Data Portal at ncwqr-data.org. The portal includes tutorials and a user guide to help you work with the dataset effectively.',
+    q: 'Why are there negative data points?',
+    a: 'Negative concentrations result from instrument error near the detection limit — they are analytically and statistically valid even though they make no physical sense. NCWQR does not censor these values because removing them would introduce bias into statistical analyses. Values of -9 and -1 are used as missing value codes and are not real measurements.',
   },
   {
     q: 'What parameters are measured?',
-    a: 'Core parameters include dissolved reactive phosphorus (DRP), total phosphorus (TP), nitrate-nitrogen, total Kjeldahl nitrogen (TKN), suspended solids (TSS), and stream discharge. Some stations also measure chlorophyll, dissolved oxygen, and biological parameters.',
+    a: 'Core parameters include dissolved reactive phosphorus (DRP), total phosphorus (TP), ammonium, nitrite, nitrate, total Kjeldahl nitrogen (TKN), chloride, sulfate, soluble reactive silica, and total suspended solids (TSS). Select stations also have YSI EXO sondes measuring turbidity, dissolved oxygen, pH, conductivity, and temperature every 30 minutes.',
+  },
+  {
+    q: 'How is data quality certified?',
+    a: 'NCWQR participates in the USGS inter-laboratory comparison study annually and certifies data through Phenova. See the Quality Assurance Plan in the Downloads section for full details on the QA/QC program.',
+  },
+  {
+    q: 'How are annual loads calculated?',
+    a: 'Annual loads are calculated using a stratified Beale Ratio Estimator program called autoBeale. Daily loads are the product of USGS daily mean discharge and flow-weighted mean concentration. Missing days — typically less than 5% annually — are estimated by interpolation or concentration-discharge relationships.',
+  },
+  {
+    q: 'How do I create a data portal account?',
+    a: 'Go to ncwqr-data.org, click Register at the top of the screen, complete the form, and confirm your account via the email you receive. Contact ncwqr@heidelberg.edu if you have issues.',
+  },
+  {
+    q: 'Who do I contact with questions?',
+    a: 'Contact Jakob Boehler or reach the team at ncwqr@heidelberg.edu.',
   },
 ];
 
