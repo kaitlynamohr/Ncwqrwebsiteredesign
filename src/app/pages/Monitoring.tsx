@@ -93,16 +93,22 @@ export function Monitoring() {
                 Heidelberg Tributary Loading Program
               </h2>
               <p className="text-gray-600 mb-5 leading-relaxed">
-                Building on research begun in 1969, NCWQR formally initiated the Heidelberg Tributary Loading Program (HTLP)
-                in 1974 — now the longest-running continuous tributary water quality monitoring program for any major lake
-                system in the world. No other program provides this length of record, sampling frequency, and geographic
-                coverage for any major lake's tributary system.
+                A tributary loading program measures the "load" — the amount of pollutants that move downstream past a sampling
+                station each year. Building on research begun in 1969, NCWQR formally initiated the Heidelberg Tributary Loading Program
+                (HTLP) in 1974 as part of state and federal programs to restore Lake Erie. It is now the longest-term and most detailed
+                program of its kind in the United States, and the only program of its type in the Great Lakes Basin.
+              </p>
+              <p className="text-gray-600 mb-5 leading-relaxed">
+                NCWQR collects and analyzes approximately 450–500 water samples per monitoring station per year. All streamflow measurements
+                are provided by the USGS. Together, the stations permit calculation of pollutant export from over 50% of Ohio's land area —
+                covering the Maumee, Sandusky, Cuyahoga, Portage, Raisin, and other major tributaries, as well as Ohio River tributaries
+                including the Great Miami, Muskingum, and Scioto rivers.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Today, 28 active stations continuously monitor discharge, nutrient concentrations, and pollutant loading across
-                Lake Erie's major tributaries. That data directly informs NOAA's annual harmful algal bloom outlook for Lake Erie's
-                Western Basin — and tracks progress toward the Great Lakes Water Quality Agreement's nutrient reduction goals adopted
-                by the U.S. and Canada in 2016.
+                Today, 28 active stations continuously monitor discharge, nutrient concentrations, and pollutant loading across Lake Erie's
+                major tributaries. That data directly informs NOAA's annual harmful algal bloom outlook for Lake Erie's Western Basin — and
+                tracks progress toward the Great Lakes Water Quality Agreement's nutrient reduction goals adopted by the U.S. and Canada in
+                2016.
               </p>
 
               <div className="grid grid-cols-3 gap-4 mb-8">
