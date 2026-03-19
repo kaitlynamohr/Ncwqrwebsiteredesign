@@ -7,16 +7,16 @@ const BLUE = '#1B4F8A';
 const GREEN = '#2D5016';
 
 const resources = [
-  { title: 'Station Metadata Spreadsheet', type: 'XLSX', desc: 'Complete metadata for all 18 HTLP monitoring stations.' },
-  { title: '2022 Ohio EPA Project Study Plan', type: 'PDF', desc: 'Comprehensive study design and sampling protocols approved by Ohio EPA.' },
-  { title: 'Quality Assurance Plan', type: 'PDF', desc: 'Data quality standards, QA/QC procedures, and detection limits documentation.' },
-  { title: 'Tutorial: Hydrographs', type: 'PDF', desc: 'Guide to interpreting stream discharge over time.' },
-  { title: 'Tutorial: Loading Calculations', type: 'PDF', desc: 'How NCWQR calculates pollutant loads from concentration and flow data.' },
-  { title: 'Tutorial: Concentration Exceedancy Curves', type: 'PDF', desc: 'Understanding frequency distributions of concentration data.' },
-  { title: 'Tutorial: Time-Weighted Concentrations', type: 'PDF', desc: 'Methods for calculating flow-weighted mean concentrations.' },
-  { title: 'Tutorial: Concentration-Flow Relationships', type: 'PDF', desc: 'Exploring the relationship between stream discharge and pollutant concentration.' },
-  { title: 'Tutorial: Two Parameter Comparisons', type: 'PDF', desc: 'Comparing multiple water quality parameters across time or stations.' },
-  { title: 'Tutorial: Pollutant Loading and Stream Discharge', type: 'PDF', desc: 'Connecting pollutant loads to discharge patterns for trend analysis.' },
+  { title: 'Station Metadata Spreadsheet', type: 'XLSX', desc: 'Complete metadata for all 18 HTLP monitoring stations.', href: '/documents/sampling-station-metadata.xlsx' },
+  { title: '2022 Ohio EPA Project Study Plan', type: 'PDF', desc: 'Comprehensive study design and sampling protocols approved by Ohio EPA.', href: '/documents/project-study-plan-2022.pdf' },
+  { title: 'Quality Assurance Plan', type: 'PDF', desc: 'Data quality standards, QA/QC procedures, and detection limits documentation.', href: '/documents/quality-assurance-plan-2022.pdf' },
+  { title: 'Tutorial: Hydrographs', type: 'PDF', desc: 'Guide to interpreting stream discharge over time.', href: '/documents/hydrographs-sedigraphs-chemographs.pdf' },
+  { title: 'Tutorial: Loading Calculations', type: 'PDF', desc: 'How NCWQR calculates pollutant loads from concentration and flow data.', href: '/documents/loading-calculations-annual-loads-unit-area-loads.pdf' },
+  { title: 'Tutorial: Concentration Exceedancy Curves', type: 'PDF', desc: 'Understanding frequency distributions of concentration data.', href: '/documents/concentration-exceedancy-curves.pdf' },
+  { title: 'Tutorial: Time-Weighted Concentrations', type: 'PDF', desc: 'Methods for calculating flow-weighted mean concentrations.', href: '/documents/time-and-flow-weighted-mean-concentrations.pdf' },
+  { title: 'Tutorial: Concentration-Flow Relationships', type: 'PDF', desc: 'Exploring the relationship between stream discharge and pollutant concentration.', href: '/documents/concentration-flow-relationships.pdf' },
+  { title: 'Tutorial: Two Parameter Comparisons', type: 'PDF', desc: 'Comparing multiple water quality parameters across time or stations.', href: '/documents/two-parameter-comparisons.pdf' },
+  { title: 'Tutorial: Pollutant Loading and Stream Discharge', type: 'PDF', desc: 'Connecting pollutant loads to discharge patterns for trend analysis.', href: '/documents/relationships-between-pollutant-loading-stream-discharge.pdf' },
 ];
 
 const faqs = [
@@ -77,21 +77,21 @@ export function Monitoring() {
                 Heidelberg Tributary Loading Program
               </h2>
               <p className="text-gray-600 mb-5 leading-relaxed">
-                Since 1969, NCWQR has operated a network of stream gauging and water quality sampling
-                stations on the major tributaries entering Lake Erie. The HTLP is unique in the world —
-                no other program provides this length of record, sampling frequency, and geographic
+                Building on research begun in 1969, NCWQR formally initiated the Heidelberg Tributary Loading Program (HTLP)
+                in 1974 — now the longest-running continuous tributary water quality monitoring program for any major lake
+                system in the world. No other program provides this length of record, sampling frequency, and geographic
                 coverage for any major lake's tributary system.
               </p>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Today, 18 active stations continuously monitor discharge, nutrient concentrations, and
-                pollutant loading. That data directly informs NOAA's annual harmful algal bloom outlook
-                for Lake Erie's Western Basin — and tracks progress toward the Great Lakes Water Quality
-                Agreement nutrient reduction goals.
+                Today, 28 active stations continuously monitor discharge, nutrient concentrations, and pollutant loading across
+                Lake Erie's major tributaries. That data directly informs NOAA's annual harmful algal bloom outlook for Lake Erie's
+                Western Basin — and tracks progress toward the Great Lakes Water Quality Agreement's nutrient reduction goals adopted
+                by the U.S. and Canada in 2016.
               </p>
 
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {[
-                  { val: '18', lbl: 'Active Stations' },
+                  { val: '28', lbl: 'Active Stations' },
                   { val: '55+', lbl: 'Years of Record' },
                   { val: 'Daily', lbl: 'Sampling Frequency' },
                 ].map((s) => (
@@ -138,7 +138,7 @@ export function Monitoring() {
                 <Map className="w-5 h-5 text-blue-300 flex-shrink-0" />
                 <div>
                   <p className="text-white text-sm font-semibold">HTLP Monitoring Network</p>
-                  <p className="text-blue-300 text-xs">18 stations covering the Maumee, Sandusky, Cuyahoga, and other major Lake Erie tributaries</p>
+                  <p className="text-blue-300 text-xs">28 stations covering the Maumee, Sandusky, Cuyahoga, and other major Lake Erie tributaries</p>
                 </div>
               </div>
             </motion.div>
@@ -248,13 +248,16 @@ export function Monitoring() {
                   <p className="text-sm font-semibold text-gray-800 truncate">{r.title}</p>
                   <p className="text-xs text-gray-500 mt-0.5">{r.desc}</p>
                 </div>
-                <button
-                  className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center transition-all"
-                  style={{ backgroundColor: '#EBF3FB', color: BLUE }}
-                  title="Download"
-                >
-                  <Download className="w-4 h-4" />
-                </button>
+                <a
+                  href={r.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 w-9 h-9 rounded-lg flex items-center justify-center transition-all"
+                    style={{ backgroundColor: '#EBF3FB', color: BLUE }}
+                    title="Download"
+                  >
+                    <Download className="w-4 h-4" />
+                </a>
               </motion.div>
             ))}
           </div>
