@@ -17,8 +17,6 @@ const timelineEvents = [
     era: 'Foundational Context',
     title: 'Dr. Ira T. Wilson Arrives at Heidelberg',
     body: 'Dr. Ira T. Wilson joins the Heidelberg faculty, becoming the college\'s first true "scholar-teacher" — balancing heavy teaching loads with pioneering summer research on lake bottom deposits in the region\'s waters. His work would lay the intellectual foundation for decades of aquatic science at Heidelberg.',
-    image: 'https://images.unsplash.com/photo-1728070920529-2a5dc82bbae0?w=800&q=80',
-    imageCaption: 'Heidelberg University campus, circa early 20th century',
     color: '#6B4226',
   },
   {
@@ -27,8 +25,8 @@ const timelineEvents = [
     era: 'A Warning Sign',
     title: 'Lake Erie\'s Ecosystem Collapses',
     body: 'A period of calm winds and stratified water causes catastrophic hypoxia in Lake Erie\'s Western Basin, resulting in near-100% mortality of burrowing mayfly (Hexagenia) populations. This ecological collapse — caused by nutrient over-enrichment from agricultural and municipal sources — would not reverse for four decades, and would become a defining motivation for the water quality research to come.',
-    image: 'https://images.unsplash.com/photo-1454702762838-a6df8cc3517f?w=800&q=80',
-    imageCaption: 'Lake Erie, one of the most impacted freshwater bodies in North America during this era',
+    image: '/images/wildlife/mayfly-flag.JPG',
+    imageCaption: 'Mayflies from the restored populations in Lake Erie, 2011. The return of Hexagenia was a celebrated milestone in the lake\'s ecological recovery.',
     color: '#0E7490',
   },
   {
@@ -37,8 +35,8 @@ const timelineEvents = [
     era: 'The Beginning',
     title: 'Baker Returns & the First River Labs',
     body: 'Heidelberg alumnus David B. Baker returns to join the Biology Department in 1966, succeeding the retiring aquatic studies chair Arthur McQuate. In the fall of 1967, Baker and chemistry professor Thomas Taylor launch the original "River Labs" component within Introductory Biology courses, funded by a modest $2,500 grant from the Esso Foundation. In December 1968, Baker is awarded a landmark $47,650 grant from the Federal Water Pollution Control Administration (FWPCA) to study flow augmentation in the Sandusky River.',
-    image: 'https://images.unsplash.com/photo-1605122822918-26956d16a6f2?w=800&q=80',
-    imageCaption: 'Field researchers collecting water samples from a tributary station, late 1960s',
+    image: '',
+    imageCaption: 'Dr. David B. Baker, founder of NCWQR, pictured in the early years of the Sandusky River Project',
     color: BLUE,
   },
   {
@@ -47,7 +45,7 @@ const timelineEvents = [
     era: 'The Founding Year',
     title: 'Sandusky River Project Founded — and a Pivotal Discovery',
     body: 'The lab is formally established as the Sandusky River Project. Jack Kramer is hired as the first full-time employee. That same summer, record-setting storms upend the planned low-flow study in a serendipitous way: researchers discover that storm events — not municipal sewage — are responsible for the vast majority of phosphorus transport in agricultural watersheds. This insight becomes a cornerstone of modern nutrient management science.',
-    image: 'https://images.unsplash.com/photo-1591296451961-1513fea61c93?w=800&q=80',
+    image: '/images/people/2016-jack.jpg',
     imageCaption: 'Agricultural fields in the Sandusky watershed — the birthplace of a 50-year monitoring mission',
     color: GREEN,
   },
@@ -57,8 +55,8 @@ const timelineEvents = [
     era: 'Expansion Era',
     title: 'The Clean Water Act, HTLP, and the Nearshore Study',
     body: 'The Clean Water Act (1972) and the Great Lakes Water Quality Agreement establish the regulatory foundation for the lab\'s future research. By 1974, the facility is renamed the River Studies Laboratory and the Heidelberg Tributary Loading Program (HTLP) — now the world\'s longest-running continuous tributary water quality monitoring program — is formally initiated. In 1975, the lab hosts the Sandusky River Basin Symposium, where the influential "River Continuum" concept is first presented publicly. The lab moves to the basement of Bareis Hall in 1976 as staff grows. By 1977, the program is renamed the Water Quality Laboratory (WQL). In 1978–1979, WQL takes to Lake Erie aboard the R/V Roger R. Simons, collecting water and sediment samples from 89 stations across the lake during the landmark Nearshore Study.',
-    image: 'https://images.unsplash.com/photo-1586398251212-c060912c38cd?w=800&q=80',
-    imageCaption: 'Industrial pollution in the Great Lakes region prompted the 1972 Clean Water Act — and gave the WQL\'s mission new urgency',
+    image: '/images/nature/bloom.jpg',
+    imageCaption: 'Aerial view of algal bloom plumes in Lake Erie\'s Western Basin — the nutrient-driven eutrophication that motivated decades of NCWQR tributary monitoring research',
     color: '#6B21A8',
   },
   {
@@ -67,7 +65,7 @@ const timelineEvents = [
     era: 'The Pesticides Decade',
     title: 'Herbicides, Private Wells, and a Publication in Nature',
     body: 'In response to the rise of no-till agriculture, pesticide monitoring is added to tributary studies in 1980. A 1983 study of finished tap water in Bowling Green and Tiffin reveals that soluble herbicides like atrazine are not removed by standard treatment. A 1985 pilot study on herbicides in rainwater yields a landmark publication in the journal Nature. In 1986, the Cooperative Private Well Testing Program (CWTP) is launched, eventually providing nitrate and herbicide data for over 70,000 wells across Ohio. In 1988, a toluene spill near Watson, OH forces the evacuation of 5,000 people; Ken Krieger documents macroinvertebrate recovery in Sugar Creek. In 1989, the lab publishes its "Nitrate and Pesticides in Private Wells of Ohio: A State Atlas," summarizing data from over 16,000 wells.',
-    image: 'https://images.unsplash.com/photo-1771684512143-88bdb34782fa?w=800&q=80',
+    image: '/images/lab/1980-pesticides.jpg',
     imageCaption: 'Private well water quality testing — at its peak, NCWQR\'s program covered over 70,000 Ohio wells',
     color: GOLD,
   },
@@ -77,7 +75,7 @@ const timelineEvents = [
     era: 'Ecological Recovery',
     title: 'Mayflies Return, and Baker Retires',
     body: 'The Environmental Extension program is formalized in 1991, with staff giving dozens of presentations annually to farmers, citizens, and policymakers. In 1992, during an OSU Stone Laboratory field trip, Ken Krieger discovers the first burrowing mayfly nymphs (Hexagenia) in Lake Erie\'s Western Basin since their disappearance in 1953 — a landmark signal of ecological recovery tied directly to phosphorus reduction efforts informed by WQL data. Heidelberg introduces the Water Resources major in 1993. Researchers respond to the Environmental Working Group\'s "Tap Water Blues" report in 1994, sparking a national debate on pesticide risk communication. In 1996, a soil metabolite of alachlor causing false positives in immunoassay tests is identified. The Sandusky River Watershed Coalition is founded in 1997. After 30 years as Director, David Baker retires in 1999; R. Peter Richards assumes leadership.',
-    image: 'https://images.unsplash.com/photo-1765318720856-ae0b415120ed?w=800&q=80',
+    image: '/images/wildlife/mayfly-close.JPG',
     imageCaption: 'The return of Hexagenia mayflies to Lake Erie in 1992 was a celebrated sign of ecosystem recovery',
     color: GREEN,
   },
@@ -87,7 +85,7 @@ const timelineEvents = [
     era: 'The National Center Era',
     title: 'An Act of Congress & a New Home',
     body: 'In 2002, by an act of Congress, the lab is officially renamed the National Center for Water Quality Research (NCWQR) — a recognition of its national and international significance. That same year, Timothy Loftus is hired as the first Director from outside the Heidelberg community. In 2004, Richards and Baker introduce the Richards-Baker Flashiness Index, now a standard tool in stream hydrology worldwide. The NCWQR moves to its current home on the top floor of the newly constructed Gillmor Science Hall in 2005, the same year its Tributary Loading Website launches — making five decades of raw data freely available to the global scientific community. Gary Winston is appointed fourth Director in 2007. Remegio Confesor joins in 2008 with advanced watershed modeling capabilities. In 2009, a line-item veto by Ohio Governor Strickland threatens HTLP funding, triggering a two-year crisis.',
-    image: 'https://images.unsplash.com/photo-1741529189646-056bf8ea92cd?w=800&q=80',
+    image: '/images/lab/gillmore-cherry-flower.jpg',
     imageCaption: 'Gillmor Science Hall, the modern home of NCWQR since 2005',
     color: BLUE,
   },
@@ -97,8 +95,8 @@ const timelineEvents = [
     era: 'Crisis & Consequence',
     title: 'HAB Forecasting and the Toledo Water Crisis',
     body: 'Ken Krieger becomes the fifth Director in 2010. State funding for the HTLP is restored in 2011 after a two-year hiatus. The following year, NCWQR begins collaborating with NOAA to develop annual Harmful Algal Bloom (HAB) forecasts for Lake Erie based on Maumee River phosphorus loading data — a partnership that now reaches millions of people each summer. Laura Johnson joins the staff in 2013. Then, on August 2–4, 2014, the Toledo water crisis shuts off drinking water for 500,000 residents and focuses international media attention on NCWQR\'s decades of research on dissolved reactive phosphorus and its role in Lake Erie\'s re-eutrophication. That same year, NCWQR joins the USDA\'s Long-Term Agro-Ecosystem Research (LTAR) network.',
-    image: 'https://images.unsplash.com/photo-1744968777132-0f856bc353d6?w=800&q=80',
-    imageCaption: 'Harmful algal blooms on Lake Erie — NCWQR data is central to NOAA\'s annual HAB outlook',
+    image: '/images/kenneth-krieger-2026.jpg',
+    imageCaption: 'Kenneth Krieger, fifth director of the NCWQR in 2010',
     color: '#DC2626',
   },
   {
@@ -107,8 +105,8 @@ const timelineEvents = [
     era: 'A New Chapter',
     title: 'New Leadership, New Policy, and a 50th Anniversary',
     body: 'Laura Johnson is named the sixth Director of NCWQR in 2016, becoming the first woman to lead the center. That same year, the U.S. and Canada formally adopt 40% phosphorus reduction targets for Lake Erie, using NCWQR\'s 40+ year monitoring dataset as the primary scientific baseline. In 2018, NCWQR co-founds the Ohio Partnership for Water, Industrial and Cyber Security (OPWICS) with Terra Community College and Tiffin University. Heidelberg faculty approve the Environmental Science and Sustainability major and a specialized Watershed Science concentration in 2019. The same year, NCWQR celebrates 50 years of monitoring, analyzing, and educating to protect freshwater resources — a milestone that few scientific programs in the world can match.',
-    image: 'https://images.unsplash.com/photo-1756832430978-0d865538e688?w=800&q=80',
-    imageCaption: 'NCWQR data helped shape the binational 40% phosphorus reduction targets signed in 2016',
+    image: '/images/people/dr-laura-johnson-2026.jpg',
+    imageCaption: 'Laura Johnson, first woman to lead the center, pictured in the lab',
     color: DARK_BLUE,
   },
 ];
@@ -569,9 +567,9 @@ export function History() {
             <div className="flex flex-wrap justify-center gap-8">
               {[
                 { value: '1969', label: 'Founded' },
-                { value: '50+', label: 'Years of Continuous Data' },
+                { value: '55+', label: 'Years of Continuous Data' },
                 { value: '70,000+', label: 'Wells Tested' },
-                { value: '18', label: 'Monitoring Stations' },
+                { value: '28', label: 'Monitoring Stations' },
                 { value: '2002', label: 'Congressional Designation' },
               ].map((s) => (
                 <div key={s.label} className="text-center">
@@ -633,8 +631,7 @@ export function History() {
         <div className="relative z-10 max-w-2xl mx-auto">
           <Quote className="w-8 h-8 text-blue-300 mx-auto mb-4" />
           <blockquote className="text-white mb-4" style={{ fontSize: 'clamp(1rem, 2vw, 1.3rem)', lineHeight: 1.6, fontStyle: 'italic' }}>
-            &ldquo;We didn&apos;t set out to build a 50-year dataset. We set out to answer a question about a river. 
-            The data just kept being needed.&rdquo;
+            &ldquo;In many instances we were in the right place at the right time with the right people.&rdquo;
           </blockquote>
           <p className="text-blue-300 text-sm">— Dr. David B. Baker, Founder</p>
         </div>
