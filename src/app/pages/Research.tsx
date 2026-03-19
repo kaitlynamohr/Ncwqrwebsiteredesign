@@ -133,7 +133,6 @@ const pastProjects = [
     partners: ['USDA-NRCS', 'Tarleton State University', 'IPM Institute', 'Sandusky River Watershed Coalition'],
     tags: ['Modeling', 'BMPs', 'Outreach'],
     yearEnd: '2017',
-    href: '/research/ntt',
   },
   {
     id: 106,
