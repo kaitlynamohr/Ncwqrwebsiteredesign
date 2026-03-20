@@ -65,6 +65,7 @@ export function Navigation() {
             <img
                 src="/images/ncwqr-logo-2026-large.jpg"
                 alt="NCWQR Logo"
+                
                 className="h-10 w-auto"
               />
             <div className="leading-tight">

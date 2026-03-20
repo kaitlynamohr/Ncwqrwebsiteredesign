@@ -16,7 +16,6 @@ interface Publication {
 
 const BLUE = '#1B4F8A';
 const GREEN = '#2D5016';
-const [showDerived, setShowDerived] = useState(true);
 
 const publications: Publication[] = [
   // ── 2023 ──
@@ -2819,6 +2818,7 @@ export function Publications() {
   const [search, setSearch] = useState('');
   const [yearFilter, setYearFilter] = useState('All');
   const [catFilter, setCatFilter] = useState('All');
+  const [showDerived, setShowDerived] = useState(true);
 
   const filtered = useMemo(() => {
     return allPublications.filter((p) => {
@@ -2831,7 +2831,7 @@ export function Publications() {
       const matchDerived = showDerived || !p.derived;
       return matchSearch && matchYear && matchCat && matchDerived;
     });
-  }, [search, yearFilter, catFilter]);
+  }, [search, yearFilter, catFilter, showDerived]);
 
   return (
     <div>
