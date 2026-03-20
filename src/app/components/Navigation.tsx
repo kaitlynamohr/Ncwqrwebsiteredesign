@@ -95,26 +95,9 @@ export function Navigation() {
                     to={link.href}
                     className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                       isActive(link.href)
-                        ? 'text-white'
-                        : 'text-gray-700 hover:text-white'
+                        ? 'bg-blue-700 text-white'
+                        : 'text-gray-700 hover:bg-blue-700 hover:text-white'
                     }`}
-                    style={
-                      isActive(link.href)
-                        ? { backgroundColor: BLUE }
-                        : undefined
-                    }
-                    onMouseEnter={(e) => {
-                      if (!isActive(link.href)) {
-                        (e.currentTarget as HTMLAnchorElement).style.backgroundColor = BLUE;
-                        (e.currentTarget as HTMLAnchorElement).style.color = 'white';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isActive(link.href)) {
-                        (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '';
-                        (e.currentTarget as HTMLAnchorElement).style.color = '';
-                      }
-                    }}
                   >
                     {link.label}
                     <ChevronDown className="w-3.5 h-3.5" />
