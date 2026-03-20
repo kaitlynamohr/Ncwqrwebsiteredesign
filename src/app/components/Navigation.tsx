@@ -113,7 +113,7 @@ export function Navigation() {
                 >
                   <Link
                     to={link.href}
-                    className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    className="flex items-center gap-0.5 px-3 py-2 rounded-md text-sm font-medium transition-colors whitespace-nowrap"
                     style={{
                       backgroundColor: isHighlighted(link.label, link.href) ? BLUE : 'transparent',
                       color: isHighlighted(link.label, link.href) ? 'white' : '#374151',
