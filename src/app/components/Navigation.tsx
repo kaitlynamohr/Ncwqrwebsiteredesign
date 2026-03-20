@@ -17,9 +17,7 @@ const navLinks = [
     label: 'Monitoring',
     href: '/monitoring',
     children: [
-      { label: 'Overview', href: '/monitoring' },
       { label: 'Tributary Loading Program', href: '/monitoring#tributary' },
-      { label: 'Lake Erie Monitoring', href: '/monitoring#lake-erie' },
       { label: 'FAQs', href: '/monitoring#faqs' },
       { label: 'Data Portal', href: 'https://ncwqr-data.org', external: true },
     ],
