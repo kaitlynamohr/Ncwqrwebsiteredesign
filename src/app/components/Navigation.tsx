@@ -4,26 +4,46 @@ import { Menu, X, ChevronDown, Droplets } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  {
+    label: 'About',
+    href: '/about',
+    children: [
+      { label: 'About NCWQR', href: '/about' },
+      { label: 'Our History', href: '/history' },
+      { label: 'Staff Directory', href: '/staff' },
+    ],
+  },
   {
     label: 'Monitoring',
     href: '/monitoring',
     children: [
       { label: 'Overview', href: '/monitoring' },
-      { label: 'Data Portal', href: 'https://ncwqr-data.org', external: true },
+      { label: 'Tributary Loading Program', href: '/monitoring#tributary' },
+      { label: 'Lake Erie Monitoring', href: '/monitoring#lake-erie' },
       { label: 'FAQs', href: '/monitoring#faqs' },
+      { label: 'Data Portal', href: 'https://ncwqr-data.org', external: true },
     ],
   },
   {
     label: 'Research',
     href: '/research',
     children: [
+      { label: 'All Research', href: '/research' },
       { label: 'Ongoing Projects', href: '/research#ongoing' },
       { label: 'Past Projects', href: '/research#past' },
     ],
   },
   { label: 'Publications', href: '/publications' },
-  { label: 'Water Testing', href: '/water-testing' },
+  {
+    label: 'Water Testing',
+    href: '/water-testing',
+    children: [
+      { label: 'Overview', href: '/water-testing' },
+      { label: 'Surface Water Testing', href: '/water-testing#surface-water' },
+      { label: 'Well Water Testing', href: '/water-testing#well-water' },
+      { label: 'Biological & Habitat Surveys', href: '/water-testing#biological' },
+    ],
+  },
   { label: 'Get Involved', href: '/get-involved' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -35,6 +55,8 @@ export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
+  const [hoveredChild, setHoveredChild] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -46,16 +68,19 @@ export function Navigation() {
   useEffect(() => {
     setMobileOpen(false);
     setOpenDropdown(null);
+    setHoveredLink(null);
+    setHoveredChild(null);
   }, [location.pathname]);
 
   const isActive = (href: string) =>
-    href === '/' ? location.pathname === '/' : location.pathname.startsWith(href);
+    href === '/' ? location.pathname === '/' : location.pathname.startsWith(href.split('#')[0]);
+
+  const isHighlighted = (label: string, href: string) =>
+    isActive(href) || hoveredLink === label;
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'shadow-lg' : ''
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}
       style={{ backgroundColor: '#fff' }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,10 +94,7 @@ export function Navigation() {
                 className="h-10 w-auto"
               />
             <div className="leading-tight">
-              <div
-                className="text-sm font-bold tracking-tight"
-                style={{ color: BLUE, lineHeight: '1.1' }}
-              >
+              <div className="text-sm font-bold tracking-tight" style={{ color: BLUE, lineHeight: '1.1' }}>
                 NCWQR
               </div>
               <div className="text-xs text-gray-500 hidden sm:block" style={{ lineHeight: '1.2' }}>
@@ -88,23 +110,24 @@ export function Navigation() {
                 <div
                   key={link.label}
                   className="relative"
-                  onMouseEnter={() => setOpenDropdown(link.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onMouseEnter={() => { setOpenDropdown(link.label); setHoveredLink(link.label); }}
+                  onMouseLeave={() => { setOpenDropdown(null); setHoveredLink(null); }}
                 >
                   <Link
                     to={link.href}
-                    className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive(link.href)
-                        ? 'bg-blue-700 text-white'
-                        : 'text-gray-700 hover:bg-blue-700 hover:text-white'
-                    }`}
+                    className="flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                    style={{
+                      backgroundColor: isHighlighted(link.label, link.href) ? BLUE : 'transparent',
+                      color: isHighlighted(link.label, link.href) ? 'white' : '#374151',
+                    }}
                   >
                     {link.label}
                     <ChevronDown className="w-3.5 h-3.5" />
                   </Link>
+
                   {openDropdown === link.label && (
                     <div
-                      className="absolute top-full left-0 mt-1 w-52 rounded-lg shadow-xl border border-gray-100 overflow-hidden z-50"
+                      className="absolute top-full left-0 mt-1 w-56 rounded-lg shadow-xl border border-gray-100 overflow-hidden z-50"
                       style={{ backgroundColor: '#fff' }}
                     >
                       {link.children.map((child) =>
@@ -114,16 +137,13 @@ export function Navigation() {
                             href={child.href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:text-white transition-colors"
-                            style={{ borderLeft: `3px solid transparent` }}
-                            onMouseEnter={(e) => {
-                              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = BLUE;
-                              (e.currentTarget as HTMLAnchorElement).style.color = 'white';
+                            className="block px-4 py-2.5 text-sm transition-colors"
+                            style={{
+                              backgroundColor: hoveredChild === child.label ? BLUE : 'transparent',
+                              color: hoveredChild === child.label ? 'white' : '#374151',
                             }}
-                            onMouseLeave={(e) => {
-                              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '';
-                              (e.currentTarget as HTMLAnchorElement).style.color = '';
-                            }}
+                            onMouseEnter={() => setHoveredChild(child.label)}
+                            onMouseLeave={() => setHoveredChild(null)}
                           >
                             {child.label} ↗
                           </a>
@@ -131,15 +151,13 @@ export function Navigation() {
                           <Link
                             key={child.label}
                             to={child.href}
-                            className="block px-4 py-2.5 text-sm text-gray-700 hover:text-white transition-colors"
-                            onMouseEnter={(e) => {
-                              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = BLUE;
-                              (e.currentTarget as HTMLAnchorElement).style.color = 'white';
+                            className="block px-4 py-2.5 text-sm transition-colors"
+                            style={{
+                              backgroundColor: hoveredChild === child.label ? BLUE : 'transparent',
+                              color: hoveredChild === child.label ? 'white' : '#374151',
                             }}
-                            onMouseLeave={(e) => {
-                              (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '';
-                              (e.currentTarget as HTMLAnchorElement).style.color = '';
-                            }}
+                            onMouseEnter={() => setHoveredChild(child.label)}
+                            onMouseLeave={() => setHoveredChild(null)}
                           >
                             {child.label}
                           </Link>
@@ -152,22 +170,13 @@ export function Navigation() {
                 <Link
                   key={link.label}
                   to={link.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(link.href) ? 'text-white' : 'text-gray-700'
-                  }`}
-                  style={isActive(link.href) ? { backgroundColor: BLUE } : undefined}
-                  onMouseEnter={(e) => {
-                    if (!isActive(link.href)) {
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = BLUE;
-                      (e.currentTarget as HTMLAnchorElement).style.color = 'white';
-                    }
+                  className="px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  style={{
+                    backgroundColor: isHighlighted(link.label, link.href) ? BLUE : 'transparent',
+                    color: isHighlighted(link.label, link.href) ? 'white' : '#374151',
                   }}
-                  onMouseLeave={(e) => {
-                    if (!isActive(link.href)) {
-                      (e.currentTarget as HTMLAnchorElement).style.backgroundColor = '';
-                      (e.currentTarget as HTMLAnchorElement).style.color = '';
-                    }
-                  }}
+                  onMouseEnter={() => setHoveredLink(link.label)}
+                  onMouseLeave={() => setHoveredLink(null)}
                 >
                   {link.label}
                 </Link>
@@ -180,13 +189,11 @@ export function Navigation() {
               target="_blank"
               rel="noopener noreferrer"
               className="ml-2 px-4 py-2 rounded-md text-sm font-semibold text-white transition-colors"
-              style={{ backgroundColor: BLUE }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = DARK_BLUE;
+              style={{
+                backgroundColor: hoveredLink === '__data_portal__' ? DARK_BLUE : BLUE,
               }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.backgroundColor = BLUE;
-              }}
+              onMouseEnter={() => setHoveredLink('__data_portal__')}
+              onMouseLeave={() => setHoveredLink(null)}
             >
               Data Portal →
             </a>
@@ -204,10 +211,7 @@ export function Navigation() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div
-          className="lg:hidden border-t border-gray-100 shadow-lg"
-          style={{ backgroundColor: '#fff' }}
-        >
+        <div className="lg:hidden border-t border-gray-100 shadow-lg" style={{ backgroundColor: '#fff' }}>
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((link) => (
               <div key={link.label}>
