@@ -3,10 +3,22 @@ import { PageHero } from '../components/PageHero';
 import { Search, ExternalLink, Filter } from 'lucide-react';
 import { motion } from 'motion/react';
 
+interface Publication {
+  id: number;
+  year: number;
+  category: string;
+  title: string;
+  authors: string;
+  journal: string;
+  doi: string | null;
+  derived?: boolean;
+}
+
 const BLUE = '#1B4F8A';
 const GREEN = '#2D5016';
+const [showDerived, setShowDerived] = useState(true);
 
-const publications = [
+const publications: Publication[] = [
   // ── 2023 ──
   {
     id: 1, year: 2023, category: 'Journal Article',
@@ -1855,6 +1867,951 @@ const publications = [
   },
 ];
 
+const derivedWorks: Publication[] = [
+  // ── 2024 ──
+  {
+    id: 1000, year: 2024, category: 'Journal Article', derived: true,
+    title: 'Investigating the applicability and assumptions of the regression relationship between flow discharge and nitrogen concentrations for load estimation',
+    authors: 'Song, J.H., Her, Y., Park, Y.S., Yoon, K., and Kim, H.',
+    journal: 'Heliyon 10(1): e23603',
+    doi: '10.1016/j.heliyon.2023.e23603',
+  },
+  {
+    id: 1001, year: 2024, category: 'Journal Article', derived: true,
+    title: 'Modeling attenuation of photosynthetically active radiation across the optical gradient in the Laurentian Great Lakes with application to Lake Erie',
+    authors: 'Alsip, P.J., Rowe, M.D., Kain, A., and Godwin, C.',
+    journal: 'Journal of Great Lakes Research',
+    doi: '10.1016/j.jglr.2024.102364',
+  },
+  {
+    id: 1002, year: 2024, category: 'Journal Article', derived: true,
+    title: 'Metatranscriptomic analysis reveals dissimilarity in viral community activity between an ice-free and ice-covered winter in Lake Erie',
+    authors: 'Denison, E.R., Zepernick, B.N., McKay, R.M.L., and Wilhelm, S.W.',
+    journal: 'Microbial Ecology: e00753-24',
+    doi: '10.1128/msystems.00753-24',
+  },
+  {
+    id: 1003, year: 2024, category: 'Journal Article', derived: true,
+    title: 'Integrating water quality data with a Bayesian network model to improve spatial and temporal phosphorus attribution: Application to the Maumee River Basin',
+    authors: 'Wei, Z., Alam, S., Verma, M., Hilderbran, M., Wu, Y., Anderson, B., Ho, D.E., and Suckale, J.',
+    journal: 'Journal of Environmental Management 360: 121120',
+    doi: '10.1016/j.jenvman.2024.121120',
+  },
+  {
+    id: 1004, year: 2024, category: 'Journal Article', derived: true,
+    title: 'A random forest approach to improve estimates of tributary nutrient loading',
+    authors: 'Isles, P.D.F.',
+    journal: 'Water Research 248: 120876',
+    doi: '10.1016/j.watres.2023.120876',
+  },
+  {
+    id: 1005, year: 2024, category: 'Journal Article', derived: true,
+    title: 'Characterizing Spatiotemporal Variability in Phosphorus Export across the United States through Bayesian Hierarchical Modeling',
+    authors: 'Karimi, K., and Obenour, D.R.',
+    journal: 'Environmental Science & Technology 58(22): 9782–9791',
+    doi: '10.1021/acs.est.3c07479',
+  },
+  {
+    id: 1006, year: 2024, category: 'Journal Article', derived: true,
+    title: 'The recent disappearance of a persistent Planktothrix bloom: Characterization of a regime shift in the phytoplankton of Sandusky Bay (USA)',
+    authors: 'Wagner, R.S., Neudeck, M.J., Heath, A.E., Barker, K.B., Brown, K.M., Buchholz, S., Ward, C.S., and Bullerjahn, G.S.',
+    journal: 'Harmful Algae 136: 102656',
+    doi: '10.1016/j.hal.2024.102656',
+  },
+  // ── 2023 ──
+  {
+    id: 1007, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Agricultural conservation practices could help offset climate change impacts on cyanobacterial harmful algal blooms in Lake Erie',
+    authors: 'Fraker, M.E., Aloysius, N.R., Martin, J.F., Keitzer, S.C., Dippold, D.A., Yen, H., Arnold, J.G., et al.',
+    journal: 'Journal of Great Lakes Research 49(1): 209–219',
+    doi: '10.1016/j.jglr.2022.11.009',
+  },
+  {
+    id: 1008, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Streamflow duration curve to explain nutrient export in Midwestern USA watersheds: Implication for water quality achievements',
+    authors: 'Kamrath, B., and Yuan, Y.',
+    journal: 'Journal of Environmental Management 336: 117598',
+    doi: '10.1016/j.jenvman.2023.117598',
+  },
+  {
+    id: 1009, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Sub-monthly time scale forecasting of harmful algal blooms intensity in Lake Erie using remote sensing and machine learning',
+    authors: 'Gupta, A., Hantush, M.M., and Govindaraju, R.S.',
+    journal: 'Science of The Total Environment 900: 165781',
+    doi: '10.1016/j.scitotenv.2023.165781',
+  },
+  {
+    id: 1010, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Remotely sensed imagery reveals animal feeding operations increase downstream dissolved reactive phosphorus',
+    authors: 'Meyer, A., Raff, Z., and Porter, S.',
+    journal: 'Journal of the American Water Resources Association 60(2): 620–638',
+    doi: '10.1111/1752-1688.13177',
+  },
+  {
+    id: 1011, year: 2023, category: 'Journal Article', derived: true,
+    title: 'A New Approach to Predict Tributary Phosphorus Loads Using Machine Learning– and Physics-Based Modeling Systems',
+    authors: 'Chang, C.F., Astitha, M., Yuan, Y., Tang, C., Vlahos, P., Garcia, V., and Khaira, U.',
+    journal: 'Artificial Intelligence for the Earth Systems 2(3): e220049',
+    doi: '10.1175/AIES-D-22-0049.1',
+  },
+  {
+    id: 1012, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Decreasing trends in total suspended solids and cumulative effects of nonpoint source projects in the Cuyahoga River Watershed, OH',
+    authors: 'McManus, M.G., Nietch, C.T., Heberling, M.T., and Gains-Germain, L.',
+    journal: 'Journal of Great Lakes Research 49(3): 608–620',
+    doi: '10.1016/j.jglr.2023.03.011',
+  },
+  {
+    id: 1013, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Advancing freshwater ecological forecasts: Harmful algal blooms in Lake Erie',
+    authors: 'Scavia, D., Wang, Y.C., and Obenour, D.R.',
+    journal: 'Science of The Total Environment 856(1): 158959',
+    doi: '10.1016/j.scitotenv.2022.158959',
+  },
+  {
+    id: 1014, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Stochastic export coefficient model to predict annual variation in phosphorus loading from diffuse runoff',
+    authors: 'Zhang, L., Endreny, T.A., and Stephan, E.A.',
+    journal: 'Journal of Hydrology 620(A): 129447',
+    doi: '10.1016/j.jhydrol.2023.129447',
+  },
+  {
+    id: 1015, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Is glyphosate an underlying cause of increased dissolved reactive phosphorus loading in the Western Lake Erie basin?',
+    authors: 'Spiese, C.E., Bowling, M.N., and Moeller, S.E.M.',
+    journal: 'Journal of Great Lakes Research 49(3): 631–639',
+    doi: '10.1016/j.jglr.2023.03.009',
+  },
+  {
+    id: 1016, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Intercomparison of three spatially-resolved, process-based Lake Erie hypoxia models',
+    authors: 'Rowe, M.D., Valipour, R., and Redder, T.M.',
+    journal: 'Journal of Great Lakes Research 49(5): 993–1003',
+    doi: '10.1016/j.jglr.2023.06.004',
+  },
+  {
+    id: 1017, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Agricultural nitrate export patterns shaped by crop rotation and tile drainage',
+    authors: 'Ma, Z., Guan, K., Peng, B., Sivapalan, M., Li, L., Pan, M., Zhou, W., Warner, R., and Zhang, J.',
+    journal: 'Water Research 229: 119468',
+    doi: '10.1016/j.watres.2022.119468',
+  },
+  {
+    id: 1018, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Long-term phosphorus mass-balance of Lake Erie (Canada-USA) reveals a major contribution of in-lake phosphorus loading',
+    authors: 'Bocaniov, S.A., Scavia, D., and Van Cappellen, P.',
+    journal: 'Ecological Informatics 77: 102131',
+    doi: '10.1016/j.ecoinf.2023.102131',
+  },
+  {
+    id: 1019, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Anthropogenic change decouples a freshwater predator\'s density feedback',
+    authors: 'Sinclair, J.S., Briland, R., Fraker, M.E., Hood, J.M., Frank, K.T., Faust, M.D., Knight, C., and Ludsin, S.A.',
+    journal: 'Scientific Reports 13: 7613',
+    doi: '10.1038/s41598-023-34408-0',
+  },
+  {
+    id: 1020, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Carbon sequestration and nitrogen and phosphorus accumulation in a freshwater, estuarine marsh: Effects of microtopography and nutrient loads',
+    authors: 'Villa, J.A., Bohrer, G., Ju, Y., Wrighton, K., Johnson, N., and Kinsman-Costello, L.',
+    journal: 'Geoderma 430: 116349',
+    doi: '10.1016/j.geoderma.2023.116349',
+  },
+  {
+    id: 1021, year: 2023, category: 'Journal Article', derived: true,
+    title: 'Monitoring the effects of urban and forested land uses on runoff quality: Implications for improved stormwater management',
+    authors: 'Simpson, I.M., Winston, R.J., and Dorsey, J.D.',
+    journal: 'Science of The Total Environment 862: 160827',
+    doi: '10.1016/j.scitotenv.2022.160827',
+  },
+  // ── 2022 ──
+  {
+    id: 1022, year: 2022, category: 'Journal Article', derived: true,
+    title: 'On the potential for reconstructed wetlands to remediate fecal coliform loading in an agricultural watershed',
+    authors: 'Jacquemin, S.J., Birt, J., Senger, Z., Axe, B., Strang, B., Ewing, C., Kinney, B., and Newell, S.E.',
+    journal: 'Hydrobiologia 850: 3879–3891',
+    doi: '10.1007/s10750-022-05078-2',
+  },
+  {
+    id: 1023, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Staying afloat: The effect of algae contamination on Lake Erie housing prices',
+    authors: 'Wolf, D., Gopalakrishnan, S., and Klaiber, H.A.',
+    journal: 'American Journal of Agricultural Economics 104(5): 1701–1723',
+    doi: '10.1111/ajae.12285',
+  },
+  {
+    id: 1024, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Quantifying the contribution of direct runoff and baseflow to nitrogen loading in the Western Lake Erie Basins',
+    authors: 'Song, J.H., Her, Y., and Guo, T.',
+    journal: 'Scientific Reports 12(9216)',
+    doi: '10.1038/s41598-022-12740-1',
+  },
+  {
+    id: 1025, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Improving estimates of phosphorus loads using hierarchical models',
+    authors: 'Yuan, L.L.',
+    journal: 'Journal of Hydrology 614(B): 128558',
+    doi: '10.1016/j.jhydrol.2022.128558',
+  },
+  {
+    id: 1026, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Spatially referenced Bayesian state-space model of total phosphorus in western Lake Erie',
+    authors: 'Maguire, T.J., Stow, C.A., and Godwin, C.M.',
+    journal: 'Hydrology and Earth System Sciences 26(8): 1993–2017',
+    doi: '10.5194/hess-26-1993-2022',
+  },
+  {
+    id: 1027, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Evaluation of sampling frequency impact on the accuracy of water quality status as determined considering different water quality monitoring objectives',
+    authors: 'Torres, C., Gitau, M.W., Paredes-Cuervo, D., and Engel, B.',
+    journal: 'Environmental Monitoring and Assessment 194(489)',
+    doi: '10.1007/s10661-022-10169-7',
+  },
+  {
+    id: 1028, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Patterns of long-term variations of nitrate concentration – Stream discharge relationships for a drained agricultural watershed in Mid-western USA',
+    authors: 'Liu, W., Tian, S., Youssef, M.A., Birgand, F.P., and Chescheir, G.M.',
+    journal: 'Journal of Hydrology 614(A): 128479',
+    doi: '10.1016/j.jhydrol.2022.128479',
+  },
+  {
+    id: 1029, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Quantifying spatial and temporal relationships between diatoms and nutrients in streams strengthens evidence of nutrient effects from monitoring data',
+    authors: 'Yuan, L.L., Smucker, N.J., Nietch, C.T., and Pilgrim, E.M.',
+    journal: 'Freshwater Science 41(1): 100–112',
+    doi: '10.1086/718631',
+  },
+  {
+    id: 1030, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Unbiased Estimates and Confidence Intervals of Riverine Loads for Low-Frequency Water Quality Monitoring Strategies',
+    authors: 'Tada, A., and Tanakamaru, H.',
+    journal: 'Water Resources Research 28(5): e2022WR031941',
+    doi: '10.1029/2022WR031941',
+  },
+  {
+    id: 1031, year: 2022, category: 'Journal Article', derived: true,
+    title: 'Simplified Method for the Determination of Total Kjeldahl Nitrogen in Wastewater',
+    authors: 'Hicks, T.D., Kuns, C.M., Raman, C., Bates, Z.T., and Nagarajan, S.',
+    journal: 'Environments 9(5): 55',
+    doi: '10.3390/environments9050055',
+  },
+  // ── 2021 ──
+  {
+    id: 1032, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Unbiased Estimates and Confidence Intervals for Riverine Loads',
+    authors: 'Tada, A., and Tanakamaru, H.',
+    journal: 'Water Resources Research 57(3): e2020WR028170',
+    doi: '10.1029/2020WR028170',
+  },
+  {
+    id: 1033, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Insights from an Evaluation of Nitrate Load Estimation Methods in the Midwestern United States',
+    authors: 'Park, D., Um, M.J., Markus, M., Jung, K., Keefer, L., and Verma, S.',
+    journal: 'Sustainability 13(13): 7508',
+    doi: '10.3390/su13137508',
+  },
+  {
+    id: 1034, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Tile Drainage Increases Total Runoff and Phosphorus Export During Wet Years in the Western Lake Erie Basin',
+    authors: 'Miller, S.A., and Lyon, S.W.',
+    journal: 'Frontiers in Water 3',
+    doi: '10.3389/frwa.2021.757106',
+  },
+  {
+    id: 1035, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Economic viability of proactive harmful algal bloom mitigation through attached algal growth',
+    authors: 'DeRose, K.K., Davis, R.W., Monroe, E.A., and Quinn, J.C.',
+    journal: 'Journal of Great Lakes Research 47(4): 1021–1032',
+    doi: '10.1016/j.jglr.2021.04.011',
+  },
+  {
+    id: 1036, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Prediction of Nitrate and Phosphorus Concentrations Using Machine Learning Algorithms in Watersheds with Different Landuse',
+    authors: 'Bhattarai, A., Dhakal, S., Gautam, Y., and Bhattarai, R.',
+    journal: 'Water 13(21): 3096',
+    doi: '10.3390/w13213096',
+  },
+  {
+    id: 1037, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Elucidating controls on cyanobacteria bloom timing and intensity via Bayesian mechanistic modeling',
+    authors: 'Del Giudice, D., Fang, S., Scavia, D., Davis, T.W., Evans, M.A., and Obenour, D.R.',
+    journal: 'Science of The Total Environment 755(1): 142487',
+    doi: '10.1016/j.scitotenv.2020.142487',
+  },
+  {
+    id: 1038, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Development of a mixed-source, single pesticide database for use in ecological risk assessment',
+    authors: 'Perkins, D.B., Chen, W., Jacobson, A., Stone, Z., White, M., Christensen, B., Ghebremichael, L., and Brain, R.',
+    journal: 'Environmental Monitoring and Assessment 193(827)',
+    doi: '10.1007/s10661-021-09596-9',
+  },
+  {
+    id: 1039, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Source contribution to phosphorus loads from the Maumee River watershed to Lake Erie',
+    authors: 'Kast, J.B., Apostel, A.M., Kalcic, M.M., Muenich, R.L., Dagnew, A., Long, C.M., Evenson, G., and Martin, J.F.',
+    journal: 'Journal of Environmental Management 279: 111803',
+    doi: '10.1016/j.jenvman.2020.111803',
+  },
+  {
+    id: 1040, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Functional traits reveal the dominant drivers of long-term community change across a North American Great Lake',
+    authors: 'Sinclair, J.S., Fraker, M.E., Hood, J.M., Frank, K.T., DuFour, M.R., Gorman, A.M., and Ludsin, S.A.',
+    journal: 'Global Change Biology 27(23): 6232–6251',
+    doi: '10.1111/gcb.15902',
+  },
+  {
+    id: 1041, year: 2021, category: 'Journal Article', derived: true,
+    title: 'The behaviors of two limnetic river plumes discharging into the semi-enclosed western basin of Lake Erie during ice-free seasons',
+    authors: 'Niu, Q., and Xia, M.',
+    journal: 'Estuarine, Coastal and Shelf Science 258: 107408',
+    doi: '10.1016/j.ecss.2021.107408',
+  },
+  {
+    id: 1042, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Assessment of risks to listed species from the use of atrazine in the USA: a perspective',
+    authors: 'Smith, P.N., Armbrust, K.L., Brain, R.A., Chen, W., Galic, N., Ghebremichael, L., Giddings, J.M., et al.',
+    journal: 'Journal of Toxicology and Environmental Health 24(6): 223–306',
+    doi: '10.1080/10937404.2021.1902890',
+  },
+  {
+    id: 1043, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Relative strength of top-down effects of an invasive fish and bottom-up effects of nutrient addition in a simple aquatic food web',
+    authors: 'Rettig, J.E., and Smith, G.R.',
+    journal: 'Environmental Science and Pollution Research 28: 5845–5853',
+    doi: '10.1007/s11356-020-10933-7',
+  },
+  {
+    id: 1044, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Cyanobacterial bloom phenology in Saginaw Bay from MODIS and a comparative look with western Lake Erie',
+    authors: 'Wynne, T.T., Stumpf, R.P., Litaker, R.W., and Hood, R.R.',
+    journal: 'Harmful Algae 103: 101999',
+    doi: '10.1016/j.hal.2021.101999',
+  },
+  {
+    id: 1045, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Low sediment redox promotes cyanobacteria blooms across a trophic range: implications for management',
+    authors: 'Molot, L.A., Schiff, S.L., Venkiteswaran, J.J., Baulch, H.M., Higgins, S.N., Zastepa, A., Verschoor, M.J., and Walters, D.',
+    journal: 'Lake and Reservoir Management 37(2): 120–142',
+    doi: '10.1080/10402381.2020.1854400',
+  },
+  {
+    id: 1046, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Quantifying uncertainty cascading from climate, watershed, and lake models in harmful algal bloom predictions',
+    authors: 'Scavia, D., Wang, Y.C., Obenour, D.R., Apostel, A., Basile, S.J., Kalcic, M.M., Kirchhoff, C.J., Miralha, L., Muenich, R.L., and Steiner, A.L.',
+    journal: 'Science of The Total Environment 759: 143487',
+    doi: '10.1016/j.scitotenv.2020.143487',
+  },
+  {
+    id: 1047, year: 2021, category: 'Journal Article', derived: true,
+    title: 'Evaluating the efficacy of targeting options for conservation practice adoption on watershed-scale phosphorus reductions',
+    authors: 'Kast, J.B., Kalcic, M., Wilson, R., Jackson-Smith, D., Breyfogle, N., and Martin, J.',
+    journal: 'Water Research 201: 117375',
+    doi: '10.1016/j.watres.2021.117375',
+  },
+  // ── 2020 ──
+  {
+    id: 1048, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Preliminary analysis to estimate the spatial distribution of benefits of P load reduction: Identifying the spatial influence of phosphorus loading from the Maumee River (USA) in western Lake Erie',
+    authors: 'Larson, J.H., Hlavacek, E., DeJager, N., Evans, M.A., and Wynne, T.',
+    journal: 'Ecology and Evolution 10(9): 3968–3976',
+    doi: '10.1002/ece3.6160',
+  },
+  {
+    id: 1049, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Comparison of Long Short-Term Memory and Weighted Regressions on Time, Discharge, and Season Models for Nitrate-N Load Estimation',
+    authors: 'Jung, K., Um, M.J., Markus, M., and Park, D.',
+    journal: 'Sustainability 12(15): 5942',
+    doi: '10.3390/su12155942',
+  },
+  {
+    id: 1050, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Stream Solutes and Particulates Export Regimes: A New Framework to Optimize Their Monitoring',
+    authors: 'Moatar, F., Floury, M., Gold, A.J., Meybeck, M., Renard, B., Ferréol, M., Chandesris, A., Minaudo, C., Addy, K., Piffady, J., and Pinay, G.',
+    journal: 'Frontiers in Ecology and Evolution 7(516)',
+    doi: '10.3389/fevo.2019.00516',
+  },
+  {
+    id: 1051, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Forecasting the combined effects of anticipated climate change and agricultural conservation practices on fish recruitment dynamics in Lake Erie',
+    authors: 'Dippold, D.A., Aloysius, N.R., Keitzer, S.C., Yen, H., Arnold, J.G., Daggupati, P., Fraker, M.E., Martin, J.F., Robertson, D.M., Sowa, S.P., Johnson, M.V.V., White, M.J., and Ludsin, S.A.',
+    journal: 'Freshwater Biology 65(9): 1487–1508',
+    doi: '10.1111/fwb.13515',
+  },
+  {
+    id: 1052, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Relative performance of different data mining techniques for nitrate concentration and load estimation in different type of watersheds',
+    authors: 'Li, S., Bhattarai, R., Cooke, R.A., Verma, S., Huang, X., Markus, M., and Christianson, L.',
+    journal: 'Environmental Pollution 263(A): 114618',
+    doi: '10.1016/j.envpol.2020.114618',
+  },
+  {
+    id: 1053, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Coupling watershed modeling, public engagement, and soil analysis improves decision making for targeting P retention wetland locations',
+    authors: 'Berkowitz, J.F., Schlea, D.A., VanZomeren, C.M., and Boles, C.M.W.',
+    journal: 'Journal of Great Lakes Research 46(5): 1331–1339',
+    doi: '10.1016/j.jglr.2020.06.016',
+  },
+  {
+    id: 1054, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Effect of temperature on phosphorus flux from anoxic western Lake Erie sediments',
+    authors: 'Gibbons, K.J., and Bridgeman, T.B.',
+    journal: 'Water Research 182: 116022',
+    doi: '10.1016/j.watres.2020.116022',
+  },
+  {
+    id: 1055, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Changing Rainfall Patterns Over the Western Lake Erie Basin (1975–2017): Effects on Tributary Discharge and Phosphorus Load',
+    authors: 'Williams, M.R., and King, K.W.',
+    journal: 'Water Resources Research 56(3): e2019WR025985',
+    doi: '10.1029/2019WR025985',
+  },
+  {
+    id: 1056, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Evaluating sediments as an ecosystem service in western Lake Erie via quantification of nutrient cycling pathways and selected gene abundances',
+    authors: 'Boedecker, A.R., Niewinski, D.N., Newell, S.E., Chaffin, J.D., and McCarthy, M.J.',
+    journal: 'Journal of Great Lakes Research 46(4): 920–932',
+    doi: '10.1016/j.jglr.2020.04.010',
+  },
+  {
+    id: 1057, year: 2020, category: 'Journal Article', derived: true,
+    title: 'Evaluation of Nitrate Load Estimations Using Neural Networks and Canonical Correlation Analysis with K-Fold Cross-Validation',
+    authors: 'Jung, K., Bae, D.H., Um, M.J., Kim, S., Jeon, S., and Park, D.',
+    journal: 'Sustainability 12(1): 400',
+    doi: '10.3390/su12010400',
+  },
+  {
+    id: 1058, year: 2020, category: 'Journal Article', derived: true,
+    title: 'An analysis of the sample size requirements for acceptable statistical power in water quality monitoring for improvement detection',
+    authors: 'Wellen, C., Van Cappellen, P., Gospodyn, L., Thomas, J.L., and Mohamed, M.N.',
+    journal: 'Ecological Indicators 118: 106684',
+    doi: '10.1016/j.ecolind.2020.106684',
+  },
+  // ── 2019 ──
+  {
+    id: 1059, year: 2019, category: 'Journal Article', derived: true,
+    title: 'A Method for Assessing and Predicting Water Quality Status for Improved Decision-Making and Management',
+    authors: 'Mijares, V., Gitau, M., and Johnson, D.R.',
+    journal: 'Water Resources Management 33: 509–522',
+    doi: '10.1007/s11269-018-2113-3',
+  },
+  {
+    id: 1060, year: 2019, category: 'Journal Article', derived: true,
+    title: 'River Water-Quality Concentration and Flux Estimation Can be Improved by Accounting for Serial Correlation Through an Autoregressive Model',
+    authors: 'Zhang, Q., and Hirsch, R.M.',
+    journal: 'Water Resources Research 55(11): 9705–9723',
+    doi: '10.1029/2019WR025338',
+  },
+  {
+    id: 1061, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Reduced forms of nitrogen are a driver of non-nitrogen-fixing harmful cyanobacterial blooms and toxicity in Lake Erie',
+    authors: 'Newell, S.E., Davis, T.W., Johengen, T.H., Gossiaux, D., Burtner, A., Palladino, D., and McCarthy, M.J.',
+    journal: 'Harmful Algae 81: 86–93',
+    doi: '10.1016/j.hal.2018.11.003',
+  },
+  {
+    id: 1062, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Phosphorus and Nitrogen Transport in the Binational Great Lakes Basin Estimated Using SPARROW Watershed Models',
+    authors: 'Robertson, D.M., Saad, D.A., Benoy, G.A., Vouk, I., Schwarz, G.E., and Laitta, M.T.',
+    journal: 'Journal of American Water Resources Association 55(6): 1401–1424',
+    doi: '10.1111/1752-1688.12792',
+  },
+  {
+    id: 1063, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Nutrient loading and nonstationarity: The importance of differentiating the independent effects of tributary flow and nutrient concentration',
+    authors: 'Stow, C.A., Liu, Q., and Anderson, E.J.',
+    journal: 'WIREs Water 7(1): e1396',
+    doi: '10.1002/wat2.1396',
+  },
+  {
+    id: 1064, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Long-Term Changes in Precipitation and Temperature Have Already Impacted Nitrogen Loading',
+    authors: 'Ballard, T.C., Sinha, E., and Michalak, A.M.',
+    journal: 'Environmental Science & Technology 53(9): 5080–5090',
+    doi: '10.1021/acs.est.8b06898',
+  },
+  {
+    id: 1065, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Short-term impacts of Phragmites management on nutrient budgets and plant communities in Great Lakes coastal freshwater marshes',
+    authors: 'Judd, K.E., and Francoeur, S.N.',
+    journal: 'Wetlands Ecology and Management 27: 55–74',
+    doi: '10.1007/s11273-018-9643-6',
+  },
+  {
+    id: 1066, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Application of continuous turbidity sensors to supplement estimates of total phosphorus concentrations in the Grand River, Ontario, Canada',
+    authors: 'Irvine, C.A., Backus, S., Cooke, S., Dove, A., and Gewurtz, S.B.',
+    journal: 'Journal of Great Lakes Research 45(4): 840–849',
+    doi: '10.1016/j.jglr.2019.05.007',
+  },
+  {
+    id: 1067, year: 2019, category: 'Journal Article', derived: true,
+    title: 'The implications of weather, nutrient prices, and other factors on nutrient concentrations in agricultural watersheds',
+    authors: 'Kim, S.J., Sohngen, B., and Sam, A.G.',
+    journal: 'Science of The Total Environment 650(1): 1083–1100',
+    doi: '10.1016/j.scitotenv.2018.09.012',
+  },
+  {
+    id: 1068, year: 2019, category: 'Journal Article', derived: true,
+    title: 'Ammonium recycling supports toxic Planktothrix blooms in Sandusky Bay, Lake Erie: Evidence from stable isotope and metatranscriptome data',
+    authors: 'Hampel, J.J., McCarthy, M.J., Neudeck, M., Bullerjahn, G.S., McKay, R.M.L., and Newell, S.E.',
+    journal: 'Harmful Algae 81: 42–52',
+    doi: '10.1016/j.hal.2018.11.011',
+  },
+  {
+    id: 1069, year: 2019, category: 'Journal Article', derived: true,
+    title: 'An R package for estimating river compound load using different methods',
+    authors: 'Nava, V., Patelli, M., Rotiroti, M., and Leoni, B.',
+    journal: 'Environmental Modelling & Software 117: 100–108',
+    doi: '10.1016/j.envsoft.2019.03.012',
+  },
+  // ── 2018 ──
+  {
+    id: 1070, year: 2018, category: 'Journal Article', derived: true,
+    title: 'A surrogate regression approach for computing continuous loads for the tributary nutrient and sediment monitoring program on the Great Lakes',
+    authors: 'Robertson, D.M., Hubbard, L.E., Lorenz, D.L., and Sullivan, D.J.',
+    journal: 'Journal of Great Lakes Research 44(1): 26–42',
+    doi: '10.1016/j.jglr.2017.10.003',
+  },
+  {
+    id: 1071, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Characterization of Temporal and Spatial Variability of Phosphorus Loading to Lake Erie from the Western Basin Using Wavelet Transform Methods',
+    authors: 'Sharma, S., Nalley, D., and Subedi, N.',
+    journal: 'Hydrology 5(3)',
+    doi: '10.3390/hydrology5030050',
+  },
+  {
+    id: 1072, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Quantifying the Role of Large Floods in Riverine Nutrient Loadings Using Linear Regression and Analysis of Covariance',
+    authors: 'Verma, S., Bartosova, A., Markus, M., Cooke, R., Um, M.J., and Park, D.',
+    journal: 'Sustainability 10(8): 2876',
+    doi: '10.3390/su10082876',
+  },
+  {
+    id: 1073, year: 2018, category: 'Journal Article', derived: true,
+    title: 'High-turbidity events in Western Lake Erie during ice-free cycles: Contributions of river-loaded vs. resuspended sediments',
+    authors: 'Niu, Q., Xia, M., Ludsin, S.A., Chu, P.Y., Mason, D.M., and Rutherford, E.S.',
+    journal: 'Limnology and Oceanography 63(6): 2545–2562',
+    doi: '10.1002/lno.10959',
+  },
+  {
+    id: 1074, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Nitrogen cycling in Sandusky Bay, Lake Erie: oscillations between strong and weak export and implications for harmful algal blooms',
+    authors: 'Salk, K.R., Bullerjahn, G.S., McKay, R.M.L., Chaffin, J.D., and Ostrom, N.E.',
+    journal: 'Biogeosciences 15: 2891–2907',
+    doi: '10.5194/bg-15-2891-2018',
+  },
+  {
+    id: 1075, year: 2018, category: 'Journal Article', derived: true,
+    title: 'On the practical usefulness of least squares for assessing uncertainty in hydrologic and water quality predictions',
+    authors: 'Del Giudice, D., Logsdon Muenich, R., McCahon Kalcic, M., Bosch, N.S., Scavia, D., and Michalak, A.M.',
+    journal: 'Environmental Modelling & Software 105: 286–295',
+    doi: '10.1016/j.envsoft.2018.03.009',
+  },
+  {
+    id: 1076, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Flow-covariate prediction of stream pesticide concentrations',
+    authors: 'Mosquin, P.L., Aldworth, J., and Chen, W.',
+    journal: 'Environmental Toxicology and Chemistry 37(1): 260–273',
+    doi: '10.1002/etc.3946',
+  },
+  {
+    id: 1077, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Discrete Organic Phosphorus Signatures are Evident in Pollutant Sources within a Lake Erie Tributary',
+    authors: 'Brooker, M.R., Longnecker, K., Kujawinski, E.B., Evert, M.H., and Mouser, P.J.',
+    journal: 'Environmental Science & Technology 52(12): 6771–6779',
+    doi: '10.1021/acs.est.7b05703',
+  },
+  {
+    id: 1078, year: 2018, category: 'Journal Article', derived: true,
+    title: 'A Hybrid Lagrangian–Eulerian Particle Model for Ecosystem Simulation',
+    authors: 'Xue, P., Schwab, D.J., Zhou, X., Huang, C., Kibler, R., and Ye, X.',
+    journal: 'Journal of Marine Science and Engineering 6(4): 109',
+    doi: '10.3390/jmse6040109',
+  },
+  {
+    id: 1079, year: 2018, category: 'Journal Article', derived: true,
+    title: 'The relative importance of anammox and denitrification to total N2 production in Lake Erie',
+    authors: 'Lu, X., Bade, D.L., Leff, L.G., and Mou, X.',
+    journal: 'Journal of Great Lakes Research 44(3): 428–435',
+    doi: '10.1016/j.jglr.2018.03.008',
+  },
+  {
+    id: 1080, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Sensitivity to climate change of land use and management patterns optimized for efficient mitigation of nutrient pollution',
+    authors: 'Xu, H., Brown, D.G., and Steiner, A.L.',
+    journal: 'Climatic Change 147: 647–662',
+    doi: '10.1007/s10584-018-2159-5',
+  },
+  {
+    id: 1081, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Evaluation of statistical methods for quantifying fractal scaling in water-quality time series with irregular sampling',
+    authors: 'Zhang, Q., Harman, C.J., and Kirchner, J.W.',
+    journal: 'Hydrology and Earth System Sciences 22: 1175–1192',
+    doi: '10.5194/hess-22-1175-2018',
+  },
+  {
+    id: 1082, year: 2018, category: 'Journal Article', derived: true,
+    title: 'Optimizing Spatial Land Management to Balance Water Quality and Economic Returns in a Lake Erie Watershed',
+    authors: 'Xu, H., Brown, D.G., Moore, M.R., and Currie, W.S.',
+    journal: 'Ecological Economics 145: 104–114',
+    doi: '10.1016/j.ecolecon.2017.08.015',
+  },
+  // ── 2017 ──
+  {
+    id: 1083, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Improving riverine constituent concentration and flux estimation by accounting for antecedent discharge conditions',
+    authors: 'Zhang, Q., and Ball, W.P.',
+    journal: 'Journal of Hydrology 547: 387–402',
+    doi: '10.1016/j.jhydrol.2016.12.052',
+  },
+  {
+    id: 1084, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Pay-for-Performance Conservation Using SWAT Highlights Need for Field-Level Agricultural Conservation',
+    authors: 'Logsdon Muenich, R., Kalcic, M.M., Winsten, J., Fisher, K., Day, M., O\'Neil, G., Wang, Y.C., and Scavia, D.',
+    journal: 'Transactions of the ASABE 60(6): 1925–1937',
+    doi: '10.13031/trans.12379',
+  },
+  {
+    id: 1085, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Spatiotemporal variability and environmental factors of harmful algal blooms (HABs) over western Lake Erie',
+    authors: 'Tian, D., Xie, G., Tian, J., Tseng, K.H., Shum, C.K., Lee, J., and Liang, S.',
+    journal: 'PLoS ONE 12(6): e0179622',
+    doi: '10.1371/journal.pone.0179622',
+  },
+  {
+    id: 1086, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Abiotic and biotic controls of phytoplankton biomass dynamics in a freshwater tributary, estuary, and large lake ecosystem: Sandusky Bay (Lake Erie) chemostat',
+    authors: 'Conroy, J.D., Kane, D.D., Quinlan, E.L., and Edwards, W.J.',
+    journal: 'Inland Waters 7(4): 473–492',
+    doi: '10.1080/20442041.2017.1395142',
+  },
+  {
+    id: 1087, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Tracking cyanobacteria blooms: Do different monitoring approaches tell the same story?',
+    authors: 'Bertani, I., Steger, C.E., Obenour, D.R., Fahnenstiel, G.L., Bridgeman, T.B., Johengen, T.H., Sayers, M.J., Shuchman, R.A., and Scavia, D.',
+    journal: 'Science of the Total Environment 575: 294–308',
+    doi: '10.1016/j.scitotenv.2016.10.023',
+  },
+  {
+    id: 1088, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Phytoplankton blooms in Lake Erie impacted by both long-term and springtime phosphorus loading',
+    authors: 'Ho, J.C., and Michalak, A.M.',
+    journal: 'Journal of Great Lakes Research 43(3): 221–228',
+    doi: '10.1016/j.jglr.2017.04.001',
+  },
+  {
+    id: 1089, year: 2017, category: 'Journal Article', derived: true,
+    title: 'Soil and Water Assessment Tool model predictions of annual maximum pesticide concentrations in high vulnerability watersheds',
+    authors: 'Winchell, M.F., Peranginangin, N., Srinivasan, R., and Chen, W.',
+    journal: 'Integrated Environmental Assessment and Management 14(3): 358–368',
+    doi: '10.1002/ieam.2014',
+  },
+  // ── 2016 ──
+  {
+    id: 1090, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Identifying the Correlation between Water Quality Data and LOADEST Model Behavior in Annual Sediment Load Estimations',
+    authors: 'Park, Y.S., and Engel, B.A.',
+    journal: 'Water 8(9): 368',
+    doi: '10.3390/w8090368',
+  },
+  {
+    id: 1091, year: 2016, category: 'Journal Article', derived: true,
+    title: 'A comparison of water sampling and analytical methods in western Lake Erie',
+    authors: 'Golnick, P.C., Chaffin, J.D., Bridgeman, T.B., Zellner, B.C., and Simons, V.E.',
+    journal: 'Journal of Great Lakes Research 42(5): 965–971',
+    doi: '10.1016/j.jglr.2016.07.031',
+  },
+  {
+    id: 1092, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Total and soluble reactive phosphorus loadings to Lake Erie: A detailed accounting by year, basin, country, and tributary',
+    authors: 'Maccoux, M.J., Dove, A., Backus, S.M., and Dolan, D.M.',
+    journal: 'Journal of Great Lakes Research 42(6): 1151–1165',
+    doi: '10.1016/j.jglr.2016.08.005',
+  },
+  {
+    id: 1093, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Precipitation Dominates Interannual Variability of Riverine Nitrogen Loading across the Continental United States',
+    authors: 'Sinha, E., and Michalak, A.M.',
+    journal: 'Environmental Science & Technology 50(23): 12874–12884',
+    doi: '10.1021/acs.est.6b04455',
+  },
+  {
+    id: 1094, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Evaluating the Impact of Legacy P and Agricultural Conservation Practices on Nutrient Loads from the Maumee River Watershed',
+    authors: 'Logsdon Muenich, R., Kalcic, M., and Scavia, D.',
+    journal: 'Environmental Science & Technology 50(15): 8146–8154',
+    doi: '10.1021/acs.est.6b01421',
+  },
+  {
+    id: 1095, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Fertilizer placement and application timing as strategies to reduce phosphorus loading to Lake Erie',
+    authors: 'Gildow, M., Aloysius, N., Gebremariam, S., and Martin, J.',
+    journal: 'Journal of Great Lakes Research 42(6): 1281–1288',
+    doi: '10.1016/j.jglr.2016.07.002',
+  },
+  {
+    id: 1096, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Engaging Stakeholders To Define Feasible and Desirable Agricultural Conservation in Western Lake Erie Watersheds',
+    authors: 'Kalcic, M.M., Kirchhoff, C., Bosch, N., Logsdon Muenich, R., Murray, M., Griffith Gardner, J., and Scavia, D.',
+    journal: 'Environmental Science & Technology 50(15): 8135–8145',
+    doi: '10.1021/acs.est.6b01420',
+  },
+  {
+    id: 1097, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Probabilistically assessing the role of nutrient loading in harmful algal bloom formation in western Lake Erie',
+    authors: 'Bertani, I., Obenour, D.R., Steger, C.E., Stow, C.A., Gronewold, A.D., and Scavia, D.',
+    journal: 'Journal of Great Lakes Research 42(6): 1184–1192',
+    doi: '10.1016/j.jglr.2016.04.002',
+  },
+  {
+    id: 1098, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Anticipated impacts of climate change on 21st century Maumee River discharge and nutrient loads',
+    authors: 'Culbertson, A.M., Martin, J.F., Aloysius, N., and Ludsin, S.A.',
+    journal: 'Journal of Great Lakes Research 42(6): 1332–1342',
+    doi: '10.1016/j.jglr.2016.08.008',
+  },
+  {
+    id: 1099, year: 2016, category: 'Journal Article', derived: true,
+    title: 'High-resolution modeling for development of nearshore ecosystem objectives in eastern Lake Erie',
+    authors: 'Valipour, R., León, L.F., Depew, D., Dove, A., and Rao, Y.R.',
+    journal: 'Journal of Great Lakes Research 42(6): 1241–1251',
+    doi: '10.1016/j.jglr.2016.08.011',
+  },
+  {
+    id: 1100, year: 2016, category: 'Journal Article', derived: true,
+    title: 'PBPK-Based Probabilistic Risk Assessment for Total Chlorotriazines in Drinking Water',
+    authors: 'Breckenridge, C.B., Campbell, J.L., Clewell, H.J., Andersen, M.E., Valdez-Flores, C., and Sielken, R.L.',
+    journal: 'Toxicological Sciences 150(2): 269–282',
+    doi: '10.1093/toxsci/kfw013',
+  },
+  {
+    id: 1101, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Ice cover extent drives phytoplankton and bacterial community structure in a large north-temperate lake: implications for a warming climate',
+    authors: 'Beall, B.F.N., Twiss, M.R., Smith, D.E., Oyserman, B.O., Rozmarynowycz, M.J., Binding, C.E., Bourbonniere, R.A., Bullerjahn, G.S., Palmer, M.E., Reavie, E.D., Waters, L.C.K., Woityra, L.C., and McKay, R.M.L.',
+    journal: 'Environmental Microbiology 18(6): 1704–1719',
+    doi: '10.1111/1462-2920.12819',
+  },
+  {
+    id: 1102, year: 2016, category: 'Journal Article', derived: true,
+    title: 'An evaluation of methods for estimating decadal stream loads',
+    authors: 'Lee, C.J., Hirsch, R.M., Schwarz, G.E., Holtschlag, D.J., Preston, S.D., Crawford, C.G., and Vecchia, A.V.',
+    journal: 'Journal of Hydrology 542: 185–203',
+    doi: '10.1016/j.jhydrol.2016.08.059',
+  },
+  {
+    id: 1103, year: 2016, category: 'Journal Article', derived: true,
+    title: 'Thinking outside of the lake: Can controls on nutrient inputs into Lake Erie benefit stream conservation in its watershed?',
+    authors: 'Keitzer, S.C., Ludsin, S.A., Sowa, S.P., Annis, G., Arnold, J.G., Daggupati, P., Froehlich, A.M., Herbert, M.E., Johnson, M.V.V., Sasson, A.M., Yen, H., White, M.J., and Rewa, C.A.',
+    journal: 'Journal of Great Lakes Research 42(6): 1322–1331',
+    doi: '10.1016/j.jglr.2016.05.012',
+  },
+  // ── 2015 ──
+  {
+    id: 1104, year: 2015, category: 'Journal Article', derived: true,
+    title: 'Characterization and evaluation of phosphate microsensors to monitor internal phosphorus loading in Lake Erie sediments',
+    authors: 'Ding, X., Behbahani, M., Gruden, C., and Seo, Y.',
+    journal: 'Journal of Environmental Management 160: 193–200',
+    doi: '10.1016/j.jenvman.2015.06.010',
+  },
+  {
+    id: 1105, year: 2015, category: 'Journal Article', derived: true,
+    title: 'A bootstrap method for estimating uncertainty of water quality trends',
+    authors: 'Hirsch, R.M., Archfield, S.A., and De Cicco, L.A.',
+    journal: 'Environmental Modelling & Software 73: 148–166',
+    doi: '10.1016/j.envsoft.2015.07.017',
+  },
+  {
+    id: 1106, year: 2015, category: 'Journal Article', derived: true,
+    title: 'Effects of Increasing Nitrogen and Phosphorus Concentrations on Phytoplankton Community Growth and Toxicity During Planktothrix Blooms in Sandusky Bay, Lake Erie',
+    authors: 'Davis, T.W., Bullerjahn, G.S., Tuttle, T., McKay, R.M., and Watson, S.B.',
+    journal: 'Environmental Science & Technology 49(12): 7197–7207',
+    doi: '10.1021/acs.est.5b00799',
+  },
+  {
+    id: 1107, year: 2015, category: 'Journal Article', derived: true,
+    title: 'Nutrient prices and concentrations in Midwestern agricultural watersheds',
+    authors: 'Sohngen, B., King, K.W., Howard, G., Newton, J., and Forster, D.L.',
+    journal: 'Ecological Economics 112: 141–149',
+    doi: '10.1016/j.ecolecon.2015.02.008',
+  },
+  {
+    id: 1108, year: 2015, category: 'Journal Article', derived: true,
+    title: 'The importance of considering shifts in seasonal changes in discharges when predicting future phosphorus loads in streams',
+    authors: 'LaBeau, M., Mayer, A., Griffis, V., Watkins, D., Robertson, D., and Gyawali, R.',
+    journal: 'Biogeochemistry 126: 153–172',
+    doi: '10.1007/s10533-015-0149-5',
+  },
+  {
+    id: 1109, year: 2015, category: 'Journal Article', derived: true,
+    title: 'Biophysical modeling assessment of the drivers for plankton dynamics in dreissenid-colonized western Lake Erie',
+    authors: 'Jiang, L., Xia, M., Ludsin, S.A., Rutherford, E.S., Mason, D.M., Marin Jarrin, J., and Pangle, K.L.',
+    journal: 'Ecological Modelling 308: 18–33',
+    doi: '10.1016/j.ecolmodel.2015.04.004',
+  },
+  // ── 2014 ──
+  {
+    id: 1110, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Summer phytoplankton nutrient limitation in Maumee Bay of Lake Erie during high-flow and low-flow years',
+    authors: 'Chaffin, J.D., Bridgeman, T.B., Bade, D.L., and Mobilian, C.N.',
+    journal: 'Journal of Great Lakes Research 40(3): 524–531',
+    doi: '10.1016/j.jglr.2014.04.009',
+  },
+  {
+    id: 1111, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Using a Bayesian hierarchical model to improve Lake Erie cyanobacteria bloom forecasts',
+    authors: 'Obenour, D.R., Gronewold, A.D., Stow, C.A., and Scavia, D.',
+    journal: 'Water Resources Research 50(10): 7847–7860',
+    doi: '10.1002/2014WR015616',
+  },
+  {
+    id: 1112, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Systemic, early-season Microcystis blooms in western Lake Erie and two of its major agricultural tributaries (Maumee and Sandusky rivers)',
+    authors: 'Conroy, J.D., Kane, D.D., Briland, R.D., and Culver, D.A.',
+    journal: 'Journal of Great Lakes Research 40(3): 518–523',
+    doi: '10.1016/j.jglr.2014.04.015',
+  },
+  {
+    id: 1113, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Interacting effects of climate change and agricultural BMPs on nutrient runoff entering Lake Erie',
+    authors: 'Bosch, N.S., Evans, M.A., Scavia, D., and Allan, J.D.',
+    journal: 'Journal of Great Lakes Research 40(3): 581–589',
+    doi: '10.1016/j.jglr.2014.04.011',
+  },
+  {
+    id: 1114, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Use of Pollutant Load Regression Models with Various Sampling Frequencies for Annual Load Estimation',
+    authors: 'Park, Y.S., and Engel, B.A.',
+    journal: 'Water 6(6): 1685–1697',
+    doi: '10.3390/w6061685',
+  },
+  {
+    id: 1115, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Organic and inorganic nitrogen utilization by nitrogen-stressed cyanobacteria during bloom conditions',
+    authors: 'Chaffin, J.D., and Bridgeman, T.B.',
+    journal: 'Journal of Applied Phycology 26: 299–309',
+    doi: '10.1007/s10811-013-0118-0',
+  },
+  {
+    id: 1116, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Status, causes and controls of cyanobacterial blooms in Lake Erie',
+    authors: 'Steffen, M.M., Belisle, B.S., Watson, S.B., Boyer, G.L., and Wilhelm, S.W.',
+    journal: 'Journal of Great Lakes Research 40(2): 215–225',
+    doi: '10.1016/j.jglr.2013.12.012',
+  },
+  {
+    id: 1117, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Quantification of uncertainty in estimated nitrate-N loads in agricultural watersheds',
+    authors: 'Jiang, Y., Frankenberger, J.R., Bowling, L.C., and Sun, Z.',
+    journal: 'Journal of Hydrology 519(A): 106–116',
+    doi: '10.1016/j.jhydrol.2014.06.027',
+  },
+  {
+    id: 1118, year: 2014, category: 'Journal Article', derived: true,
+    title: 'Spatiotemporal characteristics of nitrogen and phosphorus in the benthos of nearshore Lake Erie',
+    authors: 'Pennuto, C.M., Burlakova, L.E., Karatayev, A.Y., Kramer, J., Fischer, A., and Mayer, C.',
+    journal: 'Journal of Great Lakes Research 40(3): 541–549',
+    doi: '10.1016/j.jglr.2014.02.013',
+  },
+  // ── 2013 ──
+  {
+    id: 1119, year: 2013, category: 'Journal Article', derived: true,
+    title: 'Controls of phosphorus loading and transport in the Cuyahoga River of northeastern Ohio, USA',
+    authors: 'Yuan, F., Quellos, J.A., and Fan, C.',
+    journal: 'Applied Geochemistry 38: 59–69',
+    doi: '10.1016/j.apgeochem.2013.08.011',
+  },
+  {
+    id: 1120, year: 2013, category: 'Journal Article', derived: true,
+    title: 'Nitrogen Constrains the Growth of Late Summer Cyanobacterial Blooms in Lake Erie',
+    authors: 'Chaffin, J.D., Bridgeman, T.B., and Bade, D.L.',
+    journal: 'Advances in Microbiology 3(6A): 16–26',
+    doi: '10.4236/aim.2013.36A003',
+  },
+  {
+    id: 1121, year: 2013, category: 'Journal Article', derived: true,
+    title: 'Watershed Regressions for Pesticides (WARP) Models for Predicting Stream Concentrations of Multiple Pesticides',
+    authors: 'Stone, W.W., Crawford, C.G., and Gilliom, R.J.',
+    journal: 'Journal of Environmental Quality 42(6): 1838–1851',
+    doi: '10.2134/jeq2013.05.0179',
+  },
+  {
+    id: 1122, year: 2013, category: 'Journal Article', derived: true,
+    title: 'Understanding seasonal phosphorus dynamics to guide effective management of shallow, hypereutrophic Grand Lake St. Marys, Ohio',
+    authors: 'Filbrun, J.E., Conroy, J.D., and Culver, D.A.',
+    journal: 'Lake and Reservoir Management 29(3): 165–178',
+    doi: '10.1080/10402381.2013.823469',
+  },
+  {
+    id: 1123, year: 2013, category: 'Journal Article', derived: true,
+    title: 'Scenario-testing of agricultural best management practices in Lake Erie watersheds',
+    authors: 'Bosch, N.S., Allan, J.D., Selegean, J.P., and Scavia, D.',
+    journal: 'Journal of Great Lakes Research 39(3): 429–436',
+    doi: '10.1016/j.jglr.2013.06.004',
+  },
+  // ── 2012 ──
+  {
+    id: 1124, year: 2012, category: 'Journal Article', derived: true,
+    title: 'Evaluating Causes of Trends in Long-Term Dissolved Reactive Phosphorus Loads to Lake Erie',
+    authors: 'Daloğlu, I., Cho, K.H., and Scavia, D.',
+    journal: 'Environmental Science & Technology 46(19): 10660–10666',
+    doi: '10.1021/es302315d',
+  },
+  {
+    id: 1125, year: 2012, category: 'Journal Article', derived: true,
+    title: 'Historical pattern of phosphorus loading to Lake Erie watersheds',
+    authors: 'Han, H., Allan, J.D., and Bosch, N.S.',
+    journal: 'Journal of Great Lakes Research 38(2): 289–298',
+    doi: '10.1016/j.jglr.2012.03.004',
+  },
+  {
+    id: 1126, year: 2012, category: 'Journal Article', derived: true,
+    title: 'Great Lakes total phosphorus revisited: 1. Loading analysis and update (1994–2008)',
+    authors: 'Dolan, D.M., and Chapra, S.C.',
+    journal: 'Journal of Great Lakes Research 38: 730–740',
+    doi: '10.1016/j.jglr.2012.10.001',
+  },
+  // ── 2011 ──
+  {
+    id: 1127, year: 2011, category: 'Journal Article', derived: true,
+    title: 'Assessment of Microcystis growth rate potential and nutrient status across a trophic gradient in western Lake Erie',
+    authors: 'Chaffin, J.D., Bridgeman, T.B., Heckathorn, S.A., and Mishra, S.',
+    journal: 'Journal of Great Lakes Research 37(1): 92–100',
+    doi: '10.1016/j.jglr.2010.11.016',
+  },
+  {
+    id: 1128, year: 2011, category: 'Journal Article', derived: true,
+    title: 'Spatial and temporal variation in phosphorus budgets for 24 watersheds in the Lake Erie and Lake Michigan basins',
+    authors: 'Han, H., Bosch, N., and Allan, J.D.',
+    journal: 'Biogeochemistry 102: 45–58',
+    doi: '10.1007/s10533-010-9420-y',
+  },
+  {
+    id: 1129, year: 2011, category: 'Journal Article', derived: true,
+    title: 'Application of a 3D hydrodynamic–biological model for seasonal and spatial dynamics of water quality and phytoplankton in Lake Erie',
+    authors: 'Leon, L.F., Smith, R.E.H., Hipsey, M.R., Bocaniov, S.A., Higgins, S.N., Hecky, R.E., Antenucci, J.P., Imberger, J.A., and Guildford, S.J.',
+    journal: 'Journal of Great Lakes Research 37(1): 41–53',
+    doi: '10.1016/j.jglr.2010.12.007',
+  },
+  // ── 2008 ──
+  {
+    id: 1130, year: 2008, category: 'Journal Article', derived: true,
+    title: 'The influence of impoundments on nutrient budgets in two catchments of Southeastern Michigan',
+    authors: 'Bosch, N.S., and Allan, J.D.',
+    journal: 'Biogeochemistry 87: 325–338',
+    doi: '10.1007/s10533-008-9187-6',
+  },
+  // ── 2007 ──
+  {
+    id: 1131, year: 2007, category: 'Journal Article', derived: true,
+    title: 'Riverine fluxes of pollutants: Towards predictions of uncertainties by flux duration indicators',
+    authors: 'Moatar, F., and Meybeck, M.',
+    journal: 'Comptes Rendus Geoscience 339(6): 367–382',
+    doi: '10.1016/j.crte.2007.05.001',
+  },
+];
+
+const allPublications = [...publications, ...derivedWorks];
+
 const years = ['All', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012', '2011', '2010', '2009', '2008', '2007', '2006', '2005', '2004', '2003', '2002', '2001', '2000', '1999', '1998', '1997', '1996', '1995', '1994', '1993', '1992', '1991', '1990', '1989', '1988', '1987', '1986', '1985', '1984', '1983', '1982', '1981', '1980', '1975', '1973', '1971'];
 const categories = ['All', 'Journal Article', 'Report', 'Conference Paper', 'Book Chapter', 'Technical Report', 'Final Report'];
 
@@ -1864,14 +2821,15 @@ export function Publications() {
   const [catFilter, setCatFilter] = useState('All');
 
   const filtered = useMemo(() => {
-    return publications.filter((p) => {
+    return allPublications.filter((p) => {
       const matchSearch =
         !search ||
         p.title.toLowerCase().includes(search.toLowerCase()) ||
         p.authors.toLowerCase().includes(search.toLowerCase());
       const matchYear = yearFilter === 'All' || String(p.year) === yearFilter;
       const matchCat = catFilter === 'All' || p.category === catFilter;
-      return matchSearch && matchYear && matchCat;
+      const matchDerived = showDerived || !p.derived;
+      return matchSearch && matchYear && matchCat && matchDerived;
     });
   }, [search, yearFilter, catFilter]);
 
@@ -1900,6 +2858,17 @@ export function Publications() {
                   style={{ '--tw-ring-color': BLUE } as React.CSSProperties}
                 />
               </div>
+              <button
+                onClick={() => setShowDerived(!showDerived)}
+                className="px-3 py-2 rounded-lg border text-sm font-medium transition-all whitespace-nowrap"
+                style={{
+                  borderColor: showDerived ? BLUE : '#e5e7eb',
+                  backgroundColor: showDerived ? '#EBF3FB' : '#f9fafb',
+                  color: showDerived ? BLUE : '#374151',
+                }}
+              >
+                {showDerived ? 'Showing Derived Works' : 'Hiding Derived Works'}
+              </button>
 
               {/* Year */}
               <div className="flex items-center gap-2">
@@ -1927,7 +2896,7 @@ export function Publications() {
           </div>
 
           <p className="text-sm text-gray-500 mb-6">
-            Showing <strong>{filtered.length}</strong> of {publications.length} publications
+            Showing <strong>{filtered.length}</strong> of {allPublications.length} publications
           </p>
 
           {/* Publication list */}
@@ -1966,6 +2935,14 @@ export function Publications() {
                       >
                         {pub.category}
                       </span>
+                    {pub.derived && (
+                      <span
+                        className="text-xs px-2.5 py-1 rounded-full font-semibold"
+                        style={{ backgroundColor: '#FEF3C7', color: '#92400E' }}
+                      >
+                        Derived Work
+                      </span>
+                    )}
                     </div>
                     <h3 className="mb-2 leading-snug" style={{ fontSize: '0.95rem', fontWeight: 600, color: '#0f2942' }}>
                       {pub.title}
