@@ -124,7 +124,7 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'https://ncwqr.org/wp-content/uploads/2020/03/img_20200317_092823.jpg?w=450',
+            url: '/image/lab/storm-event-station.webp',
             caption:
             'Before and during a storm event from a station last week',
             size: 'medium'
@@ -147,7 +147,7 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'https://ncwqr.org/wp-content/uploads/2020/03/img_20200303_124841.jpg?w=600',
+            url: '/image/lab/autoBeale-image.jpeg',
             caption:
             'Screenshot of the autoBeale program for loads',
             size: 'medium'
@@ -159,9 +159,9 @@ const articles: Record<string, ArticleData> = {
         {
             type: 'imagegrid',
             images: [
-                { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3420.jpg?w=492&h=659&ssl=1'},
-                { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3419.jpg?w=490&h=657&ssl=1'},
-                { url: 'https://i0.wp.com/ncwqr.org/wp-content/uploads/2020/03/img_3408.jpg?w=490&h=657&ssl=1'},
+                { url: '/images/nature/erie-here-grass.jpg'},
+                { url: '/images/nature/erie-here-grate.jpg'},
+                { url: '/images/nature/erie-here-paint.jpg'},
             ],
         },
         {
@@ -215,10 +215,10 @@ const articles: Record<string, ArticleData> = {
         {
           type: 'imagescroller',
           images: [
-            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/5-scan0001.jpg?w=1024'},
-            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/ellen-immunoassay-2013-1.jpg'},
-            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/7-scan0003-1.jpg'},
-            { url: 'https://ncwqr.org/wp-content/uploads/2020/10/barb-filtering-samples-2013-1.jpg'},
+            { url: '/images/people/sunglasses-lab.jpg'},
+            { url: '/images/people/ellen-immunoassay.jpg'},
+            { url: '/images/people/lab-watch.jpg'},
+            { url: '/images/people/bard-filtering-samples.jpg'},
           ],
           caption: 'Slideshow of Ellen and Barm from then to now'
         },
@@ -245,8 +245,8 @@ const articles: Record<string, ArticleData> = {
         {
             type: 'imagegrid',
             images: [
-                { url: 'https://ncwqr.org/wp-content/uploads/2020/10/2020-10-01-taylor-emily.jpg', caption: 'Taylor and Emily weighing filters (L to R)' },
-                { url: 'https://ncwqr.org/wp-content/uploads/2020/10/2020-10-01-kevin.jpg', caption: 'Kevin on the ion chromatograph' },
+                { url: '/images/people/taylor-emily-filters-2010.jpg', caption: 'Taylor and Emily weighing filters (L to R)' },
+                { url: '/images/people/kevin-chromatograph.jpg', caption: 'Kevin on the ion chromatograph' },
             ],
         },
         {
@@ -293,7 +293,7 @@ const articles: Record<string, ArticleData> = {
                             here
                         </Link>
                         {' '}. Furthermore, {' '}
-                        <Link to="https://ncwqr.org/wp-content/uploads/2020/02/ncwqr-history-by-ken-baker-2019-updated.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                        <Link to="/documents/ncwqr-history-by-ken-baker-2019-updated.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
                             a 255 page history of the lab was graciously written by Dr. Ken Baker in 2019
                         </Link>
                         {' '} to help celebrate the lab’s 50th anniversary.  As written to his family on Saturday, {' '}
@@ -354,7 +354,7 @@ const articles: Record<string, ArticleData> = {
             type: 'paragraph',
             content: (
                     <>
-                        <Link to="https://ncwqr.org/wp-content/uploads/2021/12/ncwqr-annual-report-2021_final.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                        <Link to="/documents/ncwqr-annual-report-2021.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
                             NCWQR Annual Report 2021
                         </Link>
                       
@@ -392,7 +392,7 @@ const articles: Record<string, ArticleData> = {
             type: 'paragraph',
             content: (
                     <>
-                        <Link to="https://ncwqr.org/wp-content/uploads/2023/03/ncwqr-annual-report-2022_6jan23.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
+                        <Link to="/documents/ncwqr-annual-report-2022.pdf" style={{ color: BLUE, textDecoration: 'underline' }}>
                             NCWQR Annual Report 2022
                         </Link>
                       
@@ -428,7 +428,7 @@ const articles: Record<string, ArticleData> = {
         },
         {
             type: 'image',
-            url: 'https://ncwqr.org/wp-content/uploads/2025/02/summer-camps-poster25_page_3.jpg?w=1440',
+            url: '/images/summer-camps-poster',
             size: 'large'
         },
     ],
