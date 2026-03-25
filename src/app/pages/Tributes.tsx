@@ -44,7 +44,7 @@ const featured = [
     years: '1969 – 2018',
     yearsOfService: '49 years',
     role: 'Co-Founder & Lab Manager',
-    photo: '/images/people/jack-retire.jpg',
+    photo: '/images/people/jack-retire.JPG',
     degrees: [
       'B.S. in Chemistry, Heidelberg College (1969)',
     ],
